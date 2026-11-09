@@ -1,0 +1,100 @@
+{
+  "videoSeries": [
+    {
+      "series": "Joseph Schumpeter: Entrepreneurship, Capitalism & Creative Destruction",
+      "videos": [
+        { "title": "Who Was Joseph Schumpeter and Why Is He So Important? (Essential Ideas)", "videoId": "UCpIWdarLwA", "url": "https://www.youtube.com/watch?v=UCpIWdarLwA" },
+        { "title": "What Is Entrepreneurship?", "videoId": "RqEetboK1s4", "url": "https://www.youtube.com/watch?v=RqEetboK1s4" },
+        { "title": "Creative Destruction", "videoId": "l-soJGRgAAQ", "url": "https://www.youtube.com/watch?v=l-soJGRgAAQ" },
+        { "title": "The Nature of Competition", "videoId": "hTs41Juc6_0", "url": "https://www.youtube.com/watch?v=hTs41Juc6_0" },
+        { "title": "The Reality of How Governments Function", "videoId": "6fxAGqJfrLY", "url": "https://www.youtube.com/watch?v=6fxAGqJfrLY" }
+      ]
+    },
+    {
+      "series": "Ray Dalio: Economics in the Real World",
+      "videos": [
+        { "title": "Four Economic Systems", "videoId": "5DJ7-d8zF_8", "url": "https://www.youtube.com/watch?v=5DJ7-d8zF_8" },
+        { "title": "How the Economic Machine Works", "videoId": "PHe0bXAIuk0", "url": "https://www.youtube.com/watch?v=PHe0bXAIuk0" },
+        { "title": "The Changing World Order", "videoId": "xguam0TKMw8", "url": "https://www.youtube.com/watch?v=xguam0TKMw8" },
+        { "title": "Principles for Investing in a Changing World Order", "videoId": "o5NQvY4eK8g", "url": "https://www.youtube.com/watch?v=o5NQvY4eK8g" },
+        { "title": "The Debt-Death Cycle", "videoId": "8u3qQtEJacY", "url": "https://www.youtube.com/watch?v=8u3qQtEJacY" },
+        { "title": "TED Talk: How to Build a Company Where the Best Ideas Win", "videoId": "HXbsVbFAczg", "url": "https://www.youtube.com/watch?v=HXbsVbFAczg" },
+        { "title": "What Is Money?", "videoId": "GQ0IvUi1bds", "url": "https://www.youtube.com/watch?v=GQ0IvUi1bds" },
+        { "title": "Money, Power, and the Collapse of Empires", "videoId": "TISMidxdZoc", "url": "https://www.youtube.com/watch?v=TISMidxdZoc" },
+        { "title": "U.S. Debt Spiral: How to Avoid Disaster", "videoId": "1_rvVTuGRNE", "url": "https://www.youtube.com/watch?v=1_rvVTuGRNE" },
+        { "title": "Economic Forces, Division, and the Future", "videoId": "_XY899x33h4", "url": "https://www.youtube.com/watch?v=_XY899x33h4" }
+      ]
+    },
+    {
+      "series": "Money, Banking & Investing",
+      "videos": [
+        { "title": "The History and Future of Money", "videoId": "xD5PvBCuUCI", "url": "https://www.youtube.com/watch?v=xD5PvBCuUCI" },
+        { "title": "The Functions of Banks", "videoId": "x8BmbUQoB54", "url": "https://www.youtube.com/watch?v=x8BmbUQoB54" },
+        { "title": "The Stock Market Game (video playlist)", "isPlaylist": true, "playlistId": "PLJUvV25FAJfk2mjHRd3y4rpVuYd6SCcjn", "url": "https://www.youtube.com/playlist?list=PLJUvV25FAJfk2mjHRd3y4rpVuYd6SCcjn" }
+      ]
+    },
+    {
+      "series": "Jacob Clifford: Econ with Movie Clips",
+      "videos": [
+        { "title": "Scarcity, Exchange, and Markets (Star Wars)", "videoId": "dKY2JkfPox4", "url": "https://www.youtube.com/watch?v=dKY2JkfPox4" },
+        { "title": "The Production Possibilities Curve (Monsters, Inc.)", "videoId": "UYlBLw-ShIM", "url": "https://www.youtube.com/watch?v=UYlBLw-ShIM" },
+        { "title": "Supply & Demand (Indiana Jones)", "videoId": "N-2mF0rGgUQ", "url": "https://www.youtube.com/watch?v=N-2mF0rGgUQ" },
+        { "title": "GDP, the Business Cycle, and Fiscal Policy (Cars)", "videoId": "KZaB1U3k0j8", "url": "https://www.youtube.com/watch?v=KZaB1U3k0j8" },
+        { "title": "Monetary Policy & the Fed (Despicable Me)", "videoId": "RaeIBeJT5hY", "url": "https://www.youtube.com/watch?v=RaeIBeJT5hY" },
+        { "title": "Macroeconomic Goals: Unemployment (Back to the Future)", "videoId": "G3eu1IaVXgE", "url": "https://www.youtube.com/watch?v=G3eu1IaVXgE" },
+        { "title": "Capitalism (Hunger Games)", "videoId": "tzXzkAs_cf0", "url": "https://www.youtube.com/watch?v=tzXzkAs_cf0" },
+        { "title": "Creative Destruction (The Lion King)", "videoId": "3eyQuNZVJGc", "url": "https://www.youtube.com/watch?v=3eyQuNZVJGc" },
+        { "title": "Income Inequality (Avengers)", "videoId": "CHReFKy_Mi4", "url": "https://www.youtube.com/watch?v=CHReFKy_Mi4" },
+        { "title": "Oligopolies (Batman)", "videoId": "JMq059SAQXM", "url": "https://www.youtube.com/watch?v=JMq059SAQXM" },
+        { "title": "Capitalism (Inside Out)", "linkPending": true }
+      ]
+    },
+    {
+      "series": "Jacob Clifford: Core Economics",
+      "videos": [
+        { "title": "Macroeconomics: Everything You Need to Know (29 min)", "videoId": "MKO1icFVtDc", "url": "https://www.youtube.com/watch?v=MKO1icFVtDc" },
+        { "title": "Microeconomics: Everything You Need to Know (30 min)", "videoId": "2izx5W1FAEU", "url": "https://www.youtube.com/watch?v=2izx5W1FAEU" },
+        { "title": "Microeconomics: Everything You Need to Know (Alternate Version)", "videoId": "1UxA6JzoT-4", "url": "https://www.youtube.com/watch?v=1UxA6JzoT-4" },
+        { "title": "Scarcity", "videoId": "deUqLLiu_CI", "url": "https://www.youtube.com/watch?v=deUqLLiu_CI" },
+        { "title": "Production Possibilities Curve", "videoId": "O6XL__2CDPU", "url": "https://www.youtube.com/watch?v=O6XL__2CDPU" },
+        { "title": "Trade & Comparative Advantage", "videoId": "XTEb98PY0XA", "url": "https://www.youtube.com/watch?v=XTEb98PY0XA" },
+        { "title": "Imports, Exports, Exchange Rates", "videoId": "geoe-6NBy10", "url": "https://www.youtube.com/watch?v=geoe-6NBy10" },
+        { "title": "Schools of Economic Thought", "videoId": "tZvjh1dxz08", "url": "https://www.youtube.com/watch?v=tZvjh1dxz08" },
+        { "title": "GDP and the Circular Flow Model", "videoId": "BnrBRuoVefY", "url": "https://www.youtube.com/watch?v=BnrBRuoVefY" },
+        { "title": "Macroeconomics Graphs", "videoId": "6TtlFk8GcTc", "url": "https://www.youtube.com/watch?v=6TtlFk8GcTc" },
+        { "title": "Macroeconomics: Five Key Graphs", "videoId": "0U54nTggSPE", "url": "https://www.youtube.com/watch?v=0U54nTggSPE" },
+        { "title": "Supply & Demand", "videoId": "kIFBaaPJUO0", "url": "https://www.youtube.com/watch?v=kIFBaaPJUO0" },
+        { "title": "Shifting Supply & Demand Curves", "videoId": "V0tIOqU7m-c", "url": "https://www.youtube.com/watch?v=V0tIOqU7m-c" },
+        { "title": "Markets: Consumer & Producer Surplus", "videoId": "CtCfwMmzOBU", "url": "https://www.youtube.com/watch?v=CtCfwMmzOBU" }
+      ]
+    },
+    {
+      "series": "Schools of Economic Thought",
+      "videos": [
+        { "title": "Adam Smith: Classical School", "videoId": "ejJRhn53X2M", "url": "https://www.youtube.com/watch?v=ejJRhn53X2M" },
+        { "title": "J.M. Keynes: Keynesian School", "videoId": "qtAeINU3FKM", "url": "https://www.youtube.com/watch?v=qtAeINU3FKM" },
+        { "title": "F.A. Hayek: Austrian School", "videoId": "SHsCkinrCPE", "url": "https://www.youtube.com/watch?v=SHsCkinrCPE" },
+        { "title": "The Chicago School (Milton Friedman) vs. the Austrian School (F.A. Hayek)", "videoId": "s5Kx6-nyVkk", "url": "https://www.youtube.com/watch?v=s5Kx6-nyVkk" },
+        { "title": "Keynes vs. Hayek Rap, Round 1", "videoId": "d0nERTFo-Sk", "url": "https://www.youtube.com/watch?v=d0nERTFo-Sk" },
+        { "title": "Keynes vs. Hayek Rap, Round 2", "videoId": "GTQnarzmTOc", "url": "https://www.youtube.com/watch?v=GTQnarzmTOc" }
+      ]
+    }
+  ],
+  "websites": [
+    { "name": "Investopedia", "url": "https://www.investopedia.com", "description": "Definitions, tutorials, and articles covering virtually every finance and investing topic.", "paywall": false },
+    { "name": "Khan Academy", "url": "https://www.khanacademy.org", "description": "Free courses on economics, personal finance, and more.", "paywall": false },
+    { "name": "The Stock Market Game", "url": "https://www.stockmarketgame.org", "description": "A hands-on investing simulation used by classrooms nationwide.", "paywall": false },
+    { "name": "Yahoo Finance", "url": "https://finance.yahoo.com", "description": "Stock quotes, market news, and company financials.", "paywall": false },
+    { "name": "MarketWatch", "url": "https://www.marketwatch.com", "description": "Financial news and market data.", "paywall": true },
+    { "name": "The Wall Street Journal", "url": "https://www.wsj.com", "description": "In-depth business and financial journalism.", "paywall": true },
+    { "name": "The Economist", "url": "https://www.economist.com", "description": "Global economics, business, and politics coverage.", "paywall": true },
+    { "name": "Bloomberg", "url": "https://www.bloomberg.com", "description": "Markets, finance, and business news.", "paywall": true }
+  ],
+  "books": [
+    { "title": "The Psychology of Money", "author": "Morgan Housel" },
+    { "title": "Rich Dad, Poor Dad", "author": "Robert Kiyosaki" },
+    { "title": "The Richest Man in Babylon", "author": "George S. Clason" },
+    { "title": "The Millionaire Next Door", "author": "Thomas J. Stanley" },
+    { "title": "The 7 Habits of Highly Effective People", "author": "Stephen R. Covey" }
+  ]
+}

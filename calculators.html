@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculators — [Club Name]</title>
+<meta name="description" content="Interactive calculators for Dividend Yield, P/E Ratio, EPS, Market Cap, and Interest Coverage.">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("flec-theme");
+      var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav-bar" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="brand-icon" aria-hidden="true">💰</span>
+      [Club Name]
+    </a>
+    <button id="nav-toggle" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">☰</button>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="key-concepts.html">Key Concepts</a></li>
+      <li><a href="videos.html">Video Library</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="calculators.html" aria-current="page">Calculators</a></li>
+    </ul>
+    <div class="nav-spacer"></div>
+    <div class="nav-tools">
+      <div class="site-search">
+        <label for="site-search-input" style="position:absolute;left:-9999px;">Search the site</label>
+        <input type="search" id="site-search-input" placeholder="Search videos, resources, concepts…" autocomplete="off">
+        <div id="site-search-results" class="search-results" role="listbox" aria-label="Search results"></div>
+      </div>
+      <button id="theme-toggle" class="icon-btn" aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+    <div class="page-hero">
+      <div class="eyebrow">Calculators</div>
+      <h1>Try the Ratios Yourself</h1>
+      <p class="lead">Plug in your own numbers, or load a worked example from the <a href="key-concepts.html#six-ratios">Key Concepts</a> page.</p>
+    </div>
+
+    <!-- Dividend Yield -->
+    <section class="calc-card" aria-labelledby="dy-heading">
+      <h2 id="dy-heading">Dividend Yield</h2>
+      <div class="calc-grid">
+        <form class="calc-form" id="dy-form">
+          <label for="dy-dividend">Annualized Dividend ($)</label>
+          <input type="number" id="dy-dividend" step="0.01" min="0" value="2.00">
+          <label for="dy-price">Common Share Price ($)</label>
+          <input type="number" id="dy-price" step="0.01" min="0.01" value="100">
+          <button type="button" class="btn" data-example="dy">Load McDonald's Example</button>
+          <div class="calc-result" id="dy-result">Dividend Yield: —</div>
+        </form>
+        <div class="calc-example">
+          <h4>Formula &amp; Example</h4>
+          <div class="formula-box" style="margin:0 0 0.75rem;">
+            <code>Dividend Yield = Annualized Dividend ÷ Share Price</code>
+          </div>
+          <p>McDonald's example: you buy the stock at $100/share. It pays a quarterly dividend of $0.50, so the annualized dividend is $0.50 × 4 = $2.00.</p>
+          <p><strong>$2.00 ÷ $100 = 2.0%</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- P/E Ratio -->
+    <section class="calc-card" aria-labelledby="pe-heading">
+      <h2 id="pe-heading">Price Earnings (P/E) Ratio</h2>
+      <div class="calc-grid">
+        <form class="calc-form" id="pe-form">
+          <label for="pe-price">Common Share Price ($)</label>
+          <input type="number" id="pe-price" step="0.01" min="0" value="38">
+          <label for="pe-eps">Earnings Per Share (EPS) ($)</label>
+          <input type="number" id="pe-eps" step="0.01" min="0.01" value="2">
+          <button type="button" class="btn" data-example="pe">Load S&amp;P 500 Average Example</button>
+          <div class="calc-result" id="pe-result">P/E Ratio: —</div>
+        </form>
+        <div class="calc-example">
+          <h4>Formula &amp; Example</h4>
+          <div class="formula-box" style="margin:0 0 0.75rem;">
+            <code>P/E Ratio = Share Price ÷ EPS</code>
+          </div>
+          <p>The historical average P/E for S&amp;P 500 companies is roughly 19 (since 1971) — meaning investors pay about $19 for every $1 of earnings.</p>
+          <p><strong>$38 ÷ $2 = 19x</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EPS -->
+    <section class="calc-card" aria-labelledby="eps-heading">
+      <h2 id="eps-heading">Earnings Per Share (EPS)</h2>
+      <div class="calc-grid">
+        <form class="calc-form" id="eps-form">
+          <label for="eps-earnings">Annualized Net Earnings ($)</label>
+          <input type="number" id="eps-earnings" step="1" min="0" value="10000000">
+          <label for="eps-shares">Common Shares Outstanding</label>
+          <input type="number" id="eps-shares" step="1" min="1" value="5000000">
+          <button type="button" class="btn" data-example="eps">Load Example</button>
+          <div class="calc-result" id="eps-result">EPS: —</div>
+        </form>
+        <div class="calc-example">
+          <h4>Formula &amp; Example</h4>
+          <div class="formula-box" style="margin:0 0 0.75rem;">
+            <code>EPS = Net Earnings ÷ Shares Outstanding</code>
+          </div>
+          <p>A company earns $10,000,000 for the year and has 5,000,000 shares outstanding.</p>
+          <p><strong>$10,000,000 ÷ 5,000,000 = $2.00 per share</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market Cap -->
+    <section class="calc-card" aria-labelledby="mc-heading">
+      <h2 id="mc-heading">Market Capitalization</h2>
+      <div class="calc-grid">
+        <form class="calc-form" id="mc-form">
+          <label for="mc-price">Common Share Price ($)</label>
+          <input type="number" id="mc-price" step="0.01" min="0" value="100">
+          <label for="mc-shares">Common Shares Outstanding</label>
+          <input type="number" id="mc-shares" step="1" min="1" value="5000000">
+          <button type="button" class="btn" data-example="mc">Load Example</button>
+          <div class="calc-result" id="mc-result">Market Cap: —</div>
+        </form>
+        <div class="calc-example">
+          <h4>Formula &amp; Example</h4>
+          <div class="formula-box" style="margin:0 0 0.75rem;">
+            <code>Market Cap = Share Price × Shares Outstanding</code>
+          </div>
+          <p>A company trades at $100/share and has 5,000,000 shares outstanding.</p>
+          <p><strong>$100 × 5,000,000 = $500,000,000</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interest Coverage -->
+    <section class="calc-card" aria-labelledby="ic-heading">
+      <h2 id="ic-heading">Interest Coverage Ratio</h2>
+      <div class="calc-grid">
+        <form class="calc-form" id="ic-form">
+          <label for="ic-ebitda">EBITDA / Cash Flow ($)</label>
+          <input type="number" id="ic-ebitda" step="1" min="0" value="40000000">
+          <label for="ic-interest">Interest Expense ($)</label>
+          <input type="number" id="ic-interest" step="1" min="0.01" value="5000000">
+          <button type="button" class="btn" data-example="ic">Load Example</button>
+          <div class="calc-result" id="ic-result">Interest Coverage: —</div>
+        </form>
+        <div class="calc-example">
+          <h4>Formula &amp; Example</h4>
+          <div class="formula-box" style="margin:0 0 0.75rem;">
+            <code>Interest Coverage = EBITDA ÷ Interest Expense</code>
+          </div>
+          <p>A ratio of 4x or higher is good to very good; above 8–10x is considered spectacular.</p>
+          <p><strong>$40,000,000 ÷ $5,000,000 = 8.0x (spectacular)</strong></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 [Club Name] · Financial &amp; Economic Literacy Club</p>
+</footer>
+
+<script src="js/concepts-index.js"></script>
+<script src="js/common.js"></script>
+<script src="js/calculators.js"></script>
+</body>
+</html>

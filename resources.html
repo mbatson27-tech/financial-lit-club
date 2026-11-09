@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — [Club Name]</title>
+<meta name="description" content="Trusted finance and economics websites, plus our club's reading list.">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("flec-theme");
+      var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav-bar" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="brand-icon" aria-hidden="true">💰</span>
+      [Club Name]
+    </a>
+    <button id="nav-toggle" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">☰</button>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="key-concepts.html">Key Concepts</a></li>
+      <li><a href="videos.html">Video Library</a></li>
+      <li><a href="resources.html" aria-current="page">Resources</a></li>
+      <li><a href="calculators.html">Calculators</a></li>
+    </ul>
+    <div class="nav-spacer"></div>
+    <div class="nav-tools">
+      <div class="site-search">
+        <label for="site-search-input" style="position:absolute;left:-9999px;">Search the site</label>
+        <input type="search" id="site-search-input" placeholder="Search videos, resources, concepts…" autocomplete="off">
+        <div id="site-search-results" class="search-results" role="listbox" aria-label="Search results"></div>
+      </div>
+      <button id="theme-toggle" class="icon-btn" aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+    <div class="page-hero">
+      <div class="eyebrow">Resources</div>
+      <h1>Websites &amp; Reading List</h1>
+      <p class="lead">Trusted places to check market data, read financial news, and go deeper with a good book.</p>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-box">
+        <label for="resource-search" style="position:absolute;left:-9999px;">Search resources</label>
+        <input type="search" id="resource-search" placeholder="Search websites and books…" autocomplete="off">
+      </div>
+    </div>
+
+    <h2 id="websites-heading">Websites</h2>
+    <div class="resource-grid" id="website-grid"></div>
+
+    <h2 id="books-heading">Reading List</h2>
+    <ul class="book-list" id="book-list"></ul>
+
+    <p id="resource-empty" class="empty-state" hidden>No resources match your search.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 [Club Name] · Financial &amp; Economic Literacy Club</p>
+</footer>
+
+<script src="js/concepts-index.js"></script>
+<script src="js/common.js"></script>
+<script src="js/resources.js"></script>
+</body>
+</html>

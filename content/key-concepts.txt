@@ -1,0 +1,203 @@
+Key Concepts: Macroeconomics, Investing & Accounting
+
+I. Key Economic Concepts:
+
+Economics: How a society allocates scarce resources amidst unlimited human wants.
+
+Opportunity Cost: The second best alternative when you are confronted with two good choices.
+
+Law of Supply: All other things being equal, producers tend to produce more of a good or service if prices are rising and less if prices are falling. This law is tied to the profit motive.
+
+Law of Demand: All other things being equal, consumers tend to buy more of a good or service if prices are falling and less if prices are rising. This law is tied to common sense.
+
+Gross Domestic Product (GDP) = C + I + G + Xn = Consumer Spending + Business Investment + Government Spending + Exports - Imports = the total dollar value of all final goods and services produced within a country's border within a given time period (quarter or year). Note: This number excludes Intermediate Goods to prevent the double counting.
+
+Wealth Effect: According to the economist Pigou, when people feel wealthier, they tend to spend more money. This may lead to high growth or a boom (GDP growth > than 4%; Unemployment < 5% and Inflation > 2%). Conversely, when people feel less wealthy, they tend to spend less money, and, if enough people begin to feel too fearful, then a recession or a bust may occur.
+
+Interest Rates: When interest rates go up, asset prices (stocks, bonds, real estate, etc.) tend to fall over time. When interest rates fall, asset prices tend to go up over time.
+
+1. What happens during a recession? GDP goes down and becomes negative for at least two consecutive quarters => unemployment goes up => incomes go down and so does inflation (unless stagflation occurs) =>
+a) The federal government may choose to lower taxes and / or increase gov't spending (But this almost always causes the national debt to rise!)
+b) the Federal Reserve Bank often lowers interest rates and/or raises the money supply => these factors => over time, this typically an increase asset prices (real estate, stocks, bonds, etc.) => wealth increases for people who own such assets => when people feel wealthier, they tend to spend more money and, eventually, a contraction / recession turns into a period of economic expansion. BUT if interest rates stay too low for too long, this will likely => a boom, which may lead to some type of bust, but not always.
+
+2. What happens during an economic boom? => GDP goes up over 4% for too long => unemployment falls below the natural rate or unemployment (NRU) of 4-5% for too long => inflation rises above 2% for too long. If this scenario takes place and persists for too long, it will likely lead to:
+a) The federal government may choose to raise taxes and / or decrease gov't spending - but it rarely does either, because politicians who do raise taxes tend not to get reelected (ex. George H.W. Bush in the 1992 presidential election).
+b) When Congress becomes largely inactive in economic matters, it places more pressure on the Federal Reserve to be more active than it probably should be at times.
+c) During a boom period, the Federal Reserve Bank often raises interest rates and lowers the money supply. This scenario => a decrease in asset prices (real estate, stocks, bonds, etc.) => when wealth decreases, people tend to spend less money, and, if this trend continues for too long, an economic expansion may turn into a recession. BUT, if interest rates are raised too high too fast, this may lead to an overcorrection and result in a recession.
+
+Productivity and the Production Possibilities Frontier (PPF):
+- Productivity is often measured by how productive a worker is in terms of the rate of output he or she produces in a given hour or day. For example, if you owned a beanbag company, you'd want to measure how many beanbags a worker could produce during a given period of time. Economists refer to this as the rate of output per unit of input.
+- The Production Possibilities Frontier applies to countries / companies / individuals.
+- The goal for a country/company is to be on the frontier and then extend it outward via: (1) better education / job training => improved "human" capital; and (2) technological innovation => improved "physical" capital.
+- If a country/company is inside the curve, it is being inefficient with one or more of the Four factors of Production (land + labor + capital + entrepreneurial ability).
+- Key factors for an individual's productivity include: (1) your mental and physical health; (2) your critical thinking skills (reading, writing, logical-reasoning); (3) your ability to learn, retain, integrate, and apply knowledge; (4) your work ethic and level of grit; and (5) your ability to get along with and motivate others.
+
+Fiscal and Monetary Policy:
+The main goals of Fiscal Policy & Monetary Policy are to keep the three main macroeconomic variables within their target ranges (see below). When this occurs, it is generally represented by an upward sloping straight line, which approximates equilibrium.
+Note: The straight line is part of a graph representing the business cycle. The economy is considered to be in a state of general equilibrium when GDP Growth = 3-4% / Inflation = 1-2% / Unemployment = 4-5%.
+
+Key Macroeconomic Variables
+Target Range % | Range (June 30, 2026)
+GDP Growth 3-4% | 1.5% (Low)
+Low Unemployment 4-5% | 4.3% (Good)
+Low Inflation 1-2% | 3.5% (High)
+
+Fiscal Policy - Key Tools (of the Federal Government):
+- Raise & Lower TAXES
+- Raise & Lower GOVERNMENT SPENDING
+
+Monetary Policy - Key Tools (of the Federal Reserve Bank):
+- Raise & Lower INTEREST RATES (via raising and lowering the Discount Rate)
+- Raise & Lower the MONEY SUPPLY (via buying and selling bonds)
+
+Inflation: A period of rising prices.
+Deflation: A period of falling prices.
+Stagflation: A period of negative (or sluggish) GDP growth accompanied by both rising inflation and rising unemployment. This often happens when there is a "supply shock," which moves the supply curve to the left. Examples: OPEC Oil Shock (1970s); Covid (2020-22)
+
+Note: Normally, during an economic boom, an economy will experience GDP growth above 4.0%, unemployment falling below 4.0%, and inflation rising much higher than 2.0%.
+During an economic bust, an economy will typically experience: negative GDP growth; and rising unemployment, and falling inflation.
+
+Business Cycle:
+Expansion: GDP (Gross Domestic Product = National Income) is growing.
+Peak: GDP reaches a high point and then falls. Note: This can only be identified in hindsight.
+Contraction/Recession: A contraction occurs when GDP growth turns negative. A recession is typically defined by two consecutive quarters of GDP decline.
+Trough (low point): This occurs when GDP decline reaches a low point. This can only be identified in hindsight.
+
+Booms and Busts: Booms are often driven by excessive greed, while busts are often driven by excessive fear. Keynes's definition of "animal spirits" - "the spontaneous urge to action rather than inaction" - helps explain the boom and bust cycle because it focuses on irrational patterns of human behavior.
+It is irrational to believe that good (or bad) times will last forever, and yet many people fall into these traps because they allow their "animal spirits" guide their decision making.
+
+Equilibrium: The concept of equilibrium is rarely achieved in any market, but it is still useful to know that there is a theoretical roadmap of how to get to a stable point in an economy via the four main factors of production (land, labor, capital, and entrepreneurial ability).
+
+Students Need to be able to graph and label the following:
+- The Business Cycle
+- The Production Possibilities Frontier
+- A Supply and Demand Curve
+
+Graph Supply and Demand Curve Shifts Under the Following Scenarios:
+- An Economic Expansion
+- An Economic Contraction (=> Stagflation)
+- A Supply Shock (=> Stagflation)
+- A Supply Surplus (This is very rare!)
+
+For each scenario, you need to know what happens to: (1) GDP Growth; (2) Unemployment; and (3) Inflation
+
+The terms below are vitally important to understanding modern American capitalism:
+
+"Creative Destruction": The process where a government allows old, inefficient businesses and industries to die off (by no longer protecting them with tariffs) so that the four factors of production can be reallocated to more efficient uses. Clever entrepreneurs are the ones to force creative destruction to occur. They do so by recognizing inefficiencies and exploiting them by using the four factors of production in a more efficient manner (such as using AI).
+Example: The U.S. government allowed old large steel mills to go bankrupt in the 1970s/1980s, which led entrepreneurs to invest in newer, smaller mills (so-called MiniMills) that used the latest technology to compete with Japan, Korea, etc.
+
+Globalization: The process through which virtually all countries around the world have the ability to be part of an integrated worldwide economic system, where countries/companies can produce and sell goods and services based on their comparative advantages.
+Example: a country with low labor costs would likely produce lower value goods such as clothes, shoes, or fruits and vegetables while a richer country will likely produce higher value goods such as cars, planes, and advanced forms of technology (ex. Pixar movies).
+
+Technological Innovation: The process through which a new or improved product is developed based on cutting edge technology, including robots that have been and will continue to replace low-skilled factory workers. Improvements in Artificial Intelligence have recently added to this trend line.
+Example: By the late 1970s, large U.S. manufacturers were spending billions of dollars each year to automate production. Factory workers (and labor unions) were hit hard by two different sources - globalization and technological innovation - at the same time.
+
+II. General Terms Related to Investing and Accounting:
+
+INVESTING:
+
+Investment Capital: Money that individuals (and companies) earn and save for investments, which may include real estate, stocks, bonds, certificates of deposits, businesses, etc.
+
+Equity Investment: This occurs when you buy shares (or stock) in a company. Note: The terms shares and stocks are often used interchangeably.
+
+Primary Markets: (ex. Initial Public Offerings (IPO), Secondary Offering, etc.) Primary markets are where companies raise money through selling shares or issuing bonds.
+Note: Owning shares is considered an equity investment, whereas buying a bond makes you a creditor to the company. If you own a bond, the company (or government) issuing the bond must repay your loan on the maturity date of the bond. To retrieve your money from the purchase of stock, you must sell it (ideally for a profit!). This leads to a capital gain or loss (see below).
+
+Secondary Markets: This is where shares and bonds are traded between individuals (or companies). The proceeds of the sale go to the seller, not the company (or government).
+
+Stocks = Shares: As noted, owning shares in a company is considered an equity investment. Publicly-traded companies have their shares traded in the stock market. Two examples are the NYSE (New York Stock Exchange) and NASDAQ. A stock market is where shares are issued and then bought and sold in the secondary market.
+
+Limited Liability: When you invest in a company, you can only lose the full amount of your investment. That is, you cannot be sued for additional funds if the company (or its executives) breaks the law.
+
+Bonds: Bonds are a debt instrument issued by a company (or government), and, similar to a bank loan, the money must be paid back by a certain date in the future. A bond market is where bonds are issued and then bought and sold.
+
+Growth Stocks: These companies rarely pay a dividend because they typically reinvest their profits (and cash flow) back into the business via some type of technological or other innovation that will continue to provide them with some type of ongoing comparative advantage.
+
+Value Stocks: These companies typically have steady profits and cash flows. They also typically pay a dividend because their period of high growth is over and, to keep investors interested in buying their shares, they have to provide some type of incentive such as a dividend, which may come in the form of a quarterly cash dividend or in the form of additional shares in the company.
+
+STOCKS:
+
+Common Stock: Common stock is what most people buy (vs. preferred stock - see below). Common stock is riskier and more volatile than preferred stock, in large part because the price of a company's common stock moves up and down more frequently. Common stock may or may not pay a dividend, but preferred stock almost always does. Over a long period of time, common stock has provided a much higher return on investment than preferred stock or the interest earned from bonds or cash.
+
+Preferred Stock: Preferred stock is less risky than common stock for several reasons: it almost always pays a dividend, and those dividends are almost always paid before dividends on common stock are paid. Also, in a bankruptcy, preferred shareholders are paid before common shareholders.
+
+Dividends: A dividend is a payment, usually in cash (but sometimes in additional stock) that attracts people looking for a higher return on investment. The dividend yield (percentage) is calculated by dividing the annual dividend by the stock price at the time of purchase. For example, if you purchased McDonald's stock at $100 per share and it paid a quarterly dividend of $0.50, your dividend yield = 2.0% = ($0.50 x 4) / $100.
+
+"Blue Chip" Stocks: These are generally considered to be the largest, most profitable companies that are often considered "household" names. There is no official list of these companies, but today Apple, Microsoft, Google, Amazon, Nvidia would certainly be on the list.
+
+A Public Company is simply a company whose shares are publicly traded on a stock exchange.
+
+An Initial Public Offering occurs when a company goes public for the first time. A Secondary Offering occurs when a company goes public for a second time and every time after that.
+
+New York Stock Exchange (NYSE): The most prestigious stock exchange in the United States (and many would say in the world). Its roots date back to 1792.
+
+Dow Jones Industrial Average: A weighted index of thirty high-profile, "Blue Chip" companies.
+
+NASDAQ: The world's first electronic trading market was founded in 1971, or about 200 years after the NYSE. Most high-tech companies that have gone public list their companies to trade on NASDAQ.
+
+S & P 500 Index: An index of 500 high-profile companies. The S & P 500 Index is a better barometer for the overall health of the U.S. economy than the Dow Jones because it has such a wide variety of companies.
+
+Return on Equity (ROE or ROI): The profit or loss made on an investment over a given time period - usually one year. It is expressed as a percentage. Over time - between 1926 and 2025 - the average ROE for a basket of stocks has generally averaged around 10%, a basket of bonds around 4-5%, short-term U.S. Treasury Bills around 3%.
+
+Paper Gain: When you buy a stock that rises in value, but you have not yet sold it.
+Paper Loss: When you buy a stock that declines in value, but you have not yet sold it.
+Capital Gain: This occurs after you have sold a stock at a profit. You must then pay a capital gains tax.
+Capital Loss: This occurs after you have sold a stock at a loss, which provides you with a tax credit.
+
+BONDS:
+- Unlike purchasing stock, which is an equity investment, when you purchase a bond - from a company or government body - you are purchasing a piece of debt that a company or a government must pay back on a certain date.
+- When you hold a bond, you receive interest payments (often paid every six months).
+- A bond has three distinct features: (1) An amount to be repaid / (2) A maturity date = when the bond must be repaid / (3) An interest rate.
+- When you buy a bond, you are taking two main risks: (1) That the company or government issuing a bond will pay you back. This is called credit risk; and (2) interest rate risk refers to the possibility that interest rates will rise while you hold a bond; if this happens, your bond will theoretically fall in value because when interest rates rise, asset prices (stocks, bonds, real estate, etc.) tend to fall.
+
+BASIC ACCOUNTING TERMS and CONCEPTS:
+
+BALANCE SHEET - The Basic Accounting Equation: Assets = Liabilities + Equity
+
+ASSETS (= Something You Own):
+Current Assets:
+- Cash
+- Accounts Receivable
+- Inventory
+Fixed Assets:
+- Plant, Property & Equipment (PP&E)
+Intangible (Non-physical) Assets:
+- Goodwill / Patents
+
+LIABILITIES (= Something you Owe):
+Current Liabilities:
+- Accounts Payable (Employees / Suppliers, etc.)
+- Short-term bank loans (or loans that must be paid within one year)
+- That portion of a bank loan or bond that must be paid within one year
+Long-Term Liabilities:
+- Long-term bank loans / That portion of a bond that does not have to be paid within one year
+
+EQUITY (= NET WORTH = The Difference between Assets and Liabilities):
+- Preferred Stock (This is less risky than common stock.)
+- Common Stock (This is the type of stock that most people buy.)
+- Retained Earnings (This is the cumulative total of all the profits and losses.)
+
+INCOME STATEMENT:
+Revenue ( = Sales)
+Less: Cost of Goods Sold (COGS)
+Gross Profit
+Less: Selling, General & Administrative Expenses (SG&A)
+Operating Profit
+Less: Interest Expense
+Pre-Tax Profit
+Less: Taxes
+Net Profit (= Net Earnings or Net Income)
+
+NOTE: There are four (4) expense categories: Cost of Goods Sold / SG&A / Interest Expense / Tax Expense
+AND four (4) profit categories: Gross Profit / Operating Profit / Pre-Tax Profit / Net Profit
+
+CASH FLOW STATEMENT:
+This statement shows how much cash a company takes in and from what sources and how it uses that cash. Uses of cash might include the following: (1) to invest in PP&E (plant, property and equipment) / (2) to pay dividends or interest or principal on a loan (or bond) / (3) to purchase other companies / (4) to make investments in stocks or bonds until the company needs the cash for a large project, such as building a factory.
+
+SIX KEY FINANCIAL TERMS/RATIOS:
+1. Market Capitalization = Market Value: Common Share Price x Common Shares Outstanding (The Common Shares Outstanding is typically found on the Balance Sheet.)
+2. Earnings Per Share (EPS): Annualized Net Earnings / Common Shares Outstanding (The term "earnings" means the same as "income" and "profits.")
+3. Price Earnings Ratio: Common Share Price / EPS (The historical average for the S & P 500 companies = roughly 19 since 1971, which means that for every dollar of earnings, you are paying $19.)
+4. Dividend Yield: Annualized Dividend / Common Share Price. Note: You should compare this yield to the dividend yield of a comparable company or what interest rate you could earn from a savings account or a U.S. Treasury Bill, Note, or Bond.
+5. Total Debt/Market Capitalization = "Financial Leverage:" This number is stated as a percentage. Typically, the lower the number the better.
+6. Interest Coverage Ratio = EBITDA / Interest Expense. EBITDA = CASH FLOW = Net Earnings before Interest Taxes Depreciation & Amortization. Note: When I was an international banker, if this ratio was 4x or higher that was considered somewhere between good and very good. A ratio above 8-10x would be considered spectacular.

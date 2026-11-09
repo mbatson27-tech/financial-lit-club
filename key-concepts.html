@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Key Concepts — [Club Name]</title>
+<meta name="description" content="Economics, fiscal & monetary policy, investing, and accounting concepts for [Club Name] members.">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("flec-theme");
+      var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav-bar" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="brand-icon" aria-hidden="true">💰</span>
+      [Club Name]
+    </a>
+    <button id="nav-toggle" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">☰</button>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="key-concepts.html" aria-current="page">Key Concepts</a></li>
+      <li><a href="videos.html">Video Library</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="calculators.html">Calculators</a></li>
+    </ul>
+    <div class="nav-spacer"></div>
+    <div class="nav-tools">
+      <div class="site-search">
+        <label for="site-search-input" style="position:absolute;left:-9999px;">Search the site</label>
+        <input type="search" id="site-search-input" placeholder="Search videos, resources, concepts…" autocomplete="off">
+        <div id="site-search-results" class="search-results" role="listbox" aria-label="Search results"></div>
+      </div>
+      <button id="theme-toggle" class="icon-btn" aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+    <div class="page-hero">
+      <div class="eyebrow">Key Concepts</div>
+      <h1>Macroeconomics, Investing &amp; Accounting</h1>
+      <p class="lead">Everything from this year's notes, organized into ten sections. Use the table of contents to jump anywhere, or search the site for a specific term.</p>
+    </div>
+
+    <div class="kc-layout">
+      <nav class="kc-toc" aria-label="Key Concepts table of contents">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#economic-concepts">1. Economic Concepts</a></li>
+          <li><a href="#recessions-booms">2. Recessions vs. Booms</a></li>
+          <li><a href="#productivity-ppf">3. Productivity &amp; the PPF</a></li>
+          <li><a href="#fiscal-monetary-policy">4. Fiscal &amp; Monetary Policy</a></li>
+          <li><a href="#business-cycle">5. Business Cycle, Booms &amp; Busts, Equilibrium</a></li>
+          <li><a href="#graphs">6. Graphs Students Must Know</a></li>
+          <li><a href="#modern-capitalism">7. Modern Capitalism</a></li>
+          <li><a href="#investing">8. Investing</a></li>
+          <li><a href="#accounting">9. Accounting</a></li>
+          <li><a href="#six-ratios">10. Six Key Financial Ratios</a></li>
+        </ol>
+      </nav>
+
+      <div class="kc-content">
+
+        <!-- 1. ECONOMIC CONCEPTS -->
+        <section id="economic-concepts" aria-labelledby="economic-concepts-h">
+          <h2 id="economic-concepts-h">1. Economic Concepts</h2>
+          <dl class="glossary">
+            <dt id="economics">Economics</dt>
+            <dd>How a society allocates scarce resources amidst unlimited human wants.</dd>
+
+            <dt id="opportunity-cost">Opportunity Cost</dt>
+            <dd>The second best alternative when you are confronted with two good choices.</dd>
+
+            <dt id="law-of-supply">Law of Supply</dt>
+            <dd>All other things being equal, producers tend to produce more of a good or service if prices are rising and less if prices are falling. This law is tied to the profit motive.</dd>
+
+            <dt id="law-of-demand">Law of Demand</dt>
+            <dd>All other things being equal, consumers tend to buy more of a good or service if prices are falling and less if prices are rising. This law is tied to common sense.</dd>
+
+            <dt id="gdp">Gross Domestic Product (GDP)</dt>
+            <dd>
+              The total dollar value of all final goods and services produced within a country's border within a given time period (quarter or year).
+              <div class="formula-box">
+                <div class="formula-name">GDP Formula</div>
+                <code>GDP = C + I + G + Xn</code>
+                <p class="formula-note">Consumer Spending (C) + Business Investment (I) + Government Spending (G) + Net Exports (Xn = Exports − Imports). Note: this excludes intermediate goods to prevent double counting.</p>
+              </div>
+            </dd>
+
+            <dt id="wealth-effect">Wealth Effect</dt>
+            <dd>According to the economist Pigou, when people feel wealthier, they tend to spend more money. This may lead to high growth or a boom (GDP growth &gt; 4%; unemployment &lt; 5% and inflation &gt; 2%). Conversely, when people feel less wealthy, they tend to spend less money, and, if enough people begin to feel too fearful, then a recession or a bust may occur.</dd>
+
+            <dt id="interest-rates">Interest Rates</dt>
+            <dd>When interest rates go up, asset prices (stocks, bonds, real estate, etc.) tend to fall over time. When interest rates fall, asset prices tend to go up over time.</dd>
+          </dl>
+        </section>
+
+        <!-- 2. RECESSIONS VS BOOMS -->
+        <section id="recessions-booms" aria-labelledby="recessions-booms-h">
+          <h2 id="recessions-booms-h">2. Recessions vs. Booms</h2>
+
+          <div class="note-box" id="recession-qa">
+            <strong>What happens during a recession?</strong>
+            <p style="margin-top:0.5rem;">GDP goes down and becomes negative for at least two consecutive quarters → unemployment goes up → incomes go down and so does inflation (unless stagflation occurs) →</p>
+            <ol>
+              <li>The federal government may choose to lower taxes and/or increase government spending. (But this almost always causes the national debt to rise!)</li>
+              <li>The Federal Reserve Bank often lowers interest rates and/or raises the money supply → over time, this typically increases asset prices (real estate, stocks, bonds, etc.) → wealth increases for people who own such assets → when people feel wealthier, they tend to spend more money and, eventually, a contraction/recession turns into a period of economic expansion. <strong>But</strong> if interest rates stay too low for too long, this will likely lead to a boom, which may lead to some type of bust — but not always.</li>
+            </ol>
+          </div>
+
+          <div class="note-box" id="boom-qa">
+            <strong>What happens during an economic boom?</strong>
+            <p style="margin-top:0.5rem;">GDP goes up over 4% for too long → unemployment falls below the natural rate of unemployment (NRU) of 4–5% for too long → inflation rises above 2% for too long. If this persists for too long, it will likely lead to:</p>
+            <ol>
+              <li>The federal government may choose to raise taxes and/or decrease government spending — but it rarely does either, because politicians who raise taxes tend not to get reelected (ex. George H.W. Bush in the 1992 presidential election).</li>
+              <li>When Congress becomes largely inactive in economic matters, it places more pressure on the Federal Reserve to be more active than it probably should be at times.</li>
+              <li>During a boom, the Federal Reserve Bank often raises interest rates and lowers the money supply → a decrease in asset prices (real estate, stocks, bonds, etc.) → when wealth decreases, people tend to spend less money, and, if this continues for too long, an economic expansion may turn into a recession. <strong>But</strong> if interest rates are raised too high too fast, this may lead to an overcorrection and result in a recession.</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- 3. PRODUCTIVITY & PPF -->
+        <section id="productivity-ppf" aria-labelledby="productivity-ppf-h">
+          <h2 id="productivity-ppf-h">3. Productivity &amp; the Production Possibilities Frontier (PPF)</h2>
+          <dl class="glossary">
+            <dt id="productivity">Productivity</dt>
+            <dd>Often measured by how productive a worker is in terms of the rate of output he or she produces in a given hour or day. For example, if you owned a beanbag company, you'd want to measure how many beanbags a worker could produce during a given period of time. Economists refer to this as the rate of output per unit of input.</dd>
+
+            <dt id="ppf">Production Possibilities Frontier (PPF)</dt>
+            <dd>Applies to countries, companies, and individuals. The goal is to be on the frontier and then extend it outward via (1) better education/job training → improved "human" capital, and (2) technological innovation → improved "physical" capital. If a country or company is inside the curve, it is being inefficient with one or more of the four factors of production.</dd>
+
+            <dt id="factors-of-production">Four Factors of Production</dt>
+            <dd>Land + Labor + Capital + Entrepreneurial Ability.</dd>
+          </dl>
+          <div class="example-box">
+            <strong>Key factors for an individual's productivity:</strong> (1) mental and physical health; (2) critical thinking skills (reading, writing, logical reasoning); (3) the ability to learn, retain, integrate, and apply knowledge; (4) work ethic and level of grit; and (5) the ability to get along with and motivate others.
+          </div>
+        </section>
+
+        <!-- 4. FISCAL & MONETARY POLICY -->
+        <section id="fiscal-monetary-policy" aria-labelledby="fiscal-monetary-policy-h">
+          <h2 id="fiscal-monetary-policy-h">4. Fiscal &amp; Monetary Policy</h2>
+          <p>The main goals of fiscal policy and monetary policy are to keep the three main macroeconomic variables within their target ranges (see table below). When this occurs, it is generally represented by an upward-sloping straight line, which approximates equilibrium — part of the business cycle graph. The economy is considered to be in a state of general equilibrium when GDP Growth = 3–4% / Inflation = 1–2% / Unemployment = 4–5%.</p>
+
+          <div class="table-wrap">
+            <table class="data-table" id="key-macro-variables">
+              <caption>Key Macroeconomic Variables</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Variable</th>
+                  <th scope="col">Target Range</th>
+                  <th scope="col">Current Reading (June 30, 2026)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">GDP Growth</th>
+                  <td>3–4%</td>
+                  <td><span class="status-low">1.5% (Low)</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Unemployment</th>
+                  <td>4–5%</td>
+                  <td><span class="status-good">4.3% (Good)</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Inflation</th>
+                  <td>1–2%</td>
+                  <td><span class="status-high">3.5% (High)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Fiscal Policy — Key Tools (of the Federal Government)</h3>
+          <dl class="glossary">
+            <dt id="fiscal-policy">Fiscal Policy Tools</dt>
+            <dd>Raise &amp; lower TAXES. Raise &amp; lower GOVERNMENT SPENDING.</dd>
+          </dl>
+
+          <h3>Monetary Policy — Key Tools (of the Federal Reserve Bank)</h3>
+          <dl class="glossary">
+            <dt id="monetary-policy">Monetary Policy Tools</dt>
+            <dd>Raise &amp; lower INTEREST RATES (via the Discount Rate). Raise &amp; lower the MONEY SUPPLY (via buying and selling bonds).</dd>
+
+            <dt id="inflation">Inflation</dt>
+            <dd>A period of rising prices.</dd>
+
+            <dt id="deflation">Deflation</dt>
+            <dd>A period of falling prices.</dd>
+
+            <dt id="stagflation">Stagflation</dt>
+            <dd>A period of negative (or sluggish) GDP growth accompanied by both rising inflation and rising unemployment. This often happens when there is a "supply shock," which moves the supply curve to the left. Examples: the OPEC Oil Shock (1970s) and Covid (2020–22).</dd>
+          </dl>
+
+          <div class="note-box">
+            Normally, during an economic boom, an economy will experience GDP growth above 4.0%, unemployment falling below 4.0%, and inflation rising much higher than 2.0%. During an economic bust, an economy will typically experience negative GDP growth, rising unemployment, and falling inflation.
+          </div>
+        </section>
+
+        <!-- 5. BUSINESS CYCLE -->
+        <section id="business-cycle" aria-labelledby="business-cycle-h">
+          <h2 id="business-cycle-h">5. Business Cycle, Booms &amp; Busts, Equilibrium</h2>
+          <dl class="glossary">
+            <dt id="expansion">Expansion</dt>
+            <dd>GDP (Gross Domestic Product = National Income) is growing.</dd>
+
+            <dt id="peak">Peak</dt>
+            <dd>GDP reaches a high point and then falls. Note: this can only be identified in hindsight.</dd>
+
+            <dt id="bc-contraction">Contraction / Recession</dt>
+            <dd>A contraction occurs when GDP growth turns negative. A recession is typically defined by two consecutive quarters of GDP decline.</dd>
+
+            <dt id="trough">Trough (Low Point)</dt>
+            <dd>This occurs when GDP decline reaches a low point. This can only be identified in hindsight.</dd>
+
+            <dt id="booms-busts">Booms and Busts</dt>
+            <dd>Booms are often driven by excessive greed, while busts are often driven by excessive fear. Keynes's "animal spirits" — "the spontaneous urge to action rather than inaction" — helps explain the boom and bust cycle because it focuses on irrational patterns of human behavior. It is irrational to believe that good (or bad) times will last forever, and yet many people fall into these traps because they let their "animal spirits" guide their decision making.</dd>
+
+            <dt id="equilibrium">Equilibrium</dt>
+            <dd>Rarely achieved in any market, but still useful as a theoretical roadmap for how to get to a stable point in an economy via the four main factors of production (land, labor, capital, and entrepreneurial ability).</dd>
+          </dl>
+        </section>
+
+        <!-- 6. GRAPHS -->
+        <section id="graphs" aria-labelledby="graphs-h">
+          <h2 id="graphs-h">6. Graphs Students Must Know</h2>
+          <p>Students need to be able to graph and label each of the following. Images will be added here soon — ask an officer if you'd like to help draw or digitize them.</p>
+          <ul class="graph-list">
+            <li class="graph-placeholder">
+              <div class="gp-title">The Business Cycle</div>
+              📈 Image coming soon
+            </li>
+            <li class="graph-placeholder">
+              <div class="gp-title">The Production Possibilities Frontier</div>
+              📈 Image coming soon
+            </li>
+            <li class="graph-placeholder">
+              <div class="gp-title">A Supply and Demand Curve</div>
+              📈 Image coming soon
+            </li>
+            <li class="graph-placeholder">
+              <div class="gp-title">Shift: An Economic Expansion</div>
+              📈 Image coming soon
+            </li>
+            <li class="graph-placeholder">
+              <div class="gp-title">Shift: An Economic Contraction (→ Stagflation)</div>
+              📈 Image coming soon
+            </li>
+            <li class="graph-placeholder">
+              <div class="gp-title">Shift: A Supply Shock (→ Stagflation)</div>
+              📈 Image coming soon
+            </li>
+            <li class="graph-placeholder">
+              <div class="gp-title">Shift: A Supply Surplus (very rare!)</div>
+              📈 Image coming soon
+            </li>
+          </ul>
+          <div class="note-box">For each scenario above, you need to know what happens to: (1) GDP Growth; (2) Unemployment; and (3) Inflation.</div>
+        </section>
+
+        <!-- 7. MODERN CAPITALISM -->
+        <section id="modern-capitalism" aria-labelledby="modern-capitalism-h">
+          <h2 id="modern-capitalism-h">7. Modern Capitalism</h2>
+          <p>The terms below are vitally important to understanding modern American capitalism.</p>
+          <dl class="glossary">
+            <dt id="creative-destruction">"Creative Destruction"</dt>
+            <dd>
+              The process where a government allows old, inefficient businesses and industries to die off (by no longer protecting them with tariffs) so that the four factors of production can be reallocated to more efficient uses. Clever entrepreneurs force creative destruction to occur by recognizing inefficiencies and exploiting them by using the four factors of production more efficiently (such as using AI).
+              <div class="example-box"><strong>Example:</strong> The U.S. government allowed old large steel mills to go bankrupt in the 1970s/1980s, which led entrepreneurs to invest in newer, smaller mills (so-called "MiniMills") that used the latest technology to compete with Japan, Korea, etc.</div>
+            </dd>
+
+            <dt id="globalization">Globalization</dt>
+            <dd>
+              The process through which virtually all countries around the world can be part of an integrated worldwide economic system, where countries/companies produce and sell goods and services based on their comparative advantages.
+              <div class="example-box"><strong>Example:</strong> a country with low labor costs would likely produce lower-value goods such as clothes, shoes, or fruits and vegetables, while a richer country will likely produce higher-value goods such as cars, planes, and advanced technology (ex. Pixar movies).</div>
+            </dd>
+
+            <dt id="technological-innovation">Technological Innovation</dt>
+            <dd>
+              The process through which a new or improved product is developed based on cutting-edge technology, including robots that have been — and will continue to — replace low-skilled factory workers. Improvements in artificial intelligence have recently added to this trend line.
+              <div class="example-box"><strong>Example:</strong> By the late 1970s, large U.S. manufacturers were spending billions of dollars each year to automate production. Factory workers (and labor unions) were hit hard by two different sources — globalization and technological innovation — at the same time.</div>
+            </dd>
+          </dl>
+        </section>
+
+        <!-- 8. INVESTING -->
+        <section id="investing" aria-labelledby="investing-h">
+          <h2 id="investing-h">8. Investing</h2>
+
+          <h3>General Terms</h3>
+          <dl class="glossary">
+            <dt id="investment-capital">Investment Capital</dt>
+            <dd>Money that individuals (and companies) earn and save for investments, which may include real estate, stocks, bonds, certificates of deposit, businesses, etc.</dd>
+
+            <dt id="equity-investment">Equity Investment</dt>
+            <dd>This occurs when you buy shares (or stock) in a company. Note: the terms "shares" and "stocks" are often used interchangeably.</dd>
+
+            <dt id="primary-markets">Primary Markets</dt>
+            <dd>Where companies raise money through selling shares or issuing bonds (ex. Initial Public Offerings, Secondary Offerings). Owning shares is an equity investment, whereas buying a bond makes you a creditor to the company — the issuer must repay your loan on the bond's maturity date. To retrieve your money from a stock purchase, you must sell it (ideally for a profit), which leads to a capital gain or loss.</dd>
+
+            <dt id="secondary-markets">Secondary Markets</dt>
+            <dd>Where shares and bonds are traded between individuals (or companies). The proceeds of the sale go to the seller, not the company (or government).</dd>
+
+            <dt id="stocks-shares">Stocks = Shares</dt>
+            <dd>Owning shares in a company is an equity investment. Publicly-traded companies have their shares traded in the stock market (ex. NYSE, NASDAQ) — a stock market is where shares are issued and then bought and sold in the secondary market.</dd>
+
+            <dt id="limited-liability">Limited Liability</dt>
+            <dd>When you invest in a company, you can only lose the full amount of your investment — you cannot be sued for additional funds if the company (or its executives) breaks the law.</dd>
+
+            <dt id="bonds">Bonds</dt>
+            <dd>A debt instrument issued by a company (or government) that, similar to a bank loan, must be paid back by a certain date in the future. A bond market is where bonds are issued and then bought and sold.</dd>
+
+            <dt id="growth-stocks">Growth Stocks</dt>
+            <dd>These companies rarely pay a dividend because they typically reinvest their profits (and cash flow) back into the business via technological or other innovation that provides an ongoing comparative advantage.</dd>
+
+            <dt id="value-stocks">Value Stocks</dt>
+            <dd>These companies typically have steady profits and cash flows. They also typically pay a dividend because their period of high growth is over, so, to keep investors interested in buying their shares, they offer an incentive such as a quarterly cash dividend or additional shares.</dd>
+          </dl>
+
+          <h3>Stocks</h3>
+          <dl class="glossary">
+            <dt id="common-stock">Common Stock</dt>
+            <dd>What most people buy (vs. preferred stock). Common stock is riskier and more volatile than preferred stock, in large part because its price moves up and down more frequently. It may or may not pay a dividend. Over a long period of time, common stock has provided a much higher return on investment than preferred stock or the interest earned from bonds or cash.</dd>
+
+            <dt id="preferred-stock">Preferred Stock</dt>
+            <dd>Less risky than common stock: it almost always pays a dividend, and those dividends are almost always paid before dividends on common stock. Also, in a bankruptcy, preferred shareholders are paid before common shareholders.</dd>
+
+            <dt id="dividends">Dividends</dt>
+            <dd>
+              A payment, usually in cash (but sometimes in additional stock), that attracts investors looking for a higher return. The dividend yield is the annual dividend divided by the stock price at purchase.
+              <div class="example-box"><strong>Example:</strong> if you purchased McDonald's stock at $100/share and it paid a quarterly dividend of $0.50, your dividend yield = ($0.50 × 4) / $100 = <strong>2.0%</strong>.</div>
+            </dd>
+
+            <dt id="blue-chip-stocks">"Blue Chip" Stocks</dt>
+            <dd>Generally the largest, most profitable companies, often considered "household" names. There's no official list, but today Apple, Microsoft, Google, Amazon, and Nvidia would certainly be on it.</dd>
+
+            <dt id="ipo">Public Company / IPO</dt>
+            <dd>A public company is one whose shares are publicly traded on a stock exchange. An Initial Public Offering (IPO) occurs when a company goes public for the first time; a Secondary Offering occurs every time after that.</dd>
+
+            <dt id="nyse">New York Stock Exchange (NYSE)</dt>
+            <dd>The most prestigious stock exchange in the United States (and many would say in the world). Its roots date back to 1792.</dd>
+
+            <dt id="dow-jones">Dow Jones Industrial Average</dt>
+            <dd>A weighted index of thirty high-profile, "Blue Chip" companies.</dd>
+
+            <dt id="nasdaq">NASDAQ</dt>
+            <dd>The world's first electronic trading market, founded in 1971 — about 200 years after the NYSE. Most high-tech companies that have gone public list their shares on NASDAQ.</dd>
+
+            <dt id="sp500">S&amp;P 500 Index</dt>
+            <dd>An index of 500 high-profile companies. It's a better barometer for the overall health of the U.S. economy than the Dow Jones because it has such a wide variety of companies.</dd>
+
+            <dt id="roe">Return on Equity (ROE / ROI)</dt>
+            <dd>The profit or loss made on an investment over a given time period — usually one year — expressed as a percentage. Between 1926 and 2025, the average ROE for a basket of stocks has generally averaged around 10%, a basket of bonds around 4–5%, and short-term U.S. Treasury Bills around 3%.</dd>
+
+            <dt id="paper-gain-loss">Paper Gain / Paper Loss</dt>
+            <dd>A paper gain is when a stock you own rises in value but you haven't sold it yet. A paper loss is when it declines in value but you haven't sold it yet.</dd>
+
+            <dt id="capital-gain-loss">Capital Gain / Capital Loss</dt>
+            <dd>A capital gain occurs after you sell a stock at a profit (you then owe capital gains tax). A capital loss occurs after you sell a stock at a loss (which provides you with a tax credit).</dd>
+          </dl>
+
+          <h3>Bonds: Risks &amp; Features</h3>
+          <dl class="glossary">
+            <dt id="bond-features">Bonds: Risks &amp; Features</dt>
+            <dd>
+              Unlike purchasing stock (an equity investment), buying a bond means purchasing a piece of debt that a company or government must pay back on a certain date. Bondholders receive interest payments, often every six months.
+              <ul>
+                <li>A bond has three distinct features: (1) an amount to be repaid; (2) a maturity date; and (3) an interest rate.</li>
+                <li><strong>Credit risk:</strong> the risk that the issuer won't pay you back.</li>
+                <li><strong>Interest rate risk:</strong> the risk that interest rates will rise while you hold the bond — if they do, your bond will theoretically fall in value, since rising interest rates tend to push asset prices (stocks, bonds, real estate, etc.) down.</li>
+              </ul>
+            </dd>
+          </dl>
+        </section>
+
+        <!-- 9. ACCOUNTING -->
+        <section id="accounting" aria-labelledby="accounting-h">
+          <h2 id="accounting-h">9. Accounting</h2>
+
+          <h3 id="balance-sheet">Balance Sheet</h3>
+          <div class="formula-box">
+            <div class="formula-name">The Basic Accounting Equation</div>
+            <code>Assets = Liabilities + Equity</code>
+          </div>
+          <dl class="glossary">
+            <dt id="assets">Assets (Something You Own)</dt>
+            <dd>
+              <strong>Current Assets:</strong> Cash, Accounts Receivable, Inventory.<br>
+              <strong>Fixed Assets:</strong> Plant, Property &amp; Equipment (PP&amp;E).<br>
+              <strong>Intangible (Non-physical) Assets:</strong> Goodwill, Patents.
+            </dd>
+            <dt id="liabilities">Liabilities (Something You Owe)</dt>
+            <dd>
+              <strong>Current Liabilities:</strong> Accounts Payable (employees/suppliers, etc.); short-term bank loans (due within one year); the portion of a bank loan or bond due within one year.<br>
+              <strong>Long-Term Liabilities:</strong> Long-term bank loans; the portion of a bond not due within one year.
+            </dd>
+            <dt id="equity-accounting">Equity (= Net Worth)</dt>
+            <dd>The difference between assets and liabilities: Preferred Stock (less risky than common stock); Common Stock (the type most people buy); Retained Earnings (the cumulative total of all profits and losses).</dd>
+          </dl>
+
+          <h3 id="income-statement">Income Statement</h3>
+          <div class="table-wrap">
+            <table class="data-table step-down">
+              <caption>Income Statement (Step-Down Format)</caption>
+              <tbody>
+                <tr><td class="label">Revenue (= Sales)</td><td></td></tr>
+                <tr><td class="less">Less: Cost of Goods Sold (COGS)</td><td></td></tr>
+                <tr class="subtotal"><td>Gross Profit</td><td></td></tr>
+                <tr><td class="less">Less: Selling, General &amp; Administrative Expenses (SG&amp;A)</td><td></td></tr>
+                <tr class="subtotal"><td>Operating Profit</td><td></td></tr>
+                <tr><td class="less">Less: Interest Expense</td><td></td></tr>
+                <tr class="subtotal"><td>Pre-Tax Profit</td><td></td></tr>
+                <tr><td class="less">Less: Taxes</td><td></td></tr>
+                <tr class="final"><td>Net Profit (= Net Earnings or Net Income)</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="note-box">There are four expense categories — Cost of Goods Sold, SG&amp;A, Interest Expense, and Tax Expense — and four profit categories: Gross Profit, Operating Profit, Pre-Tax Profit, and Net Profit.</div>
+
+          <h3 id="cash-flow-statement">Cash Flow Statement</h3>
+          <p>This statement shows how much cash a company takes in, from what sources, and how it uses that cash. Uses of cash might include: (1) investing in PP&amp;E (plant, property, and equipment); (2) paying dividends or interest or principal on a loan (or bond); (3) purchasing other companies; or (4) investing in stocks or bonds until the cash is needed for a large project, such as building a factory.</p>
+        </section>
+
+        <!-- 10. SIX KEY FINANCIAL RATIOS -->
+        <section id="six-ratios" aria-labelledby="six-ratios-h">
+          <h2 id="six-ratios-h">10. Six Key Financial Ratios</h2>
+          <div class="ratio-grid">
+            <div class="formula-box" id="market-cap">
+              <div class="formula-name">1. Market Capitalization (Market Value)</div>
+              <code>Common Share Price × Common Shares Outstanding</code>
+              <p class="formula-note">Common Shares Outstanding is typically found on the balance sheet.</p>
+            </div>
+            <div class="formula-box" id="eps">
+              <div class="formula-name">2. Earnings Per Share (EPS)</div>
+              <code>Annualized Net Earnings ÷ Common Shares Outstanding</code>
+              <p class="formula-note">"Earnings" means the same as "income" and "profits."</p>
+            </div>
+            <div class="formula-box" id="pe-ratio">
+              <div class="formula-name">3. Price Earnings (P/E) Ratio</div>
+              <code>Common Share Price ÷ EPS</code>
+              <p class="formula-note">The historical average for S&amp;P 500 companies is roughly 19 since 1971 — for every dollar of earnings, you're paying $19.</p>
+            </div>
+            <div class="formula-box" id="dividend-yield">
+              <div class="formula-name">4. Dividend Yield</div>
+              <code>Annualized Dividend ÷ Common Share Price</code>
+              <p class="formula-note">Compare this yield to a comparable company's yield or to what you could earn from a savings account or a U.S. Treasury Bill, Note, or Bond.</p>
+            </div>
+            <div class="formula-box" id="financial-leverage">
+              <div class="formula-name">5. Financial Leverage</div>
+              <code>Total Debt ÷ Market Capitalization</code>
+              <p class="formula-note">Stated as a percentage. Typically, the lower the number, the better.</p>
+            </div>
+            <div class="formula-box" id="interest-coverage">
+              <div class="formula-name">6. Interest Coverage Ratio</div>
+              <code>EBITDA ÷ Interest Expense</code>
+              <p class="formula-note">EBITDA = Cash Flow = Net Earnings before Interest, Taxes, Depreciation &amp; Amortization. A ratio of 4x or higher is good to very good; above 8–10x is spectacular.</p>
+            </div>
+          </div>
+          <p style="margin-top:1.5rem;">Want to try these yourself? Head to the <a href="calculators.html">Calculators</a> page for interactive versions of the Dividend Yield, P/E Ratio, EPS, Market Cap, and Interest Coverage formulas.</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 [Club Name] · Financial &amp; Economic Literacy Club</p>
+</footer>
+
+<script src="js/concepts-index.js"></script>
+<script src="js/common.js"></script>
+<script>
+  // Highlight the active TOC entry as the reader scrolls.
+  (function () {
+    const sections = Array.from(document.querySelectorAll(".kc-content > section[id]"));
+    const links = Array.from(document.querySelectorAll(".kc-toc a"));
+    if (!sections.length || !links.length) return;
+
+    function setActive(id) {
+      links.forEach(function (link) {
+        link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+      });
+    }
+
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-20% 0px -70% 0px" }
+    );
+    sections.forEach(function (s) { observer.observe(s); });
+  })();
+</script>
+</body>
+</html>

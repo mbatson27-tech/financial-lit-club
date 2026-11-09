@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Club Name] — Financial &amp; Economic Literacy Club</title>
+<meta name="description" content="Notes, videos, websites, and book recommendations from [Club Name], our school's Financial & Economic Literacy Club.">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("flec-theme");
+      var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav-bar" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="brand-icon" aria-hidden="true">💰</span>
+      [Club Name]
+    </a>
+    <button id="nav-toggle" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">☰</button>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="key-concepts.html">Key Concepts</a></li>
+      <li><a href="videos.html">Video Library</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="calculators.html">Calculators</a></li>
+    </ul>
+    <div class="nav-spacer"></div>
+    <div class="nav-tools">
+      <div class="site-search">
+        <label for="site-search-input" style="position:absolute;left:-9999px;">Search the site</label>
+        <input type="search" id="site-search-input" placeholder="Search videos, resources, concepts…" autocomplete="off">
+        <div id="site-search-results" class="search-results" role="listbox" aria-label="Search results"></div>
+      </div>
+      <button id="theme-toggle" class="icon-btn" aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+    <section class="home-hero">
+      <h1>[Club Name]</h1>
+      <p class="mission">Teaching students to be financially independent and smart with money.</p>
+    </section>
+
+    <section aria-label="Browse the resource library">
+      <div class="card-grid">
+        <a class="nav-card" href="key-concepts.html">
+          <span class="nc-icon" aria-hidden="true">📘</span>
+          <h3>Key Concepts</h3>
+          <p>Economics, fiscal &amp; monetary policy, investing, and accounting — organized and easy to scan.</p>
+        </a>
+        <a class="nav-card" href="videos.html">
+          <span class="nc-icon" aria-hidden="true">🎬</span>
+          <h3>Video Library</h3>
+          <p>Short videos from Schumpeter, Ray Dalio, Jacob Clifford, and more — searchable by series.</p>
+        </a>
+        <a class="nav-card" href="resources.html">
+          <span class="nc-icon" aria-hidden="true">🔗</span>
+          <h3>Resources</h3>
+          <p>Trusted websites for market data and news, plus our club's reading list.</p>
+        </a>
+        <a class="nav-card" href="calculators.html">
+          <span class="nc-icon" aria-hidden="true">🧮</span>
+          <h3>Calculators</h3>
+          <p>Try the ratio formulas yourself: Dividend Yield, P/E Ratio, EPS, Market Cap, and more.</p>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 [Club Name] · Financial &amp; Economic Literacy Club</p>
+</footer>
+
+<script src="js/concepts-index.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
