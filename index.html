@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Financial and Economic Literacy Club</title>
 <meta name="description" content="Notes, videos, websites, and book recommendations from our school's Financial and Economic Literacy Club.">
+<link rel="canonical" href="https://ssesfinancialandeconomicliteracyclub.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Financial and Economic Literacy Club">
+<meta property="og:title" content="Financial and Economic Literacy Club">
+<meta property="og:description" content="Notes, videos, websites, and book recommendations from our school's Financial and Economic Literacy Club.">
+<meta property="og:url" content="https://ssesfinancialandeconomicliteracyclub.org/">
 <link rel="stylesheet" href="css/styles.css">
 <script>
   (function () {
@@ -46,13 +52,43 @@
 </header>
 
 <main id="main">
-  <div class="container">
-    <section class="home-hero">
-      <h1>Financial and Economic Literacy Club</h1>
-      <p class="mission">Teaching students to be financially independent and smart with money.</p>
-    </section>
+  <section class="hero" aria-label="Welcome">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title">Financial &amp; Economic Literacy Club</h1>
+      <p class="hero-tagline">Building financially independent futures, one lesson at a time.</p>
+      <a href="#mission" class="btn hero-btn">Explore Resources</a>
+    </div>
+  </section>
 
+  <section class="mission-section" id="mission" aria-labelledby="mission-h">
+    <div class="container">
+      <h2 id="mission-h" class="reveal">Our Mission</h2>
+      <p class="mission-text reveal">The Financial &amp; Economic Literacy Club is dedicated to giving every member, no matter their age or experience, a real understanding of how money works. We teach the skills that schools often leave out: budgeting, saving, investing, understanding credit, and making smart financial decisions. By learning from each other and passing that knowledge on to younger students, we aim to develop confident, responsible, and financially independent individuals who are prepared to build wealth, avoid costly mistakes, and make informed choices for the rest of their lives.</p>
+      <div class="mission-cards">
+        <div class="mission-card reveal">
+          <span class="mc-icon" aria-hidden="true">📚</span>
+          <h3>Learn</h3>
+          <p>Master the basics of budgeting, saving, credit, and investing.</p>
+        </div>
+        <div class="mission-card reveal">
+          <span class="mc-icon" aria-hidden="true">🤝</span>
+          <h3>Teach</h3>
+          <p>Share what we know with younger students in our community.</p>
+        </div>
+        <div class="mission-card reveal">
+          <span class="mc-icon" aria-hidden="true">🌱</span>
+          <h3>Grow</h3>
+          <p>Build the habits that lead to lifelong financial independence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
     <section aria-label="Browse the resource library">
+      <h2 class="browse-heading reveal">Browse the Library</h2>
       <div class="card-grid">
         <a class="nav-card" href="key-concepts.html">
           <span class="nc-icon" aria-hidden="true">📘</span>
@@ -85,5 +121,6 @@
 
 <script src="js/concepts-index.js"></script>
 <script src="js/common.js"></script>
+<script src="js/home.js"></script>
 </body>
 </html>
