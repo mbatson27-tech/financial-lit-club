@@ -466,18 +466,48 @@ table.step-down tr.final td { font-weight: 800; color: var(--accent); border-top
   margin: 1rem 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.9rem;
 }
-.graph-placeholder {
-  border: 2px dashed var(--border);
+.graph-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
   border-radius: var(--radius-md);
-  padding: 1.5rem 1rem;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.88rem;
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
 }
-.graph-placeholder .gp-title { font-weight: 600; color: var(--text); margin-bottom: 0.35rem; }
+.graph-card .gp-title {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.graph-caption {
+  margin-top: 0.45rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Inline SVG economics diagrams */
+.econ-graph { width: 100%; height: auto; display: block; }
+.econ-graph .axis { stroke: var(--text-muted); stroke-width: 1.5; fill: none; }
+.econ-graph .ax-head { fill: var(--text-muted); }
+.econ-graph .curve { stroke: var(--text); stroke-width: 2.5; fill: none; stroke-linecap: round; }
+.econ-graph .curve-old { stroke: var(--text-muted); stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+.econ-graph .curve-new { stroke: var(--accent); stroke-width: 2.5; fill: none; stroke-linecap: round; }
+.econ-graph .trend { stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 6 4; fill: none; }
+.econ-graph .guide { stroke: var(--text-muted); stroke-width: 1; stroke-dasharray: 3 3; fill: none; }
+.econ-graph .dot { fill: var(--accent); }
+.econ-graph .dot-old { fill: var(--text-muted); }
+.econ-graph .shift { stroke: var(--gold); stroke-width: 2.25; fill: none; }
+.econ-graph .shift-head { fill: var(--gold); }
+.econ-graph text { font-family: inherit; }
+.econ-graph .lbl { fill: var(--text); font-size: 12px; font-weight: 600; }
+.econ-graph .lbl-accent { fill: var(--accent); font-size: 12px; font-weight: 700; }
+.econ-graph .lbl-muted { fill: var(--text-muted); font-size: 11px; }
+.econ-graph .lbl-sm { fill: var(--text-muted); font-size: 10px; }
 
 /* ---------- Video library ---------- */
 .toolbar {

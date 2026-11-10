@@ -110,5 +110,7 @@ python3 -m http.server 8000
 
 - Add the "Capitalism (Inside Out)" video link in `data/resources.json`
   once it's available (search for `linkPending` in that file).
-- Drop images into the `images/` folder and swap them in for the graph
-  placeholders on the Key Concepts page when they're ready.
+
+The graphs on the Key Concepts page are drawn as inline SVG directly in
+`key-concepts.html`, so they automatically match the light/dark theme —
+no image files needed.
