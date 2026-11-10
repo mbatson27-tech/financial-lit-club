@@ -750,6 +750,12 @@ a.video-card:hover, a.video-card:focus-visible {
   }
   .nav-links.open { display: flex; }
   .nav-bar { position: relative; flex-wrap: wrap; }
+  .brand {
+    white-space: normal;
+    font-size: 1rem;
+    line-height: 1.25;
+    flex: 1 1 100%;
+  }
   .site-search { order: 4; width: 100%; }
   .site-search input[type="search"] { width: 100%; }
   .search-results { width: 100%; }

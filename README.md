@@ -1,4 +1,4 @@
-# [Club Name] — Resource Library
+# Financial and Economic Literacy Club — Resource Library
 
 A static, no-build website for our Financial & Economic Literacy Club: notes
 (Key Concepts), a video library, a resource/reading list, and interactive
@@ -108,8 +108,6 @@ python3 -m http.server 8000
 
 ## Before you launch
 
-- Replace every `[Club Name]` placeholder (in the `<title>`, header, and
-  footer of each page) with your club's real name.
 - Add the "Capitalism (Inside Out)" video link in `data/resources.json`
   once it's available (search for `linkPending` in that file).
 - Drop images into the `images/` folder and swap them in for the graph
