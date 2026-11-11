@@ -156,17 +156,14 @@ main { display: block; padding-bottom: 4rem; }
 }
 .brand:hover { text-decoration: none; opacity: 0.85; }
 .brand-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-sm);
-  background: var(--accent);
-  color: var(--accent-contrast);
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
-.brand-icon .icon { width: 19px; height: 19px; }
+.brand-icon img { width: 100%; height: 100%; display: block; }
 
 .nav-links {
   display: flex;
