@@ -45,7 +45,13 @@ const problems = [];
 for (const pageFile of pages) {
   const page = await browser.newPage();
   page.on("console", (msg) => {
-    if (msg.type() === "error") problems.push(`${pageFile}: console error: ${msg.text()}`);
+    if (msg.type() !== "error") return;
+    /* Resource-load console errors for third-party URLs (YouTube thumbnails,
+       fonts) depend on network availability — only report our own origin,
+       mirroring the requestfailed filter below. */
+    const loc = msg.location()?.url || "";
+    if (/^https?:/.test(loc) && !loc.startsWith(`http://127.0.0.1:${port}`)) return;
+    problems.push(`${pageFile}: console error: ${msg.text()}`);
   });
   page.on("pageerror", (e) => problems.push(`${pageFile}: page error: ${e.message}`));
   page.on("requestfailed", (req) => {

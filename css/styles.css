@@ -5,20 +5,23 @@
 
 /* ---------- Design tokens ---------- */
 :root {
-  --bg: #f7f8fa;
-  --surface: #ffffff;
-  --surface-alt: #eef1f5;
+  --navy: #0b1f3a; /* brand navy; same in both themes */
+  --bg: #f4f1ea;
+  --surface: #fbf9f5;
+  --surface-alt: #ede8dd;
   --heading: #0b1f3a;
-  --text: #4a5568;
-  --text-muted: #718096;
-  --border: #e2e8f0;
+  --text: #2b2f36;
+  --text-muted: #555b66;
+  --border: #e2ddd2;
+  --link: #1e4c8a;
   --accent: #0b1f3a;
   --accent-strong: #16325c;
   --accent-contrast: #ffffff;
   --accent-soft: #e9eef6;
   --gold: #b8963e;
-  --gold-strong: #9c7d2f;
+  --gold-strong: #82641d;
   --gold-soft: #f6f1e3;
+  --code-bg: #eef1f5;
   --danger: #9f1239;
   --danger-soft: #fde6ea;
   --focus: #2563eb;
@@ -26,7 +29,7 @@
   --g-teal: #0f766e;
   --g-purple: #6d28d9;
   --g-slate: #475569;
-  --g-gold: #9c7d2f;
+  --g-gold: #82641d;
   --g-green: #15803d;
   --g-maroon: #9f1239;
   --g-blue: #1d4ed8;
@@ -51,6 +54,7 @@
   --text: #cbd5e1;
   --text-muted: #94a3b8;
   --border: #233650;
+  --link: #8fb3de;
   --accent: #8fb3de;
   --accent-strong: #b3cdeb;
   --accent-contrast: #0b1f3a;
@@ -86,7 +90,8 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   font-size: 1.0625rem;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -94,10 +99,11 @@ body {
 img { max-width: 100%; display: block; }
 
 a {
-  color: var(--accent);
+  color: var(--link);
   text-decoration: none;
 }
 a:hover { text-decoration: underline; }
+a:visited { color: var(--link); }
 
 h1, h2, h3, h4 {
   line-height: 1.25;
@@ -116,7 +122,15 @@ h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; }
   vertical-align: -0.2em;
 }
 
-p { margin: 0 0 1rem; }
+p { margin: 0 0 1rem; max-width: 70ch; }
+/* Paragraphs inside centered sections stay visually centered. */
+.hero-tagline,
+.mission-text,
+.footer-copy,
+.kc-no-results p,
+.empty-state p { margin-left: auto; margin-right: auto; }
+
+input::placeholder { color: var(--text-muted); opacity: 1; }
 
 :focus-visible {
   outline: 3px solid var(--focus);
@@ -331,9 +345,10 @@ main { display: block; padding-bottom: 4rem; }
   font-size: 0.78rem;
   font-weight: 700;
   font-family: var(--font-sans);
-  color: var(--gold);
+  color: var(--gold-strong); /* darker gold: readable text on light bg */
   margin-bottom: 0.4rem;
 }
+[data-theme="dark"] .page-hero .eyebrow { color: var(--gold); }
 .page-hero p.lead {
   font-size: 1.05rem;
   color: var(--text-muted);
@@ -360,7 +375,7 @@ main { display: block; padding-bottom: 4rem; }
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #0b1f3a; /* solid navy fallback if the photo fails */
+  background-color: var(--navy); /* solid navy fallback if the photo fails */
   background-image: url("../images/school.jpg");
   background-size: cover;
   background-position: center;
@@ -415,7 +430,7 @@ main { display: block; padding-bottom: 4rem; }
 .hero-btn:focus-visible { text-decoration: none; }
 .btn.btn-gold {
   background: var(--gold);
-  color: #0b1f3a;
+  color: var(--navy);
 }
 .btn.btn-gold:hover { background: #cba84f; }
 .btn.btn-ghost {
@@ -633,11 +648,17 @@ dl.glossary dd {
 }
 
 .formula-box {
-  background: var(--gold-soft);
-  border: 1px solid var(--gold);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy);
   border-radius: var(--radius-md);
   padding: 1rem 1.25rem;
   margin: 1rem 0;
+}
+/* Dark mode keeps its original gold formula-box look. */
+[data-theme="dark"] .formula-box {
+  background: var(--gold-soft);
+  border: 1px solid var(--gold);
 }
 .formula-box .formula-name { font-weight: 700; margin-bottom: 0.35rem; color: var(--text); }
 .formula-box code {
