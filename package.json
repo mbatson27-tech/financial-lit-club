@@ -1,0 +1,15 @@
+{
+  "name": "financial-lit-club",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site for the Financial & Economic Literacy Club (checks only; the site itself has no build step).",
+  "type": "module",
+  "scripts": {
+    "check": "node tools/check-site.mjs && node tools/console-check.mjs",
+    "check:static": "node tools/check-site.mjs",
+    "serve": "npx serve ."
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}
