@@ -59,599 +59,100 @@
     <div class="page-hero">
       <div class="eyebrow">Key Concepts</div>
       <h1>Macroeconomics, Investing &amp; Accounting</h1>
-      <p class="lead">Everything from this year's notes, organized into ten sections. Use the table of contents to jump anywhere, or search the site for a specific term.</p>
+      <p class="lead">Every term from this year's notes, organized into eight topics. Click any card to expand it, search for a term, or filter by topic. Looking for the graphs? They now live on the Graphs page.</p>
+    </div>
+
+    <noscript><p class="note-box"><strong>Note:</strong> This page needs JavaScript to display the glossary cards. Please enable JavaScript, or browse the <a href="videos.html">Video Library</a> and <a href="resources.html">Resources</a> instead.</p></noscript>
+
+    <div class="toolbar kc-toolbar">
+      <div class="search-box">
+        <label for="concept-search" style="position:absolute;left:-9999px;">Search concepts</label>
+        <input type="search" id="concept-search" placeholder="Search terms, definitions, examples…" autocomplete="off">
+      </div>
+      <div class="kc-actions">
+        <button type="button" id="expand-all" class="chip">Expand all</button>
+        <button type="button" id="collapse-all" class="chip">Collapse all</button>
+        <button type="button" id="az-toggle" class="chip" aria-pressed="false">A–Z view</button>
+      </div>
+      <div id="group-chips" class="filter-chips" role="group" aria-label="Filter by topic"></div>
+      <p id="kc-count" class="kc-count" aria-live="polite"></p>
     </div>
 
     <div class="kc-layout">
       <nav class="kc-toc" aria-label="Key Concepts table of contents">
         <h2>On this page</h2>
+        <label for="kc-toc-select" style="position:absolute;left:-9999px;">Jump to topic</label>
+        <select id="kc-toc-select" class="kc-toc-select">
+          <option value="foundations">1. Economic Foundations</option>
+          <option value="gdp-cycle">2. GDP &amp; the Business Cycle</option>
+          <option value="policy">3. Fiscal &amp; Monetary Policy</option>
+          <option value="capitalism">4. Modern Capitalism</option>
+          <option value="stocks">5. Investing: Stocks</option>
+          <option value="bonds">6. Investing: Bonds</option>
+          <option value="accounting">7. Accounting &amp; Financial Statements</option>
+          <option value="ratios">8. Key Ratios</option>
+        </select>
         <ol>
-          <li><a href="#economic-concepts">1. Economic Concepts</a></li>
-          <li><a href="#recessions-booms">2. Recessions vs. Booms</a></li>
-          <li><a href="#productivity-ppf">3. Productivity &amp; the PPF</a></li>
-          <li><a href="#fiscal-monetary-policy">4. Fiscal &amp; Monetary Policy</a></li>
-          <li><a href="#business-cycle">5. Business Cycle, Booms &amp; Busts, Equilibrium</a></li>
-          <li><a href="#graphs">6. Graphs Students Must Know</a></li>
-          <li><a href="#modern-capitalism">7. Modern Capitalism</a></li>
-          <li><a href="#investing">8. Investing</a></li>
-          <li><a href="#accounting">9. Accounting</a></li>
-          <li><a href="#six-ratios">10. Six Key Financial Ratios</a></li>
+          <li><a href="#foundations"><span class="toc-dot toc-dot--navy" aria-hidden="true"></span>1. Economic Foundations</a></li>
+          <li><a href="#gdp-cycle"><span class="toc-dot toc-dot--teal" aria-hidden="true"></span>2. GDP &amp; the Business Cycle</a></li>
+          <li><a href="#policy"><span class="toc-dot toc-dot--purple" aria-hidden="true"></span>3. Fiscal &amp; Monetary Policy</a></li>
+          <li><a href="#capitalism"><span class="toc-dot toc-dot--slate" aria-hidden="true"></span>4. Modern Capitalism</a></li>
+          <li><a href="#stocks"><span class="toc-dot toc-dot--gold" aria-hidden="true"></span>5. Investing: Stocks</a></li>
+          <li><a href="#bonds"><span class="toc-dot toc-dot--green" aria-hidden="true"></span>6. Investing: Bonds</a></li>
+          <li><a href="#accounting"><span class="toc-dot toc-dot--maroon" aria-hidden="true"></span>7. Accounting &amp; Financial Statements</a></li>
+          <li><a href="#ratios"><span class="toc-dot toc-dot--blue" aria-hidden="true"></span>8. Key Ratios</a></li>
         </ol>
       </nav>
 
       <div class="kc-content">
 
-        <!-- 1. ECONOMIC CONCEPTS -->
-        <section id="economic-concepts" aria-labelledby="economic-concepts-h">
-          <h2 id="economic-concepts-h">1. Economic Concepts</h2>
-          <dl class="glossary">
-            <dt id="economics">Economics</dt>
-            <dd>How a society allocates scarce resources amidst unlimited human wants.</dd>
-
-            <dt id="opportunity-cost">Opportunity Cost</dt>
-            <dd>The second best alternative when you are confronted with two good choices.</dd>
-
-            <dt id="law-of-supply">Law of Supply</dt>
-            <dd>All other things being equal, producers tend to produce more of a good or service if prices are rising and less if prices are falling. This law is tied to the profit motive.</dd>
-
-            <dt id="law-of-demand">Law of Demand</dt>
-            <dd>All other things being equal, consumers tend to buy more of a good or service if prices are falling and less if prices are rising. This law is tied to common sense.</dd>
-
-            <dt id="gdp">Gross Domestic Product (GDP)</dt>
-            <dd>
-              The total dollar value of all final goods and services produced within a country's border within a given time period (quarter or year).
-              <div class="formula-box">
-                <div class="formula-name">GDP Formula</div>
-                <code>GDP = C + I + G + Xn</code>
-                <p class="formula-note">Consumer Spending (C) + Business Investment (I) + Government Spending (G) + Net Exports (Xn = Exports − Imports). Note: this excludes intermediate goods to prevent double counting.</p>
-              </div>
-            </dd>
-
-            <dt id="wealth-effect">Wealth Effect</dt>
-            <dd>According to the economist Pigou, when people feel wealthier, they tend to spend more money. This may lead to high growth or a boom (GDP growth &gt; 4%; unemployment &lt; 5% and inflation &gt; 2%). Conversely, when people feel less wealthy, they tend to spend less money, and, if enough people begin to feel too fearful, then a recession or a bust may occur.</dd>
-
-            <dt id="interest-rates">Interest Rates</dt>
-            <dd>When interest rates go up, asset prices (stocks, bonds, real estate, etc.) tend to fall over time. When interest rates fall, asset prices tend to go up over time.</dd>
-          </dl>
+        <section id="foundations" class="kc-group" aria-labelledby="foundations-h">
+          <h2 id="foundations-h"><span class="group-tag group-tag--navy">Topic 1</span>Economic Foundations</h2>
+          <div class="term-list" data-group="foundations"></div>
         </section>
 
-        <!-- 2. RECESSIONS VS BOOMS -->
-        <section id="recessions-booms" aria-labelledby="recessions-booms-h">
-          <h2 id="recessions-booms-h">2. Recessions vs. Booms</h2>
-
-          <div class="note-box" id="recession-qa">
-            <strong>What happens during a recession?</strong>
-            <p style="margin-top:0.5rem;">GDP goes down and becomes negative for at least two consecutive quarters → unemployment goes up → incomes go down and so does inflation (unless stagflation occurs) →</p>
-            <ol>
-              <li>The federal government may choose to lower taxes and/or increase government spending. (This almost always causes the national debt to rise.)</li>
-              <li>The Federal Reserve Bank often lowers interest rates and/or raises the money supply → over time, this typically increases asset prices (real estate, stocks, bonds, etc.) → wealth increases for people who own such assets → when people feel wealthier, they tend to spend more money and, eventually, a contraction/recession turns into a period of economic expansion. <strong>But</strong> if interest rates stay too low for too long, this will likely lead to a boom, which may lead to some type of bust — but not always.</li>
-            </ol>
-          </div>
-
-          <div class="note-box" id="boom-qa">
-            <strong>What happens during an economic boom?</strong>
-            <p style="margin-top:0.5rem;">GDP goes up over 4% for too long → unemployment falls below the natural rate of unemployment (NRU) of 4–5% for too long → inflation rises above 2% for too long. If this persists for too long, it will likely lead to:</p>
-            <ol>
-              <li>The federal government may choose to raise taxes and/or decrease government spending — but it rarely does either, because politicians who raise taxes tend not to get reelected (ex. George H.W. Bush in the 1992 presidential election).</li>
-              <li>When Congress becomes largely inactive in economic matters, it places more pressure on the Federal Reserve to be more active than it probably should be at times.</li>
-              <li>During a boom, the Federal Reserve Bank often raises interest rates and lowers the money supply → a decrease in asset prices (real estate, stocks, bonds, etc.) → when wealth decreases, people tend to spend less money, and, if this continues for too long, an economic expansion may turn into a recession. <strong>But</strong> if interest rates are raised too high too fast, this may lead to an overcorrection and result in a recession.</li>
-            </ol>
-          </div>
+        <section id="gdp-cycle" class="kc-group" aria-labelledby="gdp-cycle-h">
+          <h2 id="gdp-cycle-h"><span class="group-tag group-tag--teal">Topic 2</span>GDP &amp; the Business Cycle</h2>
+          <div class="term-list" data-group="gdp-cycle"></div>
         </section>
 
-        <!-- 3. PRODUCTIVITY & PPF -->
-        <section id="productivity-ppf" aria-labelledby="productivity-ppf-h">
-          <h2 id="productivity-ppf-h">3. Productivity &amp; the Production Possibilities Frontier (PPF)</h2>
-          <dl class="glossary">
-            <dt id="productivity">Productivity</dt>
-            <dd>Often measured by how productive a worker is in terms of the rate of output he or she produces in a given hour or day. For example, if you owned a beanbag company, you'd want to measure how many beanbags a worker could produce during a given period of time. Economists refer to this as the rate of output per unit of input.</dd>
-
-            <dt id="ppf">Production Possibilities Frontier (PPF)</dt>
-            <dd>Applies to countries, companies, and individuals. The goal is to be on the frontier and then extend it outward via (1) better education/job training → improved "human" capital, and (2) technological innovation → improved "physical" capital. If a country or company is inside the curve, it is being inefficient with one or more of the four factors of production.</dd>
-
-            <dt id="factors-of-production">Four Factors of Production</dt>
-            <dd>Land + Labor + Capital + Entrepreneurial Ability.</dd>
-          </dl>
-          <div class="example-box">
-            <strong>Key factors for an individual's productivity:</strong> (1) mental and physical health; (2) critical thinking skills (reading, writing, logical reasoning); (3) the ability to learn, retain, integrate, and apply knowledge; (4) work ethic and level of grit; and (5) the ability to get along with and motivate others.
-          </div>
+        <section id="policy" class="kc-group" aria-labelledby="policy-h">
+          <h2 id="policy-h"><span class="group-tag group-tag--purple">Topic 3</span>Fiscal &amp; Monetary Policy</h2>
+          <div class="term-list" data-group="policy"></div>
         </section>
 
-        <!-- 4. FISCAL & MONETARY POLICY -->
-        <section id="fiscal-monetary-policy" aria-labelledby="fiscal-monetary-policy-h">
-          <h2 id="fiscal-monetary-policy-h">4. Fiscal &amp; Monetary Policy</h2>
-          <p>The main goals of fiscal policy and monetary policy are to keep the three main macroeconomic variables within their target ranges (see table below). When this occurs, it is generally represented by an upward-sloping straight line, which approximates equilibrium — part of the business cycle graph. The economy is considered to be in a state of general equilibrium when GDP Growth = 3–4% / Inflation = 1–2% / Unemployment = 4–5%.</p>
-
-          <div class="table-wrap">
-            <table class="data-table" id="key-macro-variables">
-              <caption>Key Macroeconomic Variables</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Variable</th>
-                  <th scope="col">Target Range</th>
-                  <th scope="col">Current Reading (June 30, 2026)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">GDP Growth</th>
-                  <td>3–4%</td>
-                  <td><span class="status-low">1.5% (Low)</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Unemployment</th>
-                  <td>4–5%</td>
-                  <td><span class="status-good">4.3% (Good)</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">Inflation</th>
-                  <td>1–2%</td>
-                  <td><span class="status-high">3.5% (High)</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>Fiscal Policy — Key Tools (of the Federal Government)</h3>
-          <dl class="glossary">
-            <dt id="fiscal-policy">Fiscal Policy Tools</dt>
-            <dd>Raise &amp; lower TAXES. Raise &amp; lower GOVERNMENT SPENDING.</dd>
-          </dl>
-
-          <h3>Monetary Policy — Key Tools (of the Federal Reserve Bank)</h3>
-          <dl class="glossary">
-            <dt id="monetary-policy">Monetary Policy Tools</dt>
-            <dd>Raise &amp; lower INTEREST RATES (via the Discount Rate). Raise &amp; lower the MONEY SUPPLY (via buying and selling bonds).</dd>
-
-            <dt id="inflation">Inflation</dt>
-            <dd>A period of rising prices.</dd>
-
-            <dt id="deflation">Deflation</dt>
-            <dd>A period of falling prices.</dd>
-
-            <dt id="stagflation">Stagflation</dt>
-            <dd>A period of negative (or sluggish) GDP growth accompanied by both rising inflation and rising unemployment. This often happens when there is a "supply shock," which moves the supply curve to the left. Examples: the OPEC Oil Shock (1970s) and Covid (2020–22).</dd>
-          </dl>
-
-          <div class="note-box">
-            Normally, during an economic boom, an economy will experience GDP growth above 4.0%, unemployment falling below 4.0%, and inflation rising much higher than 2.0%. During an economic bust, an economy will typically experience negative GDP growth, rising unemployment, and falling inflation.
-          </div>
+        <section id="capitalism" class="kc-group" aria-labelledby="capitalism-h">
+          <h2 id="capitalism-h"><span class="group-tag group-tag--slate">Topic 4</span>Modern Capitalism</h2>
+          <div class="term-list" data-group="capitalism"></div>
         </section>
 
-        <!-- 5. BUSINESS CYCLE -->
-        <section id="business-cycle" aria-labelledby="business-cycle-h">
-          <h2 id="business-cycle-h">5. Business Cycle, Booms &amp; Busts, Equilibrium</h2>
-          <dl class="glossary">
-            <dt id="expansion">Expansion</dt>
-            <dd>GDP (Gross Domestic Product = National Income) is growing.</dd>
-
-            <dt id="peak">Peak</dt>
-            <dd>GDP reaches a high point and then falls. Note: this can only be identified in hindsight.</dd>
-
-            <dt id="bc-contraction">Contraction / Recession</dt>
-            <dd>A contraction occurs when GDP growth turns negative. A recession is typically defined by two consecutive quarters of GDP decline.</dd>
-
-            <dt id="trough">Trough (Low Point)</dt>
-            <dd>This occurs when GDP decline reaches a low point. This can only be identified in hindsight.</dd>
-
-            <dt id="booms-busts">Booms and Busts</dt>
-            <dd>Booms are often driven by excessive greed, while busts are often driven by excessive fear. Keynes's "animal spirits" — "the spontaneous urge to action rather than inaction" — helps explain the boom and bust cycle because it focuses on irrational patterns of human behavior. It is irrational to believe that good (or bad) times will last forever, and yet many people fall into these traps because they let their "animal spirits" guide their decision making.</dd>
-
-            <dt id="equilibrium">Equilibrium</dt>
-            <dd>Rarely achieved in any market, but still useful as a theoretical roadmap for how to get to a stable point in an economy via the four main factors of production (land, labor, capital, and entrepreneurial ability).</dd>
-          </dl>
+        <section id="stocks" class="kc-group" aria-labelledby="stocks-h">
+          <h2 id="stocks-h"><span class="group-tag group-tag--gold">Topic 5</span>Investing: Stocks</h2>
+          <div class="term-list" data-group="stocks"></div>
         </section>
 
-        <!-- 6. GRAPHS -->
-        <section id="graphs" aria-labelledby="graphs-h">
-          <h2 id="graphs-h">6. Graphs Students Must Know</h2>
-          <p>Students need to be able to graph and label each of the following.</p>
-          <ul class="graph-list">
-
-            <li class="graph-card">
-              <div class="gp-title">The Business Cycle</div>
-              <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Business cycle graph: real GDP over time rises and falls in waves around an upward long-run trend line. The first peak is followed by a contraction down to a trough, then an expansion up to a higher peak.">
-                <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
-                <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
-                <polygon class="ax-head" points="309,195 301,191 301,199"/>
-                <polygon class="ax-head" points="40,11 36,19 44,19"/>
-                <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Real GDP</text>
-                <text class="lbl-muted" x="172" y="216" text-anchor="middle">Time</text>
-                <line class="trend" x1="45" y1="170" x2="295" y2="62"/>
-                <path class="curve" d="M 45 185 C 62 160, 82 95, 100 95 C 118 95, 142 160, 160 160 C 182 160, 216 40, 240 40 C 256 40, 276 58, 295 88"/>
-                <text class="lbl" x="100" y="82" text-anchor="middle">Peak</text>
-                <text class="lbl" x="240" y="28" text-anchor="middle">Peak</text>
-                <text class="lbl" x="160" y="180" text-anchor="middle">Trough</text>
-                <line class="shift" x1="104" y1="178" x2="126" y2="140"/>
-                <polygon class="shift-head" points="128,136 120,132 120,140" transform="rotate(-60 128 136)"/>
-                <text class="lbl-sm" x="82" y="190" text-anchor="middle">Contraction</text>
-                <line class="shift" x1="238" y1="154" x2="216" y2="112"/>
-                <polygon class="shift-head" points="214,108 206,104 206,112" transform="rotate(-118 214 108)"/>
-                <text class="lbl-sm" x="252" y="166" text-anchor="middle">Expansion</text>
-              </svg>
-              <div class="graph-caption">Dashed line = the long-run growth trend.</div>
-            </li>
-
-            <li class="graph-card">
-              <div class="gp-title">The Production Possibilities Frontier</div>
-              <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Production possibilities frontier between guns produced and butter produced: a curve bowed outward from the origin. Points B, D, and C on the curve are efficient, point A inside the curve is inefficient, and point X outside the curve is unattainable. Dashed lines connect B, D, and C to both axes.">
-                <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
-                <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
-                <polygon class="ax-head" points="309,195 301,191 301,199"/>
-                <polygon class="ax-head" points="40,11 36,19 44,19"/>
-                <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Guns produced</text>
-                <text class="lbl-muted" x="172" y="216" text-anchor="middle">Butter produced</text>
-                <path class="curve" d="M 45 40 Q 230 55 262 190"/>
-                <line class="guide" x1="40" y1="47" x2="97" y2="47"/>
-                <line class="guide" x1="97" y1="47" x2="97" y2="195"/>
-                <line class="guide" x1="40" y1="93" x2="202" y2="93"/>
-                <line class="guide" x1="202" y1="93" x2="202" y2="195"/>
-                <line class="guide" x1="40" y1="164" x2="254" y2="164"/>
-                <line class="guide" x1="254" y1="164" x2="254" y2="195"/>
-                <circle class="dot" cx="97" cy="47" r="4"/>
-                <circle class="dot" cx="202" cy="93" r="4"/>
-                <circle class="dot" cx="254" cy="164" r="4"/>
-                <circle class="dot-old" cx="140" cy="135" r="4"/>
-                <circle class="dot-old" cx="283" cy="85" r="4"/>
-                <text class="lbl" x="104" y="40">B</text>
-                <text class="lbl" x="210" y="87">D</text>
-                <text class="lbl" x="262" y="158">C</text>
-                <text class="lbl" x="148" y="130">A</text>
-                <text class="lbl" x="290" y="80">X</text>
-              </svg>
-              <div class="graph-caption">B, D, C (on curve) = efficient · A (inside) = inefficient · X (outside) = unattainable.</div>
-            </li>
-
-            <li class="graph-card">
-              <div class="gp-title">A Supply and Demand Curve</div>
-              <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Supply and demand graph: an upward-sloping supply curve and a downward-sloping demand curve cross at the equilibrium point, which sets the equilibrium price and equilibrium quantity.">
-                <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
-                <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
-                <polygon class="ax-head" points="309,195 301,191 301,199"/>
-                <polygon class="ax-head" points="40,11 36,19 44,19"/>
-                <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Price</text>
-                <text class="lbl-muted" x="303" y="216" text-anchor="end">Quantity</text>
-                <line class="curve" x1="70" y1="180" x2="260" y2="50"/>
-                <line class="curve" x1="70" y1="50" x2="260" y2="180"/>
-                <text class="lbl-sm" x="226" y="64" text-anchor="middle" transform="rotate(-34 226 64)">Supply curve</text>
-                <text class="lbl-sm" x="226" y="166" text-anchor="middle" transform="rotate(34 226 166)">Demand curve</text>
-                <line class="guide" x1="40" y1="115" x2="165" y2="115"/>
-                <line class="guide" x1="165" y1="115" x2="165" y2="195"/>
-                <circle class="dot" cx="165" cy="115" r="4.5"/>
-                <text class="lbl-accent" x="175" y="106">Equilibrium</text>
-                <text class="lbl-sm" x="98" y="110" text-anchor="middle">Equilibrium price</text>
-                <text class="lbl-sm" x="157" y="148" text-anchor="middle" transform="rotate(-90 157 148)">Eq. quantity</text>
-              </svg>
-              <div class="graph-caption">Equilibrium: where supply meets demand sets the market price and quantity.</div>
-            </li>
-
-            <li class="graph-card">
-              <div class="gp-title">Shift: An Economic Expansion</div>
-              <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Economic expansion: the demand curve shifts right from D1 to D2 along a fixed supply curve, raising both price and quantity. GDP rises, unemployment falls, inflation rises.">
-                <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
-                <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
-                <polygon class="ax-head" points="309,195 301,191 301,199"/>
-                <polygon class="ax-head" points="40,11 36,19 44,19"/>
-                <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Price</text>
-                <text class="lbl-muted" x="303" y="216" text-anchor="end">Quantity</text>
-                <line class="curve" x1="70" y1="180" x2="260" y2="50"/>
-                <text class="lbl" x="260" y="42" text-anchor="middle">S</text>
-                <line class="curve-old" x1="70" y1="50" x2="260" y2="180"/>
-                <text class="lbl-muted" x="70" y="42" text-anchor="middle">D₁</text>
-                <line class="curve-new" x1="115" y1="50" x2="300" y2="180"/>
-                <text class="lbl-accent" x="115" y="42" text-anchor="middle">D₂</text>
-                <line class="shift" x1="104" y1="70" x2="130" y2="70"/>
-                <polygon class="shift-head" points="139,70 129,65 129,75"/>
-                <line class="guide" x1="40" y1="115" x2="165" y2="115"/>
-                <line class="guide" x1="165" y1="115" x2="165" y2="195"/>
-                <line class="guide" x1="40" y1="100" x2="187" y2="100"/>
-                <line class="guide" x1="187" y1="100" x2="187" y2="195"/>
-                <circle class="dot-old" cx="165" cy="115" r="4"/>
-                <circle class="dot" cx="187" cy="100" r="4.5"/>
-                <text class="lbl-sm" x="34" y="97" text-anchor="end">P₂</text>
-                <text class="lbl-sm" x="34" y="124" text-anchor="end">P₁</text>
-                <text class="lbl-sm" x="161" y="211" text-anchor="middle">Q₁</text>
-                <text class="lbl-sm" x="193" y="211" text-anchor="middle">Q₂</text>
-              </svg>
-              <div class="graph-caption">Demand shifts right (P₁→P₂, Q₁→Q₂) → GDP ↑ · Unemployment ↓ · Inflation ↑</div>
-            </li>
-
-            <li class="graph-card">
-              <div class="gp-title">Shift: An Economic Contraction (→ Stagflation)</div>
-              <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Economic contraction: the demand curve shifts left from D1 to D2 along a fixed supply curve, lowering both price and quantity. GDP falls, unemployment rises, inflation falls.">
-                <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
-                <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
-                <polygon class="ax-head" points="309,195 301,191 301,199"/>
-                <polygon class="ax-head" points="40,11 36,19 44,19"/>
-                <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Price</text>
-                <text class="lbl-muted" x="303" y="216" text-anchor="end">Quantity</text>
-                <line class="curve" x1="70" y1="180" x2="260" y2="50"/>
-                <text class="lbl" x="260" y="42" text-anchor="middle">S</text>
-                <line class="curve-old" x1="115" y1="50" x2="300" y2="180"/>
-                <text class="lbl-muted" x="115" y="42" text-anchor="middle">D₁</text>
-                <line class="curve-new" x1="70" y1="50" x2="260" y2="180"/>
-                <text class="lbl-accent" x="70" y="42" text-anchor="middle">D₂</text>
-                <line class="shift" x1="138" y1="70" x2="112" y2="70"/>
-                <polygon class="shift-head" points="103,70 113,65 113,75"/>
-                <line class="guide" x1="40" y1="100" x2="187" y2="100"/>
-                <line class="guide" x1="187" y1="100" x2="187" y2="195"/>
-                <line class="guide" x1="40" y1="115" x2="165" y2="115"/>
-                <line class="guide" x1="165" y1="115" x2="165" y2="195"/>
-                <circle class="dot-old" cx="187" cy="100" r="4"/>
-                <circle class="dot" cx="165" cy="115" r="4.5"/>
-                <text class="lbl-sm" x="34" y="97" text-anchor="end">P₁</text>
-                <text class="lbl-sm" x="34" y="124" text-anchor="end">P₂</text>
-                <text class="lbl-sm" x="161" y="211" text-anchor="middle">Q₂</text>
-                <text class="lbl-sm" x="193" y="211" text-anchor="middle">Q₁</text>
-              </svg>
-              <div class="graph-caption">Demand shifts left (P₁→P₂, Q₁→Q₂) → GDP ↓ · Unemployment ↑ · Inflation ↓</div>
-            </li>
-
-            <li class="graph-card">
-              <div class="gp-title">Shift: A Supply Shock (→ Stagflation)</div>
-              <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Supply shock: the supply curve shifts left from S1 to S2 along a fixed demand curve, raising price while quantity falls. GDP falls, unemployment rises, and inflation rises — stagflation.">
-                <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
-                <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
-                <polygon class="ax-head" points="309,195 301,191 301,199"/>
-                <polygon class="ax-head" points="40,11 36,19 44,19"/>
-                <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Price</text>
-                <text class="lbl-muted" x="303" y="216" text-anchor="end">Quantity</text>
-                <line class="curve" x1="70" y1="50" x2="260" y2="180"/>
-                <text class="lbl" x="70" y="42" text-anchor="middle">D</text>
-                <line class="curve-old" x1="70" y1="180" x2="260" y2="50"/>
-                <text class="lbl-muted" x="260" y="42" text-anchor="middle">S₁</text>
-                <line class="curve-new" x1="42" y1="172" x2="220" y2="50"/>
-                <text class="lbl-accent" x="220" y="42" text-anchor="middle">S₂</text>
-                <line class="shift" x1="226" y1="70" x2="200" y2="70"/>
-                <polygon class="shift-head" points="191,70 201,65 201,75"/>
-                <line class="guide" x1="40" y1="115" x2="165" y2="115"/>
-                <line class="guide" x1="165" y1="115" x2="165" y2="195"/>
-                <line class="guide" x1="40" y1="101" x2="145" y2="101"/>
-                <line class="guide" x1="145" y1="101" x2="145" y2="195"/>
-                <circle class="dot-old" cx="165" cy="115" r="4"/>
-                <circle class="dot" cx="145" cy="101" r="4.5"/>
-                <text class="lbl-sm" x="34" y="98" text-anchor="end">P₂*</text>
-                <text class="lbl-sm" x="34" y="125" text-anchor="end">P₁*</text>
-                <text class="lbl-sm" x="141" y="211" text-anchor="middle">Q₂*</text>
-                <text class="lbl-sm" x="171" y="211" text-anchor="middle">Q₁*</text>
-              </svg>
-              <div class="graph-caption">Supply shifts left (P* ↑, Q* ↓) → GDP ↓ · Unemployment ↑ · Inflation ↑ (stagflation)</div>
-            </li>
-
-            <li class="graph-card">
-              <div class="gp-title">Shift: A Supply Surplus (very rare)</div>
-              <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Supply surplus: the supply curve shifts right from S1 to S2 along a fixed demand curve, lowering price while quantity rises. GDP rises, unemployment falls, inflation falls.">
-                <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
-                <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
-                <polygon class="ax-head" points="309,195 301,191 301,199"/>
-                <polygon class="ax-head" points="40,11 36,19 44,19"/>
-                <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Price</text>
-                <text class="lbl-muted" x="303" y="216" text-anchor="end">Quantity</text>
-                <line class="curve" x1="70" y1="50" x2="260" y2="180"/>
-                <text class="lbl" x="70" y="42" text-anchor="middle">D</text>
-                <line class="curve-old" x1="70" y1="180" x2="260" y2="50"/>
-                <text class="lbl-muted" x="257" y="42" text-anchor="middle">S₁</text>
-                <line class="curve-new" x1="115" y1="180" x2="300" y2="53"/>
-                <text class="lbl-accent" x="297" y="45" text-anchor="middle">S₂</text>
-                <line class="shift" x1="236" y1="70" x2="262" y2="70"/>
-                <polygon class="shift-head" points="271,70 261,65 261,75"/>
-                <line class="guide" x1="40" y1="115" x2="210" y2="115"/>
-                <line class="guide" x1="165" y1="115" x2="165" y2="195"/>
-                <line class="guide" x1="210" y1="115" x2="210" y2="195"/>
-                <circle class="dot-old" cx="165" cy="115" r="4"/>
-                <circle class="dot" cx="188" cy="130" r="4.5"/>
-                <text class="lbl-accent" x="187" y="105" text-anchor="middle">Surplus</text>
-                <text class="lbl-sm" x="34" y="119" text-anchor="end">P*</text>
-                <text class="lbl-sm" x="165" y="211" text-anchor="middle">Q&#8339;</text>
-                <text class="lbl-sm" x="187" y="211" text-anchor="middle">&lt;</text>
-                <text class="lbl-sm" x="210" y="211" text-anchor="middle">Q&#8347;</text>
-              </svg>
-              <div class="graph-caption">At the old price P*, Q supplied &gt; Q demanded (a surplus) → price falls → GDP ↑ · Unemployment ↓ · Inflation ↓</div>
-            </li>
-          </ul>
-          <div class="note-box">For each scenario above, you need to know what happens to: (1) GDP Growth; (2) Unemployment; and (3) Inflation.</div>
+        <section id="bonds" class="kc-group" aria-labelledby="bonds-h">
+          <h2 id="bonds-h"><span class="group-tag group-tag--green">Topic 6</span>Investing: Bonds</h2>
+          <div class="term-list" data-group="bonds"></div>
         </section>
 
-        <!-- 7. MODERN CAPITALISM -->
-        <section id="modern-capitalism" aria-labelledby="modern-capitalism-h">
-          <h2 id="modern-capitalism-h">7. Modern Capitalism</h2>
-          <p>The terms below are vitally important to understanding modern American capitalism.</p>
-          <dl class="glossary">
-            <dt id="creative-destruction">"Creative Destruction"</dt>
-            <dd>
-              The process where a government allows old, inefficient businesses and industries to die off (by no longer protecting them with tariffs) so that the four factors of production can be reallocated to more efficient uses. Clever entrepreneurs force creative destruction to occur by recognizing inefficiencies and exploiting them by using the four factors of production more efficiently (such as using AI).
-              <div class="example-box"><strong>Example:</strong> The U.S. government allowed old large steel mills to go bankrupt in the 1970s/1980s, which led entrepreneurs to invest in newer, smaller mills (so-called "MiniMills") that used the latest technology to compete with Japan, Korea, etc.</div>
-            </dd>
-
-            <dt id="globalization">Globalization</dt>
-            <dd>
-              The process through which virtually all countries around the world can be part of an integrated worldwide economic system, where countries/companies produce and sell goods and services based on their comparative advantages.
-              <div class="example-box"><strong>Example:</strong> a country with low labor costs would likely produce lower-value goods such as clothes, shoes, or fruits and vegetables, while a richer country will likely produce higher-value goods such as cars, planes, and advanced technology (ex. Pixar movies).</div>
-            </dd>
-
-            <dt id="technological-innovation">Technological Innovation</dt>
-            <dd>
-              The process through which a new or improved product is developed based on cutting-edge technology, including robots that have been — and will continue to — replace low-skilled factory workers. Improvements in artificial intelligence have recently added to this trend line.
-              <div class="example-box"><strong>Example:</strong> By the late 1970s, large U.S. manufacturers were spending billions of dollars each year to automate production. Factory workers (and labor unions) were hit hard by two different sources — globalization and technological innovation — at the same time.</div>
-            </dd>
-          </dl>
+        <section id="accounting" class="kc-group" aria-labelledby="accounting-h">
+          <h2 id="accounting-h"><span class="group-tag group-tag--maroon">Topic 7</span>Accounting &amp; Financial Statements</h2>
+          <div class="term-list" data-group="accounting"></div>
         </section>
 
-        <!-- 8. INVESTING -->
-        <section id="investing" aria-labelledby="investing-h">
-          <h2 id="investing-h">8. Investing</h2>
-
-          <h3>General Terms</h3>
-          <dl class="glossary">
-            <dt id="investment-capital">Investment Capital</dt>
-            <dd>Money that individuals (and companies) earn and save for investments, which may include real estate, stocks, bonds, certificates of deposit, businesses, etc.</dd>
-
-            <dt id="equity-investment">Equity Investment</dt>
-            <dd>This occurs when you buy shares (or stock) in a company. Note: the terms "shares" and "stocks" are often used interchangeably.</dd>
-
-            <dt id="primary-markets">Primary Markets</dt>
-            <dd>Where companies raise money through selling shares or issuing bonds (ex. Initial Public Offerings, Secondary Offerings). Owning shares is an equity investment, whereas buying a bond makes you a creditor to the company — the issuer must repay your loan on the bond's maturity date. To retrieve your money from a stock purchase, you must sell it (ideally for a profit), which leads to a capital gain or loss.</dd>
-
-            <dt id="secondary-markets">Secondary Markets</dt>
-            <dd>Where shares and bonds are traded between individuals (or companies). The proceeds of the sale go to the seller, not the company (or government).</dd>
-
-            <dt id="stocks-shares">Stocks = Shares</dt>
-            <dd>Owning shares in a company is an equity investment. Publicly-traded companies have their shares traded in the stock market (ex. NYSE, NASDAQ) — a stock market is where shares are issued and then bought and sold in the secondary market.</dd>
-
-            <dt id="limited-liability">Limited Liability</dt>
-            <dd>When you invest in a company, you can only lose the full amount of your investment — you cannot be sued for additional funds if the company (or its executives) breaks the law.</dd>
-
-            <dt id="bonds">Bonds</dt>
-            <dd>A debt instrument issued by a company (or government) that, similar to a bank loan, must be paid back by a certain date in the future. A bond market is where bonds are issued and then bought and sold.</dd>
-
-            <dt id="growth-stocks">Growth Stocks</dt>
-            <dd>These companies rarely pay a dividend because they typically reinvest their profits (and cash flow) back into the business via technological or other innovation that provides an ongoing comparative advantage.</dd>
-
-            <dt id="value-stocks">Value Stocks</dt>
-            <dd>These companies typically have steady profits and cash flows. They also typically pay a dividend because their period of high growth is over, so, to keep investors interested in buying their shares, they offer an incentive such as a quarterly cash dividend or additional shares.</dd>
-          </dl>
-
-          <h3>Stocks</h3>
-          <dl class="glossary">
-            <dt id="common-stock">Common Stock</dt>
-            <dd>What most people buy (vs. preferred stock). Common stock is riskier and more volatile than preferred stock, in large part because its price moves up and down more frequently. It may or may not pay a dividend. Over a long period of time, common stock has provided a much higher return on investment than preferred stock or the interest earned from bonds or cash.</dd>
-
-            <dt id="preferred-stock">Preferred Stock</dt>
-            <dd>Less risky than common stock: it almost always pays a dividend, and those dividends are almost always paid before dividends on common stock. Also, in a bankruptcy, preferred shareholders are paid before common shareholders.</dd>
-
-            <dt id="dividends">Dividends</dt>
-            <dd>
-              A payment, usually in cash (but sometimes in additional stock), that attracts investors looking for a higher return. The dividend yield is the annual dividend divided by the stock price at purchase.
-              <div class="example-box"><strong>Example:</strong> if you purchased McDonald's stock at $100/share and it paid a quarterly dividend of $0.50, your dividend yield = ($0.50 × 4) / $100 = <strong>2.0%</strong>.</div>
-            </dd>
-
-            <dt id="blue-chip-stocks">"Blue Chip" Stocks</dt>
-            <dd>Generally the largest, most profitable companies, often considered "household" names. There's no official list, but today Apple, Microsoft, Google, Amazon, and Nvidia would certainly be on it.</dd>
-
-            <dt id="ipo">Public Company / IPO</dt>
-            <dd>A public company is one whose shares are publicly traded on a stock exchange. An Initial Public Offering (IPO) occurs when a company goes public for the first time; a Secondary Offering occurs every time after that.</dd>
-
-            <dt id="nyse">New York Stock Exchange (NYSE)</dt>
-            <dd>The most prestigious stock exchange in the United States (and many would say in the world). Its roots date back to 1792.</dd>
-
-            <dt id="dow-jones">Dow Jones Industrial Average</dt>
-            <dd>A weighted index of thirty high-profile, "Blue Chip" companies.</dd>
-
-            <dt id="nasdaq">NASDAQ</dt>
-            <dd>The world's first electronic trading market, founded in 1971 — about 200 years after the NYSE. Most high-tech companies that have gone public list their shares on NASDAQ.</dd>
-
-            <dt id="sp500">S&amp;P 500 Index</dt>
-            <dd>An index of 500 high-profile companies. It's a better barometer for the overall health of the U.S. economy than the Dow Jones because it has such a wide variety of companies.</dd>
-
-            <dt id="roe">Return on Equity (ROE / ROI)</dt>
-            <dd>The profit or loss made on an investment over a given time period — usually one year — expressed as a percentage. Between 1926 and 2025, the average ROE for a basket of stocks has generally averaged around 10%, a basket of bonds around 4–5%, and short-term U.S. Treasury Bills around 3%.</dd>
-
-            <dt id="paper-gain-loss">Paper Gain / Paper Loss</dt>
-            <dd>A paper gain is when a stock you own rises in value but you haven't sold it yet. A paper loss is when it declines in value but you haven't sold it yet.</dd>
-
-            <dt id="capital-gain-loss">Capital Gain / Capital Loss</dt>
-            <dd>A capital gain occurs after you sell a stock at a profit (you then owe capital gains tax). A capital loss occurs after you sell a stock at a loss (which provides you with a tax credit).</dd>
-          </dl>
-
-          <h3>Bonds: Risks &amp; Features</h3>
-          <dl class="glossary">
-            <dt id="bond-features">Bonds: Risks &amp; Features</dt>
-            <dd>
-              Unlike purchasing stock (an equity investment), buying a bond means purchasing a piece of debt that a company or government must pay back on a certain date. Bondholders receive interest payments, often every six months.
-              <ul>
-                <li>A bond has three distinct features: (1) an amount to be repaid; (2) a maturity date; and (3) an interest rate.</li>
-                <li><strong>Credit risk:</strong> the risk that the issuer won't pay you back.</li>
-                <li><strong>Interest rate risk:</strong> the risk that interest rates will rise while you hold the bond — if they do, your bond will theoretically fall in value, since rising interest rates tend to push asset prices (stocks, bonds, real estate, etc.) down.</li>
-              </ul>
-            </dd>
-          </dl>
+        <section id="ratios" class="kc-group" aria-labelledby="ratios-h">
+          <h2 id="ratios-h"><span class="group-tag group-tag--blue">Topic 8</span>Key Ratios</h2>
+          <div class="term-list" data-group="ratios"></div>
+          <p class="kc-calc-note">Want to try these yourself? Head to the <a href="calculators.html">Calculators</a> page for interactive versions of the Dividend Yield, P/E Ratio, EPS, Market Cap, and Interest Coverage formulas.</p>
         </section>
 
-        <!-- 9. ACCOUNTING -->
-        <section id="accounting" aria-labelledby="accounting-h">
-          <h2 id="accounting-h">9. Accounting</h2>
-
-          <h3 id="balance-sheet">Balance Sheet</h3>
-          <div class="formula-box">
-            <div class="formula-name">The Basic Accounting Equation</div>
-            <code>Assets = Liabilities + Equity</code>
-          </div>
-          <dl class="glossary">
-            <dt id="assets">Assets (Something You Own)</dt>
-            <dd>
-              <strong>Current Assets:</strong> Cash, Accounts Receivable, Inventory.<br>
-              <strong>Fixed Assets:</strong> Plant, Property &amp; Equipment (PP&amp;E).<br>
-              <strong>Intangible (Non-physical) Assets:</strong> Goodwill, Patents.
-            </dd>
-            <dt id="liabilities">Liabilities (Something You Owe)</dt>
-            <dd>
-              <strong>Current Liabilities:</strong> Accounts Payable (employees/suppliers, etc.); short-term bank loans (due within one year); the portion of a bank loan or bond due within one year.<br>
-              <strong>Long-Term Liabilities:</strong> Long-term bank loans; the portion of a bond not due within one year.
-            </dd>
-            <dt id="equity-accounting">Equity (= Net Worth)</dt>
-            <dd>The difference between assets and liabilities: Preferred Stock (less risky than common stock); Common Stock (the type most people buy); Retained Earnings (the cumulative total of all profits and losses).</dd>
-          </dl>
-
-          <h3 id="income-statement">Income Statement</h3>
-          <div class="table-wrap">
-            <table class="data-table step-down">
-              <caption>Income Statement (Step-Down Format)</caption>
-              <tbody>
-                <tr><td class="label">Revenue (= Sales)</td><td></td></tr>
-                <tr><td class="less">Less: Cost of Goods Sold (COGS)</td><td></td></tr>
-                <tr class="subtotal"><td>Gross Profit</td><td></td></tr>
-                <tr><td class="less">Less: Selling, General &amp; Administrative Expenses (SG&amp;A)</td><td></td></tr>
-                <tr class="subtotal"><td>Operating Profit</td><td></td></tr>
-                <tr><td class="less">Less: Interest Expense</td><td></td></tr>
-                <tr class="subtotal"><td>Pre-Tax Profit</td><td></td></tr>
-                <tr><td class="less">Less: Taxes</td><td></td></tr>
-                <tr class="final"><td>Net Profit (= Net Earnings or Net Income)</td><td></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="note-box">There are four expense categories — Cost of Goods Sold, SG&amp;A, Interest Expense, and Tax Expense — and four profit categories: Gross Profit, Operating Profit, Pre-Tax Profit, and Net Profit.</div>
-
-          <h3 id="cash-flow-statement">Cash Flow Statement</h3>
-          <p>This statement shows how much cash a company takes in, from what sources, and how it uses that cash. Uses of cash might include: (1) investing in PP&amp;E (plant, property, and equipment); (2) paying dividends or interest or principal on a loan (or bond); (3) purchasing other companies; or (4) investing in stocks or bonds until the cash is needed for a large project, such as building a factory.</p>
+        <section id="az-view" class="kc-group" aria-labelledby="az-view-h" hidden>
+          <h2 id="az-view-h"><span class="group-tag group-tag--navy">A–Z</span>All terms, alphabetically</h2>
+          <div class="term-list" data-group="az"></div>
         </section>
 
-        <!-- 10. SIX KEY FINANCIAL RATIOS -->
-        <section id="six-ratios" aria-labelledby="six-ratios-h">
-          <h2 id="six-ratios-h">10. Six Key Financial Ratios</h2>
-          <div class="ratio-grid">
-            <div class="formula-box" id="market-cap">
-              <div class="formula-name">1. Market Capitalization (Market Value)</div>
-              <code>Common Share Price × Common Shares Outstanding</code>
-              <p class="formula-note">Common Shares Outstanding is typically found on the balance sheet.</p>
-            </div>
-            <div class="formula-box" id="eps">
-              <div class="formula-name">2. Earnings Per Share (EPS)</div>
-              <code>Annualized Net Earnings ÷ Common Shares Outstanding</code>
-              <p class="formula-note">"Earnings" means the same as "income" and "profits."</p>
-            </div>
-            <div class="formula-box" id="pe-ratio">
-              <div class="formula-name">3. Price Earnings (P/E) Ratio</div>
-              <code>Common Share Price ÷ EPS</code>
-              <p class="formula-note">The historical average for S&amp;P 500 companies is roughly 19 since 1971 — for every dollar of earnings, you're paying $19.</p>
-            </div>
-            <div class="formula-box" id="dividend-yield">
-              <div class="formula-name">4. Dividend Yield</div>
-              <code>Annualized Dividend ÷ Common Share Price</code>
-              <p class="formula-note">Compare this yield to a comparable company's yield or to what you could earn from a savings account or a U.S. Treasury Bill, Note, or Bond.</p>
-            </div>
-            <div class="formula-box" id="financial-leverage">
-              <div class="formula-name">5. Financial Leverage</div>
-              <code>Total Debt ÷ Market Capitalization</code>
-              <p class="formula-note">Stated as a percentage. Typically, the lower the number, the better.</p>
-            </div>
-            <div class="formula-box" id="interest-coverage">
-              <div class="formula-name">6. Interest Coverage Ratio</div>
-              <code>EBITDA ÷ Interest Expense</code>
-              <p class="formula-note">EBITDA = Cash Flow = Net Earnings before Interest, Taxes, Depreciation &amp; Amortization. A ratio of 4x or higher is good to very good; above 8–10x is spectacular.</p>
-            </div>
-          </div>
-          <p style="margin-top:1.5rem;">Want to try these yourself? Head to the <a href="calculators.html">Calculators</a> page for interactive versions of the Dividend Yield, P/E Ratio, EPS, Market Cap, and Interest Coverage formulas.</p>
-        </section>
+        <p id="kc-no-results" class="kc-no-results" hidden>No terms match your search. Try a different word, or clear the topic filter.</p>
 
       </div>
     </div>
@@ -675,31 +176,8 @@
   <p class="footer-copy">© 2026 Financial and Economic Literacy Club</p>
 </footer>
 
-<script src="js/concepts-index.js"></script>
+<script src="js/concepts-data.js"></script>
 <script src="js/common.js"></script>
-<script>
-  // Highlight the active TOC entry as the reader scrolls.
-  (function () {
-    const sections = Array.from(document.querySelectorAll(".kc-content > section[id]"));
-    const links = Array.from(document.querySelectorAll(".kc-toc a"));
-    if (!sections.length || !links.length) return;
-
-    function setActive(id) {
-      links.forEach(function (link) {
-        link.classList.toggle("active", link.getAttribute("href") === "#" + id);
-      });
-    }
-
-    const observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { rootMargin: "-20% 0px -70% 0px" }
-    );
-    sections.forEach(function (s) { observer.observe(s); });
-  })();
-</script>
+<script src="js/concepts.js"></script>
 </body>
 </html>

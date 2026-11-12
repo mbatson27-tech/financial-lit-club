@@ -15,7 +15,8 @@ resources.html          Websites + Reading List
 calculators.html        Interactive ratio calculators
 css/styles.css          All styles (includes light/dark theme)
 js/common.js            Theme toggle, mobile nav, site-wide search
-js/concepts-index.js    Glossary terms used by the search box
+js/concepts-data.js     ALL Key Concepts content lives here (also feeds search)
+js/concepts.js          Renders Key Concepts cards, toolbar, TOC, deep links
 js/videos.js            Video Library page logic
 js/resources.js         Resources page logic
 js/calculators.js       Calculator logic
@@ -66,14 +67,15 @@ Add an entry to `"books"`:
 
 ### Editing Key Concepts
 
-The Key Concepts page (`key-concepts.html`) is hand-formatted HTML (tables,
-formula boxes, etc. don't translate well from plain text), not generated
-from JSON. `content/key-concepts.txt` is kept as the original reference
-copy of the notes. To change the Key Concepts page itself, edit the
-`<section>` you want inside `key-concepts.html` directly — each glossary
-term is a `<dt id="some-slug">` / `<dd>` pair. If you add a new term and
-want it to show up in the site search, also add a matching entry to
-`js/concepts-index.js`.
+Every term on the Key Concepts page lives in one file:
+[`js/concepts-data.js`](js/concepts-data.js). Each entry has a `slug`
+(used for deep links like `key-concepts.html#opportunity-cost`), a `term`,
+a `group` (one of the eight topics in `CONCEPT_GROUPS`), a plain-English
+`def`, a `why` ("Why it matters"), an `example`, and a `related` list of
+other slugs. Formulas can add a `formula` object with a worked example.
+Edit that file to add or change a term — the page cards and the site-wide
+search both update automatically. `content/key-concepts.txt` is kept as
+the original reference copy of the notes.
 
 ## Running it locally
 
@@ -111,6 +113,5 @@ python3 -m http.server 8000
 - Add the "Capitalism (Inside Out)" video link in `data/resources.json`
   once it's available (search for `linkPending` in that file).
 
-The graphs on the Key Concepts page are drawn as inline SVG directly in
-`key-concepts.html`, so they automatically match the light/dark theme —
-no image files needed.
+The economics graphs are drawn as inline SVG, so they automatically match
+the light/dark theme — no image files needed.
