@@ -208,9 +208,59 @@
     });
   }
 
+  /* ---------- Gold scroll-progress bar ---------- */
+  function initScrollProgress() {
+    const bar = document.createElement("div");
+    bar.className = "scroll-progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+
+    let ticking = false;
+    function paint() {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = "scaleX(" + (max > 0 ? window.scrollY / max : 0) + ")";
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(paint);
+    }, { passive: true });
+    paint();
+  }
+
+  /* ---------- Scroll-reveal (fade in + slide up, once) ---------- */
+  const prefersReduced =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  let revealObserver = null;
+  function observeReveal(root) {
+    const els = (root || document).querySelectorAll(".reveal:not(.visible)");
+    if (prefersReduced || !("IntersectionObserver" in window)) {
+      els.forEach(function (el) { el.classList.add("visible"); });
+      return;
+    }
+    if (!revealObserver) {
+      revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target); // animate only the first time
+          }
+        });
+      }, { threshold: 0.15 });
+    }
+    els.forEach(function (el) { revealObserver.observe(el); });
+  }
+
+  /* Shared helpers for the page scripts. */
+  window.FLEC = { observeReveal: observeReveal, prefersReduced: prefersReduced };
+
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
     initMobileNav();
     initSiteSearch();
+    initScrollProgress();
+    observeReveal(document);
   });
 })();

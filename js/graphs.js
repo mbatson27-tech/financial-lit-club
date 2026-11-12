@@ -13,15 +13,52 @@
   const tabs = Array.from(document.querySelectorAll('.graph-tabs [role="tab"]'));
   const panels = tabs.map(function (t) { return document.getElementById(t.getAttribute("aria-controls")); });
 
+  /* ---------- Draw-in animation for solid SVG curves ----------
+     pathLength="1" makes one dash unit equal the whole line, so the CSS
+     (gated behind prefers-reduced-motion: no-preference) can animate
+     stroke-dashoffset 1 -> 0 to "draw" the curve. */
+  document.querySelectorAll(".econ-graph").forEach(function (svg) {
+    svg.querySelectorAll(".curve, .curve-new").forEach(function (el) {
+      el.setAttribute("pathLength", "1");
+    });
+  });
+
+  function triggerDraw(panel) {
+    if (prefersReduced()) return;
+    panel.querySelectorAll(".econ-graph").forEach(function (svg) {
+      svg.classList.remove("draw");
+      void svg.getBoundingClientRect(); // force reflow so the animation restarts
+      svg.classList.add("draw");
+    });
+  }
+
   function selectTab(tab, focus) {
     tabs.forEach(function (t, i) {
       const selected = t === tab;
       t.setAttribute("aria-selected", selected ? "true" : "false");
       t.tabIndex = selected ? 0 : -1;
       panels[i].hidden = !selected;
+      if (selected) triggerDraw(panels[i]);
     });
     if (focus) tab.focus();
   }
+
+  /* Draw the initially visible graph when it scrolls into view. */
+  (function () {
+    const first = panels.find(function (p) { return p && !p.hidden; });
+    const svg = first && first.querySelector(".econ-graph");
+    if (!svg || prefersReduced()) return;
+    if (!("IntersectionObserver" in window)) { svg.classList.add("draw"); return; }
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          io.disconnect();
+          svg.classList.add("draw");
+        }
+      });
+    }, { threshold: 0.25 });
+    io.observe(svg);
+  })();
 
   tabs.forEach(function (tab, i) {
     tab.addEventListener("click", function () { selectTab(tab, false); });

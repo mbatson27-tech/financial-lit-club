@@ -19,14 +19,22 @@
     if (!form || !result) return;
 
     const inputs = Array.from(form.querySelectorAll("input"));
+    let firstRun = true;
 
     function update() {
       const values = inputs.map(function (i) { return parseFloat(i.value); });
-      if (values.some(function (v) { return isNaN(v); })) {
-        result.textContent = "Enter valid numbers above.";
-        return;
+      const next = values.some(function (v) { return isNaN(v); })
+        ? "Enter valid numbers above."
+        : compute.apply(null, values);
+      const changed = next !== result.textContent;
+      result.textContent = next;
+      if (changed && !firstRun) {
+        /* Re-trigger the pop animation (CSS no-ops it under reduced motion). */
+        result.classList.remove("pop");
+        void result.offsetWidth;
+        result.classList.add("pop");
       }
-      result.textContent = compute.apply(null, values);
+      firstRun = false;
     }
 
     inputs.forEach(function (i) { i.addEventListener("input", update); });
