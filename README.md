@@ -10,6 +10,7 @@ no build step, free to host on GitHub Pages.
 ```
 index.html            Home
 key-concepts.html      Key Concepts notes (economics, investing, accounting)
+graphs.html             Interactive economics graphs (business cycle, PPF, shifts)
 videos.html             Video Library (search + filter by series)
 resources.html          Websites + Reading List
 calculators.html        Interactive ratio calculators
@@ -17,6 +18,7 @@ css/styles.css          All styles (includes light/dark theme)
 js/common.js            Theme toggle, mobile nav, site-wide search
 js/concepts-data.js     ALL Key Concepts content lives here (also feeds search)
 js/concepts.js          Renders Key Concepts cards, toolbar, TOC, deep links
+js/graphs.js            Graphs page tabs, shift animations, test-yourself mode
 js/videos.js            Video Library page logic
 js/resources.js         Resources page logic
 js/calculators.js       Calculator logic

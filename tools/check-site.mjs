@@ -28,6 +28,15 @@ function walk(dir, exts, out = []) {
 const htmlFiles = walk(ROOT, [".html"]);
 const jsonFiles = walk(join(ROOT, "data"), [".json"]);
 
+/* key-concepts.html renders its term cards from js/concepts-data.js, so
+   fragment ids for that page also come from the data file's slugs. */
+const conceptSlugs = new Set();
+const dataFile = join(ROOT, "js", "concepts-data.js");
+if (existsSync(dataFile)) {
+  const src = readFileSync(dataFile, "utf8");
+  for (const m of src.matchAll(/^\s*(?:slug|id):\s*"([^"]+)"/gm)) conceptSlugs.add(m[1]);
+}
+
 const rel = (f) => f.slice(ROOT.length + 1).split(sep).join("/");
 
 /* ---------- HTML checks ---------- */
@@ -75,9 +84,12 @@ for (const file of htmlFiles) {
   for (const [id, count] of seen) {
     if (count > 1) err(name, `duplicate id "${id}" (${count} times)`);
   }
+  const isConceptsPage = name === "key-concepts.html";
   const fragRe = /\shref\s*=\s*"#([^"]+)"/g;
   while ((m = fragRe.exec(html))) {
-    if (!ids.has(m[1])) err(name, `same-page fragment "#${m[1]}" has no matching id`);
+    if (!ids.has(m[1]) && !(isConceptsPage && conceptSlugs.has(m[1]))) {
+      err(name, `same-page fragment "#${m[1]}" has no matching id`);
+    }
   }
 
   /* Cross-page fragments (page.html#frag) */
@@ -85,6 +97,7 @@ for (const file of htmlFiles) {
   while ((m = crossRe.exec(html))) {
     const targetFile = resolve(fileDir, m[1]);
     if (!existsSync(targetFile)) continue; // already reported as broken
+    if (m[1].endsWith("key-concepts.html") && conceptSlugs.has(m[2])) continue;
     const targetHtml = readFileSync(targetFile, "utf8");
     if (!new RegExp(`\\sid\\s*=\\s*"${m[2].replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`).test(targetHtml)) {
       err(name, `fragment "${m[1]}#${m[2]}" has no matching id in ${m[1]}`);

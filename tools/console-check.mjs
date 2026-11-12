@@ -71,10 +71,17 @@ for (const pageFile of pages) {
     if (await firstCard.count()) await firstCard.click();
   }
   if (pageFile === "graphs.html") {
-    for (const btn of await page.locator(".scenario-btns button, .graph-tabs [role=tab]").all()) {
-      await btn.click();
+    /* Activate each tab, then exercise the visible buttons inside it. */
+    for (const tab of await page.locator(".graph-tabs [role=tab]").all()) {
+      await tab.click();
       await page.waitForTimeout(150);
+      for (const btn of await page.locator(".graph-panel:not([hidden]) .scenario-btns button").all()) {
+        await btn.click();
+        await page.waitForTimeout(250);
+      }
     }
+    const quiz = page.locator("#quiz-toggle");
+    if (await quiz.count()) { await quiz.click(); await page.waitForTimeout(150); }
   }
   await page.close();
 }

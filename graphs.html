@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphs — Financial and Economic Literacy Club</title>
+<meta name="description" content="Interactive economics graphs — the business cycle, the production possibilities frontier, supply and demand, and shift scenarios — for Financial and Economic Literacy Club members.">
+<link rel="canonical" href="https://ssesfinancialandeconomicliteracyclub.org/graphs.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Financial and Economic Literacy Club">
+<meta property="og:title" content="Graphs — Financial and Economic Literacy Club">
+<meta property="og:description" content="Interactive economics graphs — the business cycle, the PPF, supply and demand, and shift scenarios.">
+<meta property="og:url" content="https://ssesfinancialandeconomicliteracyclub.org/graphs.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("flec-theme");
+      var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav-bar" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="brand-icon" aria-hidden="true"><img src="images/logo.png" alt=""></span>
+      Financial and Economic Literacy Club
+    </a>
+    <button id="nav-toggle" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="key-concepts.html">Key Concepts</a></li>
+      <li><a href="graphs.html" aria-current="page">Graphs</a></li>
+      <li><a href="videos.html">Video Library</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="calculators.html">Calculators</a></li>
+    </ul>
+    <div class="nav-spacer"></div>
+    <div class="nav-tools">
+      <div class="site-search">
+        <label for="site-search-input" style="position:absolute;left:-9999px;">Search the site</label>
+        <input type="search" id="site-search-input" placeholder="Search videos, resources, concepts…" autocomplete="off">
+        <div id="site-search-results" class="search-results" role="listbox" aria-label="Search results"></div>
+      </div>
+      <button id="theme-toggle" class="icon-btn" aria-pressed="false" aria-label="Switch to dark mode"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+    <div class="page-hero">
+      <div class="eyebrow">Graphs</div>
+      <h1>The Graphs Students Must Know</h1>
+      <p class="lead">Every member should be able to draw and label these four graphs from memory. Explore each one, run the shift scenarios, then use <strong>Test yourself</strong> to hide the labels and quiz yourself.</p>
+    </div>
+
+    <noscript><p class="note-box"><strong>Note:</strong> This page needs JavaScript for the interactive graphs. Please enable JavaScript to use it.</p></noscript>
+
+    <div class="graph-toolbar">
+      <div class="graph-tabs" role="tablist" aria-label="Graph types">
+        <button type="button" role="tab" id="tab-cycle" aria-selected="true" aria-controls="panel-cycle">Business Cycle</button>
+        <button type="button" role="tab" id="tab-ppf" aria-selected="false" aria-controls="panel-ppf" tabindex="-1">PPF</button>
+        <button type="button" role="tab" id="tab-sd" aria-selected="false" aria-controls="panel-sd" tabindex="-1">Supply &amp; Demand</button>
+        <button type="button" role="tab" id="tab-shifts" aria-selected="false" aria-controls="panel-shifts" tabindex="-1">Shifts</button>
+      </div>
+      <button type="button" id="quiz-toggle" class="chip" aria-pressed="false">Test yourself: hide labels</button>
+    </div>
+
+    <!-- ============ 1. BUSINESS CYCLE ============ -->
+    <section id="panel-cycle" class="graph-panel" role="tabpanel" aria-labelledby="tab-cycle">
+      <div class="graph-stage">
+        <div class="graph-card">
+          <div class="gp-title">The Business Cycle</div>
+          <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Business cycle graph: real GDP over time rises and falls in waves around an upward long-run trend line. The first peak is followed by a contraction down to a trough, then an expansion up to a higher peak.">
+            <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
+            <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
+            <polygon class="ax-head" points="309,195 301,191 301,199"/>
+            <polygon class="ax-head" points="40,11 36,19 44,19"/>
+            <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Real GDP</text>
+            <text class="lbl-muted" x="172" y="216" text-anchor="middle">Time</text>
+            <line class="trend" x1="45" y1="170" x2="295" y2="62"/>
+            <path class="curve draw-line" d="M 45 185 C 62 160, 82 95, 100 95 C 118 95, 142 160, 160 160 C 182 160, 216 40, 240 40 C 256 40, 276 58, 295 88"/>
+            <text class="lbl qz" x="100" y="82" text-anchor="middle">Peak</text>
+            <text class="lbl qz" x="240" y="28" text-anchor="middle">Peak</text>
+            <text class="lbl qz" x="160" y="180" text-anchor="middle">Trough</text>
+            <line class="shift qz" x1="104" y1="178" x2="126" y2="140"/>
+            <polygon class="shift-head qz" points="128,136 120,132 120,140" transform="rotate(-60 128 136)"/>
+            <text class="lbl-sm qz" x="82" y="190" text-anchor="middle">Contraction</text>
+            <line class="shift qz" x1="238" y1="154" x2="216" y2="112"/>
+            <polygon class="shift-head qz" points="214,108 206,104 206,112" transform="rotate(-118 214 108)"/>
+            <text class="lbl-sm qz" x="252" y="166" text-anchor="middle">Expansion</text>
+          </svg>
+          <div class="graph-caption qz">Dashed line = the long-run growth trend.</div>
+        </div>
+        <div class="graph-notes">
+          <h2>The four phases</h2>
+          <ol>
+            <li><strong>Expansion</strong> — real GDP is rising; unemployment falls and incomes grow.</li>
+            <li><strong>Peak</strong> — the high point of the cycle; growth stalls and the economy runs hot.</li>
+            <li><strong>Contraction / Recession</strong> — real GDP falls; unemployment rises. Two consecutive quarters of negative real GDP growth is the classic definition of a recession.</li>
+            <li><strong>Trough</strong> — the low point; the economy bottoms out, then a new expansion begins.</li>
+          </ol>
+          <p>The dashed trend line shows that despite the waves, the economy grows over the long run — mainly thanks to rising <a href="key-concepts.html#productivity">productivity</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. PPF ============ -->
+    <section id="panel-ppf" class="graph-panel" role="tabpanel" aria-labelledby="tab-ppf" hidden>
+      <div class="graph-stage">
+        <div class="graph-card">
+          <div class="gp-title">The Production Possibilities Frontier</div>
+          <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Production possibilities frontier between guns produced and butter produced: a curve bowed outward from the origin. Points B, D, and C on the curve are efficient, point A inside the curve is inefficient, and point X outside the curve is unattainable. A toggle shifts the whole frontier outward to represent economic growth.">
+            <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
+            <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
+            <polygon class="ax-head" points="309,195 301,191 301,199"/>
+            <polygon class="ax-head" points="40,11 36,19 44,19"/>
+            <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Guns produced</text>
+            <text class="lbl-muted" x="172" y="216" text-anchor="middle">Butter produced</text>
+            <path class="curve" d="M 45 40 Q 230 55 262 190"/>
+            <g id="ppf-growth" hidden>
+              <path class="curve-new" d="M 45 24 Q 258 38 294 190"/>
+              <line class="shift" x1="196" y1="78" x2="220" y2="60"/>
+              <polygon class="shift-head" points="224,56 215,54 221,63"/>
+              <text class="lbl-accent qz" x="248" y="52">Growth</text>
+            </g>
+            <line class="guide" x1="40" y1="47" x2="97" y2="47"/>
+            <line class="guide" x1="97" y1="47" x2="97" y2="195"/>
+            <line class="guide" x1="40" y1="93" x2="202" y2="93"/>
+            <line class="guide" x1="202" y1="93" x2="202" y2="195"/>
+            <line class="guide" x1="40" y1="164" x2="254" y2="164"/>
+            <line class="guide" x1="254" y1="164" x2="254" y2="195"/>
+            <circle class="dot" cx="97" cy="47" r="4"/>
+            <circle class="dot" cx="202" cy="93" r="4"/>
+            <circle class="dot" cx="254" cy="164" r="4"/>
+            <circle class="dot-old" cx="140" cy="135" r="4"/>
+            <circle class="dot-old" cx="283" cy="85" r="4"/>
+            <text class="lbl qz" x="104" y="40">B</text>
+            <text class="lbl qz" x="210" y="87">D</text>
+            <text class="lbl qz" x="262" y="158">C</text>
+            <text class="lbl qz" x="148" y="130">A</text>
+            <text class="lbl qz" x="290" y="80">X</text>
+          </svg>
+          <div class="graph-caption qz">B, D, C (on curve) = efficient · A (inside) = inefficient · X (outside) = unattainable.</div>
+          <div class="scenario-btns ppf-btns">
+            <button type="button" id="ppf-shift-btn" class="chip" aria-pressed="false">Shift the frontier outward</button>
+          </div>
+        </div>
+        <div class="graph-notes">
+          <h2>Reading the PPF</h2>
+          <ul>
+            <li><strong>On the curve (B, D, C):</strong> every resource is fully and efficiently used. Moving along the curve shows <a href="key-concepts.html#opportunity-cost">opportunity cost</a> — more guns means less butter.</li>
+            <li><strong>Inside the curve (A):</strong> resources are sitting idle or being wasted — the economy could produce more of both goods.</li>
+            <li><strong>Outside the curve (X):</strong> unattainable with today's resources and technology.</li>
+          </ul>
+          <p>The whole frontier shifts outward when an economy improves its <strong>human capital</strong> (education and job training) or its <strong>physical capital</strong> (technological innovation). Try the toggle to see it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. SUPPLY & DEMAND ============ -->
+    <section id="panel-sd" class="graph-panel" role="tabpanel" aria-labelledby="tab-sd" hidden>
+      <div class="graph-stage">
+        <div class="graph-card">
+          <div class="gp-title">A Supply and Demand Curve</div>
+          <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Supply and demand graph: an upward-sloping supply curve and a downward-sloping demand curve cross at the equilibrium point, which sets the equilibrium price and equilibrium quantity.">
+            <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
+            <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
+            <polygon class="ax-head" points="309,195 301,191 301,199"/>
+            <polygon class="ax-head" points="40,11 36,19 44,19"/>
+            <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Price</text>
+            <text class="lbl-muted" x="303" y="216" text-anchor="end">Quantity</text>
+            <line class="curve" x1="70" y1="180" x2="260" y2="50"/>
+            <line class="curve" x1="70" y1="50" x2="260" y2="180"/>
+            <text class="lbl-sm qz" x="226" y="64" text-anchor="middle" transform="rotate(-34 226 64)">Supply curve</text>
+            <text class="lbl-sm qz" x="226" y="166" text-anchor="middle" transform="rotate(34 226 166)">Demand curve</text>
+            <line class="guide" x1="40" y1="115" x2="165" y2="115"/>
+            <line class="guide" x1="165" y1="115" x2="165" y2="195"/>
+            <circle class="dot" cx="165" cy="115" r="4.5"/>
+            <text class="lbl-accent qz" x="175" y="106">Equilibrium</text>
+            <text class="lbl-sm qz" x="98" y="110" text-anchor="middle">Equilibrium price</text>
+            <text class="lbl-sm qz" x="157" y="148" text-anchor="middle" transform="rotate(-90 157 148)">Eq. quantity</text>
+          </svg>
+          <div class="graph-caption qz">Equilibrium: where supply meets demand sets the market price and quantity.</div>
+        </div>
+        <div class="graph-notes">
+          <h2>Why the curves slope the way they do</h2>
+          <ul>
+            <li><strong><a href="key-concepts.html#law-of-supply">Law of Supply</a>:</strong> producers make more as prices rise (the profit motive) — so supply slopes upward.</li>
+            <li><strong><a href="key-concepts.html#law-of-demand">Law of Demand</a>:</strong> consumers buy more as prices fall (common sense) — so demand slopes downward.</li>
+            <li><strong><a href="key-concepts.html#equilibrium">Equilibrium</a>:</strong> the one price where the quantity producers want to sell equals the quantity consumers want to buy. Markets constantly push prices toward this point.</li>
+          </ul>
+          <p>When something <em>other than price</em> changes — incomes, costs, fears, technology — a whole curve moves. See the <strong>Shifts</strong> tab.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. SHIFTS ============ -->
+    <section id="panel-shifts" class="graph-panel" role="tabpanel" aria-labelledby="tab-shifts" hidden>
+      <div class="scenario-btns" role="group" aria-label="Shift scenarios">
+        <button type="button" class="chip" data-scenario="expansion" aria-pressed="false">Economic Expansion</button>
+        <button type="button" class="chip" data-scenario="contraction" aria-pressed="false">Economic Contraction</button>
+        <button type="button" class="chip" data-scenario="shock" aria-pressed="false">Supply Shock</button>
+        <button type="button" class="chip" data-scenario="surplus" aria-pressed="false">Supply Surplus</button>
+      </div>
+      <div class="graph-stage">
+        <div class="graph-card">
+          <div class="gp-title" id="shift-title">Pick a scenario to see the curves move</div>
+          <svg class="econ-graph" viewBox="0 0 320 222" role="img" aria-label="Interactive supply and demand graph. Choosing a scenario shifts the demand or supply curve: the old curve stays as a faded dashed line and the equilibrium point slides to its new position." id="shift-svg">
+            <line class="axis" x1="40" y1="195" x2="303" y2="195"/>
+            <line class="axis" x1="40" y1="195" x2="40" y2="17"/>
+            <polygon class="ax-head" points="309,195 301,191 301,199"/>
+            <polygon class="ax-head" points="40,11 36,19 44,19"/>
+            <text class="lbl-muted" x="20" y="108" transform="rotate(-90 20 108)" text-anchor="middle">Price</text>
+            <text class="lbl-muted" x="303" y="216" text-anchor="end">Quantity</text>
+            <line id="sh-old" class="curve-old" x1="70" y1="50" x2="260" y2="180" opacity="0"/>
+            <line id="sh-guide-old-h" class="guide" x1="40" y1="115" x2="165" y2="115" opacity="0"/>
+            <line id="sh-guide-old-v" class="guide" x1="165" y1="115" x2="165" y2="195" opacity="0"/>
+            <line id="sh-guide-new-h" class="guide" x1="40" y1="115" x2="165" y2="115" opacity="0"/>
+            <line id="sh-guide-new-v" class="guide" x1="165" y1="115" x2="165" y2="195" opacity="0"/>
+            <line id="sh-s" class="curve" x1="70" y1="180" x2="260" y2="50"/>
+            <line id="sh-d" class="curve" x1="70" y1="50" x2="260" y2="180"/>
+            <g id="sh-arrow" opacity="0">
+              <line class="shift" x1="104" y1="70" x2="130" y2="70"/>
+              <polygon class="shift-head" id="sh-arrow-head" points="139,70 129,65 129,75"/>
+            </g>
+            <circle id="sh-dot-old" class="dot-old" cx="165" cy="115" r="4" opacity="0"/>
+            <circle id="sh-dot" class="dot" cx="165" cy="115" r="4.5"/>
+            <text id="sh-s-lbl" class="lbl qz" x="260" y="42" text-anchor="middle">S</text>
+            <text id="sh-d-lbl" class="lbl qz" x="70" y="42" text-anchor="middle">D</text>
+            <text id="sh-new-lbl" class="lbl-accent qz" x="0" y="0" text-anchor="middle" opacity="0"></text>
+            <text id="sh-p-old" class="lbl-sm qz" x="34" y="118" text-anchor="end" opacity="0">P₁</text>
+            <text id="sh-p-new" class="lbl-sm qz" x="34" y="103" text-anchor="end" opacity="0">P₂</text>
+            <text id="sh-q-old" class="lbl-sm qz" x="165" y="211" text-anchor="middle" opacity="0">Q₁</text>
+            <text id="sh-q-new" class="lbl-sm qz" x="187" y="211" text-anchor="middle" opacity="0">Q₂</text>
+          </svg>
+          <div class="graph-caption" id="shift-caption">The market starts at equilibrium — supply (S) meets demand (D).</div>
+        </div>
+        <div class="graph-notes">
+          <div id="shift-info" hidden>
+            <h2 id="shift-info-title"></h2>
+            <div class="table-wrap">
+              <table class="data-table shift-table">
+                <thead><tr><th scope="col">Indicator</th><th scope="col">What happens</th></tr></thead>
+                <tbody>
+                  <tr><td>GDP Growth</td><td id="shift-gdp"></td></tr>
+                  <tr><td>Unemployment</td><td id="shift-unemp"></td></tr>
+                  <tr><td>Inflation</td><td id="shift-infl"></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p id="shift-explain"></p>
+            <p class="example-box" id="shift-example"></p>
+          </div>
+          <div id="shift-intro">
+            <h2>How to read a shift</h2>
+            <p>A curve shifts when something <em>other than price</em> changes. The old curve stays behind as a faded dashed line, and the equilibrium slides to where the new curves cross.</p>
+            <p class="note-box">For each scenario, you need to know what happens to: (1) GDP Growth; (2) Unemployment; and (3) Inflation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-brand">Financial &amp; Economic Literacy Club</p>
+      <p class="footer-school">Saint Stephen's Episcopal School</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="key-concepts.html">Key Concepts</a>
+      <a href="graphs.html">Graphs</a>
+      <a href="videos.html">Video Library</a>
+      <a href="resources.html">Resources</a>
+      <a href="calculators.html">Calculators</a>
+    </nav>
+  </div>
+  <p class="footer-copy">© 2026 Financial and Economic Literacy Club</p>
+</footer>
+
+<script src="js/concepts-data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/graphs.js"></script>
+</body>
+</html>
