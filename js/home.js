@@ -106,3 +106,14 @@
     }, { passive: true });
   }
 })();
+
+/* About Us photo: if the school-hosted portrait fails to load,
+   remove it so the gold monogram placeholder shows instead. */
+(function () {
+  "use strict";
+  var img = document.querySelector(".profile-img");
+  if (!img) return;
+  function drop() { if (img.parentNode) img.parentNode.removeChild(img); }
+  if (img.complete && img.naturalWidth === 0 && img.currentSrc) drop();
+  img.addEventListener("error", drop);
+})();
