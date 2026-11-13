@@ -22,6 +22,8 @@
   --gold-strong: #82641d;
   --gold-soft: #f6f1e3;
   --code-bg: #eef1f5;
+  --input-bg: #ffffff;
+  --input-border: #8a8f99;
   --danger: #9f1239;
   --danger-soft: #fde6ea;
   --focus: #2563eb;
@@ -62,8 +64,11 @@
   --gold: #d4b36a;
   --gold-strong: #e2c88d;
   --gold-soft: #2a2310;
+  --input-bg: #0d1a2b;
+  --input-border: #3b5170;
   --danger: #ff8fa3;
   --danger-soft: #341420;
+  --code-bg: #172a42;
   --focus: #60a5fa;
   --g-navy: #8fb3de;
   --g-teal: #2dd4bf;
@@ -660,12 +665,13 @@ dl.glossary dd {
   background: var(--gold-soft);
   border: 1px solid var(--gold);
 }
+[data-theme="dark"] .formula-box code { color: var(--gold-strong); }
 .formula-box .formula-name { font-weight: 700; margin-bottom: 0.35rem; color: var(--text); }
 .formula-box code {
   display: block;
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--gold-strong);
+  color: var(--heading);
   background: none;
   padding: 0;
   margin-bottom: 0.4rem;
@@ -973,19 +979,22 @@ a.video-card:hover, a.video-card:focus-visible {
 }
 .calc-form label {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
+  color: var(--heading);
   margin: 0.75rem 0 0.3rem;
 }
 .calc-form input {
   width: 100%;
   padding: 0.55rem 0.7rem;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: var(--surface-alt);
-  color: var(--text);
-  font-size: 0.95rem;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--heading);
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
 }
+.calc-form input:hover { border-color: var(--text-muted); }
 .calc-result {
   margin-top: 1rem;
   padding: 0.85rem 1rem;
@@ -998,14 +1007,15 @@ a.video-card:hover, a.video-card:focus-visible {
 [data-theme="dark"] .calc-result { color: var(--accent); }
 .calc-result--notice,
 [data-theme="dark"] .calc-result--notice {
-  background: var(--surface-alt);
+  background: var(--code-bg);
   color: var(--text);
   font-weight: 500;
   font-size: 0.95rem;
-  border-left: 3px solid var(--gold);
+  border-left: 3px solid var(--accent);
 }
 .calc-example {
-  background: var(--surface-alt);
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 0.85rem 1rem;
   font-size: 0.9rem;
