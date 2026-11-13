@@ -5,6 +5,7 @@
    Fields:
      slug     - stable id used for deep links (key-concepts.html#slug)
      term     - display name
+     short    - one-line definition shown under the term while the card is collapsed
      group    - key into CONCEPT_GROUPS
      def      - plain-English definition (may contain simple inline HTML)
      why      - "Why it matters" sentence(s)
@@ -30,6 +31,7 @@ const CONCEPTS_DATA = [
   {
     slug: "economics",
     term: "Economics",
+    short: "How a society uses scarce resources to meet unlimited wants.",
     group: "foundations",
     def: "How a society allocates scarce resources amidst unlimited human wants.",
     why: "Every economic question — what to produce, how, and for whom — comes back to scarcity. If resources were unlimited, there would be nothing to study.",
@@ -39,6 +41,7 @@ const CONCEPTS_DATA = [
   {
     slug: "opportunity-cost",
     term: "Opportunity Cost",
+    short: "What you give up when you choose one option over another.",
     group: "foundations",
     def: "The second best alternative when you are confronted with two good choices — what you give up when you pick one option over another.",
     why: "Every choice has a hidden price tag: the value of the thing you did not choose. Thinking in opportunity costs is the core habit of economic reasoning.",
@@ -48,6 +51,7 @@ const CONCEPTS_DATA = [
   {
     slug: "law-of-supply",
     term: "Law of Supply",
+    short: "Higher prices lead producers to make more; lower prices, less.",
     group: "foundations",
     def: "All other things being equal, producers tend to produce more of a good or service if prices are rising and less if prices are falling. This law is tied to the profit motive.",
     why: "It explains the upward slope of the supply curve and why high prices attract new producers into a market.",
@@ -57,6 +61,7 @@ const CONCEPTS_DATA = [
   {
     slug: "law-of-demand",
     term: "Law of Demand",
+    short: "Lower prices lead buyers to purchase more; higher prices, less.",
     group: "foundations",
     def: "All other things being equal, consumers tend to buy more of a good or service if prices are falling and less if prices are rising. This law is tied to common sense.",
     why: "It explains the downward slope of the demand curve and why sales and discounts move product.",
@@ -66,6 +71,7 @@ const CONCEPTS_DATA = [
   {
     slug: "wealth-effect",
     term: "Wealth Effect",
+    short: "People spend more when they feel richer and less when they feel poorer.",
     group: "foundations",
     def: "According to the economist Pigou, when people feel wealthier, they tend to spend more money. Conversely, when people feel less wealthy, they tend to spend less — and if enough people become fearful, a recession or bust may follow.",
     why: "It links asset prices (homes, stocks) to consumer spending, which is the largest part of GDP. Rising markets can feed booms; falling markets can deepen busts.",
@@ -75,6 +81,7 @@ const CONCEPTS_DATA = [
   {
     slug: "interest-rates",
     term: "Interest Rates",
+    short: "The cost of borrowing money, which pushes asset prices the opposite way.",
     group: "foundations",
     def: "The cost of borrowing money. When interest rates go up, asset prices (stocks, bonds, real estate, etc.) tend to fall over time. When interest rates fall, asset prices tend to rise over time.",
     why: "Interest rates are the gravity of finance: they set the price of borrowing for homes, cars, and businesses, and they anchor the value of every asset.",
@@ -84,6 +91,7 @@ const CONCEPTS_DATA = [
   {
     slug: "productivity",
     term: "Productivity",
+    short: "How much output you get from each unit of input, like an hour of work.",
     group: "foundations",
     def: "The rate of output per unit of input — often measured by how much a worker produces in a given hour or day.",
     why: "Rising productivity is the main driver of higher wages and long-run economic growth: the more each worker produces, the more there is to go around.",
@@ -93,6 +101,7 @@ const CONCEPTS_DATA = [
   {
     slug: "ppf",
     term: "Production Possibilities Frontier (PPF)",
+    short: "A curve showing the most an economy can produce with what it has.",
     group: "foundations",
     def: "A curve showing the maximum combinations of two goods an economy (or company, or person) can produce with its current resources. The goal is to be on the frontier and then push it outward via (1) better education and job training — improved \"human\" capital — and (2) technological innovation — improved \"physical\" capital.",
     why: "Points inside the curve mean resources are being wasted; points outside are unattainable today. The PPF turns scarcity and trade-offs into a picture.",
@@ -102,6 +111,7 @@ const CONCEPTS_DATA = [
   {
     slug: "factors-of-production",
     term: "Four Factors of Production",
+    short: "Land, labor, capital, and entrepreneurship: the inputs to all production.",
     group: "foundations",
     def: "Land + Labor + Capital + Entrepreneurial Ability — the four inputs every economy combines to produce goods and services.",
     why: "An economy grows by using these four inputs more efficiently. If a country or company is inside its PPF, it is being inefficient with one or more of them.",
@@ -111,6 +121,7 @@ const CONCEPTS_DATA = [
   {
     slug: "equilibrium",
     term: "Equilibrium",
+    short: "The price and quantity where supply meets demand.",
     group: "foundations",
     def: "The point where supply meets demand, setting the market price and quantity. Rarely achieved perfectly in any market, but still useful as a theoretical roadmap for how an economy reaches a stable point.",
     why: "Equilibrium is the reference point for every supply-and-demand story: shifts in either curve move the market to a new equilibrium price and quantity.",
@@ -122,6 +133,7 @@ const CONCEPTS_DATA = [
   {
     slug: "gdp",
     term: "Gross Domestic Product (GDP)",
+    short: "The total value of all final goods and services a country produces.",
     group: "gdp-cycle",
     def: "The total dollar value of all final goods and services produced within a country's border within a given time period (quarter or year). Intermediate goods are excluded to prevent double counting.",
     why: "GDP is the headline scorecard for an economy. Whether it is growing or shrinking drives jobs, incomes, elections, and markets.",
@@ -137,6 +149,7 @@ const CONCEPTS_DATA = [
   {
     slug: "expansion",
     term: "Expansion",
+    short: "The part of the business cycle when GDP is growing.",
     group: "gdp-cycle",
     def: "The phase of the business cycle when GDP (Gross Domestic Product = National Income) is growing.",
     why: "Expansions are when jobs are created, wages rise, and most investment gains happen. Knowing where you are in the cycle shapes policy and investing decisions.",
@@ -146,6 +159,7 @@ const CONCEPTS_DATA = [
   {
     slug: "peak",
     term: "Peak",
+    short: "The high point of GDP before the economy starts to shrink.",
     group: "gdp-cycle",
     def: "The point where GDP reaches a high point and then falls. Note: a peak can only be identified in hindsight.",
     why: "Peaks mark the turning point from expansion to contraction. Because they are only visible after the fact, timing the market around them is notoriously difficult.",
@@ -155,6 +169,7 @@ const CONCEPTS_DATA = [
   {
     slug: "bc-contraction",
     term: "Contraction / Recession",
+    short: "When GDP shrinks; two straight quarters of decline is a recession.",
     group: "gdp-cycle",
     def: "A contraction occurs when GDP growth turns negative. A recession is typically defined by two consecutive quarters of GDP decline.",
     why: "Recessions mean rising unemployment and falling incomes — and they trigger the fiscal and monetary policy responses covered in this guide.",
@@ -164,6 +179,7 @@ const CONCEPTS_DATA = [
   {
     slug: "trough",
     term: "Trough",
+    short: "The low point of GDP before growth returns.",
     group: "gdp-cycle",
     def: "The low point of the business cycle, where GDP decline bottoms out before growth resumes. Like the peak, it can only be identified in hindsight.",
     why: "The trough marks the start of recovery. Markets often turn up before the trough is officially recognized.",
@@ -173,6 +189,7 @@ const CONCEPTS_DATA = [
   {
     slug: "booms-busts",
     term: "Booms and Busts",
+    short: "Swings in the economy driven by too much greed, then too much fear.",
     group: "gdp-cycle",
     def: "Booms are often driven by excessive greed, while busts are often driven by excessive fear. Keynes's \"animal spirits\" — \"the spontaneous urge to action rather than inaction\" — helps explain the cycle, because it focuses on irrational patterns of human behavior.",
     why: "It is irrational to believe good (or bad) times will last forever, yet many people fall into these traps by letting their animal spirits guide their decisions.",
@@ -182,6 +199,7 @@ const CONCEPTS_DATA = [
   {
     slug: "recession-qa",
     term: "What Happens During a Recession?",
+    short: "GDP falls, unemployment rises, and incomes and inflation drop.",
     group: "gdp-cycle",
     def: "GDP goes down and becomes negative for at least two consecutive quarters → unemployment goes up → incomes go down and so does inflation (unless stagflation occurs).",
     why: "This chain reaction is the standard playbook policymakers respond to — and the test question you will most likely see.",
@@ -191,6 +209,7 @@ const CONCEPTS_DATA = [
   {
     slug: "boom-qa",
     term: "What Happens During an Economic Boom?",
+    short: "GDP grows too fast, unemployment falls too low, and inflation rises.",
     group: "gdp-cycle",
     def: "GDP grows above 4% for too long → unemployment falls below the natural rate (4–5%) for too long → inflation rises above 2% for too long.",
     why: "Booms feel great but sow the seeds of the next bust — which is why the Fed often acts to cool them down.",
@@ -202,6 +221,7 @@ const CONCEPTS_DATA = [
   {
     slug: "fiscal-policy",
     term: "Fiscal Policy",
+    short: "Government changes to taxes and spending to steer the economy.",
     group: "policy",
     def: "The federal government's economic toolkit: raising and lowering <strong>taxes</strong>, and raising and lowering <strong>government spending</strong>.",
     why: "Fiscal policy is one of the two levers (with monetary policy) used to keep GDP growth, inflation, and unemployment in their target ranges.",
@@ -211,6 +231,7 @@ const CONCEPTS_DATA = [
   {
     slug: "monetary-policy",
     term: "Monetary Policy",
+    short: "The Federal Reserve's changes to interest rates and the money supply.",
     group: "policy",
     def: "The Federal Reserve's toolkit: raising and lowering <strong>interest rates</strong> — primarily by setting a target for the <strong>federal funds rate</strong>, the overnight rate banks charge each other — and raising and lowering the <strong>money supply</strong> (via buying and selling bonds). The discount rate, which the Fed charges banks directly, is a secondary tool.",
     why: "The Fed's rate decisions ripple through every loan, mortgage, and asset price in the economy — usually faster and more predictably than fiscal policy.",
@@ -220,6 +241,7 @@ const CONCEPTS_DATA = [
   {
     slug: "inflation",
     term: "Inflation",
+    short: "A period when prices across the economy are rising.",
     group: "policy",
     def: "A period of rising prices.",
     why: "Inflation quietly shrinks the purchasing power of every dollar you hold. The Fed targets roughly 2% — enough to grease the economy without eroding savings.",
@@ -229,6 +251,7 @@ const CONCEPTS_DATA = [
   {
     slug: "deflation",
     term: "Deflation",
+    short: "A period when prices across the economy are falling.",
     group: "policy",
     def: "A period of falling prices.",
     why: "Falling prices sound nice but can be dangerous: consumers delay purchases, businesses cut jobs, and debts get harder to repay — a downward spiral.",
@@ -238,6 +261,7 @@ const CONCEPTS_DATA = [
   {
     slug: "stagflation",
     term: "Stagflation",
+    short: "Slow or negative growth combined with rising prices and unemployment.",
     group: "policy",
     def: "A period of negative (or sluggish) GDP growth accompanied by both rising inflation and rising unemployment. This often happens after a \"supply shock\" moves the supply curve to the left.",
     why: "Stagflation is the policymaker's nightmare: fighting inflation (raising rates) makes unemployment worse, and fighting unemployment (cutting rates) makes inflation worse.",
@@ -247,6 +271,7 @@ const CONCEPTS_DATA = [
   {
     slug: "key-macro-variables",
     term: "Key Macroeconomic Variables",
+    short: "GDP growth, unemployment, and inflation: the three numbers policy watches.",
     group: "policy",
     def: "The three numbers fiscal and monetary policy try to keep in range: GDP growth, unemployment, and inflation. When all three are in range, the economy approximates general equilibrium.",
     why: "Almost every policy debate — rate hikes, stimulus, tax cuts — is an argument about getting these three numbers back into their target ranges.",
@@ -267,6 +292,7 @@ const CONCEPTS_DATA = [
   {
     slug: "creative-destruction",
     term: "Creative Destruction",
+    short: "Letting old, inefficient businesses fail so resources move to better uses.",
     group: "capitalism",
     def: "The process where a government allows old, inefficient businesses and industries to die off (by no longer protecting them with tariffs) so the four factors of production can be reallocated to more efficient uses. Clever entrepreneurs force creative destruction by spotting inefficiencies and exploiting them — including with tools like AI.",
     why: "Coined by Joseph Schumpeter, this is the engine of capitalism: painful in the short run for displaced workers and firms, but the source of long-run growth and rising living standards.",
@@ -276,6 +302,7 @@ const CONCEPTS_DATA = [
   {
     slug: "globalization",
     term: "Globalization",
+    short: "Countries trading in one connected world economy based on what each does best.",
     group: "capitalism",
     def: "The process through which virtually all countries can be part of an integrated worldwide economic system, where countries and companies produce and sell goods and services based on their comparative advantages.",
     why: "Globalization lowered prices and lifted hundreds of millions out of poverty, but it also hit workers in industries that moved overseas — one of the defining economic tensions of our time.",
@@ -285,6 +312,7 @@ const CONCEPTS_DATA = [
   {
     slug: "technological-innovation",
     term: "Technological Innovation",
+    short: "New or better products created with cutting-edge technology.",
     group: "capitalism",
     def: "The process through which a new or improved product is developed using cutting-edge technology — including robots that have replaced (and will continue to replace) low-skilled factory workers. Advances in artificial intelligence are accelerating this trend.",
     why: "Technology raises productivity and creates whole new industries, but it also disrupts existing jobs — often at the same time as globalization.",
@@ -296,6 +324,7 @@ const CONCEPTS_DATA = [
   {
     slug: "investment-capital",
     term: "Investment Capital",
+    short: "Money people and companies save to invest in assets like stocks or real estate.",
     group: "stocks",
     def: "Money that individuals (and companies) earn and save for investments — real estate, stocks, bonds, certificates of deposit, businesses, and so on.",
     why: "Capital you invest can compound and grow; capital you spend is gone. Building investment capital early is the foundation of financial independence.",
@@ -305,6 +334,7 @@ const CONCEPTS_DATA = [
   {
     slug: "equity-investment",
     term: "Equity Investment",
+    short: "Buying shares of stock, which makes you a part-owner of a company.",
     group: "stocks",
     def: "Buying shares (stock) in a company. The terms \"shares\" and \"stocks\" are often used interchangeably.",
     why: "Equity makes you a part-owner: you share in profits and growth, but you also bear the risk of losses.",
@@ -314,6 +344,7 @@ const CONCEPTS_DATA = [
   {
     slug: "primary-markets",
     term: "Primary Markets",
+    short: "Where companies sell new shares or bonds to raise money.",
     group: "stocks",
     def: "Where companies raise money by selling shares or issuing bonds (e.g., Initial Public Offerings and secondary offerings). Owning shares is an equity investment; buying a bond makes you a creditor who must be repaid on the bond's maturity date.",
     why: "The primary market is where investment money actually reaches companies to fund growth — every share you trade later started life here.",
@@ -323,6 +354,7 @@ const CONCEPTS_DATA = [
   {
     slug: "secondary-markets",
     term: "Secondary Markets",
+    short: "Where investors buy and sell shares and bonds with each other.",
     group: "stocks",
     def: "Where shares and bonds are traded between individuals (or companies). The proceeds of the sale go to the seller, not to the company (or government) that originally issued them.",
     why: "Secondary markets provide liquidity — the confidence that you can sell when you need to — which is what makes people willing to invest in the first place.",
@@ -332,6 +364,7 @@ const CONCEPTS_DATA = [
   {
     slug: "stocks-shares",
     term: "Stocks = Shares",
+    short: "Two words for the same thing: a piece of ownership in a company.",
     group: "stocks",
     def: "Owning shares in a company is an equity investment. Publicly traded companies have their shares traded in the stock market (e.g., NYSE, NASDAQ) — a stock market is where shares are issued and then bought and sold in the secondary market.",
     why: "Understanding that a stock is a slice of ownership — not a lottery ticket — is the first step to investing like an owner instead of a gambler.",
@@ -341,6 +374,7 @@ const CONCEPTS_DATA = [
   {
     slug: "limited-liability",
     term: "Limited Liability",
+    short: "As an investor, the most you can lose is what you put in.",
     group: "stocks",
     def: "When you invest in a company, you can only lose the full amount of your investment — you cannot be sued for additional funds if the company (or its executives) breaks the law.",
     why: "Limited liability is what makes stock investing possible for ordinary people: your downside is capped at what you put in.",
@@ -350,6 +384,7 @@ const CONCEPTS_DATA = [
   {
     slug: "growth-stocks",
     term: "Growth Stocks",
+    short: "Companies that reinvest profits to grow instead of paying dividends.",
     group: "stocks",
     def: "Companies that rarely pay a dividend because they typically reinvest their profits (and cash flow) back into the business via technological or other innovation that provides an ongoing comparative advantage.",
     why: "Growth stocks offer higher potential returns in exchange for higher volatility and no dividend income along the way.",
@@ -359,6 +394,7 @@ const CONCEPTS_DATA = [
   {
     slug: "value-stocks",
     term: "Value Stocks",
+    short: "Steady, mature companies that usually pay a dividend.",
     group: "stocks",
     def: "Companies with steady profits and cash flows. They typically pay a dividend because their period of high growth is over — the dividend keeps investors interested in holding the shares.",
     why: "Value stocks tend to be steadier and pay you to wait, making them a counterweight to growth stocks in a portfolio.",
@@ -368,6 +404,7 @@ const CONCEPTS_DATA = [
   {
     slug: "common-stock",
     term: "Common Stock",
+    short: "The everyday type of stock most people buy; riskier than preferred.",
     group: "stocks",
     def: "What most people buy (vs. preferred stock). Common stock is riskier and more volatile than preferred stock, largely because its price moves up and down more frequently. It may or may not pay a dividend.",
     why: "Over long periods, common stock has provided a much higher return than preferred stock, bonds, or cash — the reward for accepting more risk.",
@@ -377,6 +414,7 @@ const CONCEPTS_DATA = [
   {
     slug: "preferred-stock",
     term: "Preferred Stock",
+    short: "Stock that pays dividends first and is repaid before common stock.",
     group: "stocks",
     def: "Less risky than common stock: it almost always pays a dividend, and those dividends are almost always paid before dividends on common stock. In a bankruptcy, preferred shareholders are paid before common shareholders.",
     why: "Preferred stock sits between bonds and common stock: steadier income than common shares, but less upside if the company thrives.",
@@ -386,6 +424,7 @@ const CONCEPTS_DATA = [
   {
     slug: "dividends",
     term: "Dividends",
+    short: "Cash (or extra shares) a company pays to its shareholders.",
     group: "stocks",
     def: "A payment, usually in cash (but sometimes in additional stock), that attracts investors looking for a higher return. The dividend yield is the annual dividend divided by the stock price at purchase.",
     why: "Dividends are the portion of your return you actually receive in hand — historically a large share of the stock market's total return.",
@@ -395,6 +434,7 @@ const CONCEPTS_DATA = [
   {
     slug: "blue-chip-stocks",
     term: "Blue Chip Stocks",
+    short: "The largest, most profitable, best-known companies.",
     group: "stocks",
     def: "Generally the largest, most profitable companies, often considered \"household\" names. There is no official list, but today Apple, Microsoft, Google, Amazon, and Nvidia would certainly be on it.",
     why: "Blue chips anchor major indexes like the Dow and are often the core holdings of long-term portfolios because of their stability and staying power.",
@@ -404,6 +444,7 @@ const CONCEPTS_DATA = [
   {
     slug: "ipo",
     term: "Public Company / IPO / Secondary Offering",
+    short: "How a private company becomes public by selling shares for the first time.",
     group: "stocks",
     def: "A public company is one whose shares are publicly traded on a stock exchange. An Initial Public Offering (IPO) occurs when a company sells shares to the public for the first time. A <strong>secondary offering</strong> occurs when an already-public company sells additional shares to raise more money.",
     why: "Going public gives companies access to huge pools of capital — and gives everyday investors the chance to own a piece of them.",
@@ -413,6 +454,7 @@ const CONCEPTS_DATA = [
   {
     slug: "nyse",
     term: "New York Stock Exchange (NYSE)",
+    short: "The oldest and most prestigious U.S. stock exchange, dating to 1792.",
     group: "stocks",
     def: "The most prestigious stock exchange in the United States (and many would say the world). Its roots date back to 1792.",
     why: "Listing on the NYSE signals size and credibility; it remains the world's largest exchange by the total value of listed companies.",
@@ -422,6 +464,7 @@ const CONCEPTS_DATA = [
   {
     slug: "dow-jones",
     term: "Dow Jones Industrial Average",
+    short: "A stock index that tracks 30 large, well-known U.S. companies.",
     group: "stocks",
     def: "A weighted index of thirty high-profile, \"Blue Chip\" companies.",
     why: "The Dow is the oldest and most quoted shorthand for \"the market,\" even though its 30 companies make it far narrower than the S&P 500.",
@@ -431,6 +474,7 @@ const CONCEPTS_DATA = [
   {
     slug: "nasdaq",
     term: "NASDAQ",
+    short: "The first electronic stock market and home to many tech companies.",
     group: "stocks",
     def: "The world's first electronic trading market, founded in 1971 — about 200 years after the NYSE. Most high-tech companies that have gone public list their shares on NASDAQ.",
     why: "The NASDAQ's tech-heavy listings make its index a barometer for the technology sector specifically.",
@@ -440,6 +484,7 @@ const CONCEPTS_DATA = [
   {
     slug: "sp500",
     term: "S&P 500 Index",
+    short: "A stock index of 500 large U.S. companies; a broad gauge of the market.",
     group: "stocks",
     def: "An index of 500 high-profile companies. It is a better barometer for the overall health of the U.S. economy than the Dow Jones because it contains such a wide variety of companies.",
     why: "The S&P 500 is the benchmark most professional investors are measured against — and the index most retirement funds quietly track.",
@@ -449,6 +494,7 @@ const CONCEPTS_DATA = [
   {
     slug: "roe",
     term: "Return on Equity / Return on Investment (ROE / ROI)",
+    short: "The profit or loss on an investment over a year, as a percentage.",
     group: "stocks",
     def: "The profit or loss made on an investment over a given time period — usually one year — expressed as a percentage.",
     why: "Return is the whole point of investing; comparing returns across assets (stocks vs. bonds vs. cash) is how you decide where to put capital.",
@@ -458,6 +504,7 @@ const CONCEPTS_DATA = [
   {
     slug: "paper-gain-loss",
     term: "Paper Gain / Paper Loss",
+    short: "A gain or loss on a stock you still own and have not sold.",
     group: "stocks",
     def: "A paper gain is when a stock you own rises in value but you have not sold it yet. A paper loss is when it declines in value but you have not sold it yet.",
     why: "Paper gains and losses are not real until you sell — a crucial distinction for both taxes and investor psychology.",
@@ -467,6 +514,7 @@ const CONCEPTS_DATA = [
   {
     slug: "capital-gain-loss",
     term: "Capital Gain / Capital Loss",
+    short: "The profit or loss you lock in when you sell an investment.",
     group: "stocks",
     def: "A capital gain occurs after you sell a stock at a profit (you then owe capital gains tax). A capital loss occurs after you sell a stock at a loss — the loss is a <strong>tax deduction</strong> that can offset capital gains (and, in the U.S., up to $3,000 of ordinary income per year).",
     why: "Realizing gains and losses has tax consequences, which is why investors often time their sales around them (\"tax-loss harvesting\").",
@@ -478,6 +526,7 @@ const CONCEPTS_DATA = [
   {
     slug: "bonds-def",
     term: "Bonds",
+    short: "A loan you make to a company or government that it must repay with interest.",
     group: "bonds",
     def: "A debt instrument issued by a company (or government) that, like a bank loan, must be paid back by a certain date in the future. A bond market is where bonds are issued and then bought and sold.",
     why: "Bonds are the quieter half of investing: steadier than stocks, they provide income and balance in a portfolio — and the bond market is actually larger than the stock market.",
@@ -487,6 +536,7 @@ const CONCEPTS_DATA = [
   {
     slug: "bond-features",
     term: "Bonds: Risks & Features",
+    short: "What a bond pays, when it matures, and what can go wrong.",
     group: "bonds",
     def: "Unlike purchasing stock (an equity investment), buying a bond means purchasing a piece of debt that must be repaid on a certain date. Bondholders receive interest payments, often every six months. Every bond has three distinct features: (1) an amount to be repaid; (2) a maturity date; and (3) an interest rate.",
     why: "Two key risks: <strong>credit risk</strong> — the issuer will not pay you back — and <strong>interest rate risk</strong> — rates rise while you hold the bond, pushing its market value down.",
@@ -498,6 +548,7 @@ const CONCEPTS_DATA = [
   {
     slug: "balance-sheet",
     term: "Balance Sheet",
+    short: "A snapshot of what a company owns, owes, and is worth on one day.",
     group: "accounting",
     def: "A snapshot of what a company owns (assets), what it owes (liabilities), and the difference (equity) at a single point in time.",
     why: "The balance sheet reveals a company's financial strength: how much debt it carries, how much cash it holds, and what shareholders actually own.",
@@ -513,6 +564,7 @@ const CONCEPTS_DATA = [
   {
     slug: "assets",
     term: "Assets (Something You Own)",
+    short: "Everything a company owns, from cash to buildings to patents.",
     group: "accounting",
     def: "<strong>Current Assets:</strong> Cash, Accounts Receivable, Inventory.<br><strong>Fixed Assets:</strong> Plant, Property &amp; Equipment (PP&amp;E).<br><strong>Intangible (non-physical) Assets:</strong> Goodwill, Patents.",
     why: "Assets are the resources a company uses to generate profit — and the collateral creditors look to if things go wrong.",
@@ -522,6 +574,7 @@ const CONCEPTS_DATA = [
   {
     slug: "liabilities",
     term: "Liabilities (Something You Owe)",
+    short: "Everything a company owes, due soon or years from now.",
     group: "accounting",
     def: "<strong>Current Liabilities:</strong> Accounts Payable (employees, suppliers, etc.), short-term bank loans due within one year, and the portion of any loan or bond due within one year.<br><strong>Long-Term Liabilities:</strong> Long-term bank loans and the portion of a bond not due within one year.",
     why: "Liabilities must be paid regardless of how business is going — too many of them is what sinks companies in downturns.",
@@ -531,6 +584,7 @@ const CONCEPTS_DATA = [
   {
     slug: "equity-accounting",
     term: "Equity (= Net Worth)",
+    short: "What a company is worth after subtracting what it owes from what it owns.",
     group: "accounting",
     def: "The difference between assets and liabilities. It includes: Preferred Stock (less risky than common), Common Stock (what most people buy), and Retained Earnings (the cumulative total of all profits and losses).",
     why: "Equity is what would be left for shareholders if the company sold everything and paid every debt — the \"book value\" of ownership.",
@@ -540,6 +594,7 @@ const CONCEPTS_DATA = [
   {
     slug: "income-statement",
     term: "Income Statement",
+    short: "A report of a company's revenue, expenses, and profit over a period.",
     group: "accounting",
     def: "The statement showing a company's revenue and expenses over a period, stepping down from Revenue to Net Profit. There are four expense categories — Cost of Goods Sold, SG&amp;A, Interest Expense, and Tax Expense — and four profit categories: Gross Profit, Operating Profit, Pre-Tax Profit, and Net Profit.",
     why: "The income statement answers the most basic business question: is the company actually making money, and where along the way is it losing it?",
@@ -561,6 +616,7 @@ const CONCEPTS_DATA = [
   {
     slug: "cash-flow-statement",
     term: "Cash Flow Statement",
+    short: "A report of where a company's cash comes from and where it goes.",
     group: "accounting",
     def: "Shows how much cash a company takes in, from what sources, and how it uses that cash. Uses include: (1) investing in PP&amp;E; (2) paying dividends, interest, or loan/bond principal; (3) purchasing other companies; (4) parking cash in stocks or bonds until it is needed for a large project.",
     why: "Profits are an opinion; cash is a fact. Companies fail when they run out of cash, not when accounting profit dips — which is why investors watch this statement closely.",
@@ -572,6 +628,7 @@ const CONCEPTS_DATA = [
   {
     slug: "market-cap",
     term: "Market Capitalization",
+    short: "The total value of all a company's shares: price times shares outstanding.",
     group: "ratios",
     def: "The total market value of a company's common shares.",
     why: "Market cap is how companies are sized and compared — \"large-cap\" vs. \"small-cap\" — and what headlines mean by \"a $3 trillion company.\"",
@@ -587,6 +644,7 @@ const CONCEPTS_DATA = [
   {
     slug: "eps",
     term: "Earnings Per Share (EPS)",
+    short: "A company's yearly profit divided by its number of shares.",
     group: "ratios",
     def: "The slice of a company's annual profit attributable to each common share. \"Earnings\" means the same as \"income\" and \"profits.\"",
     why: "EPS puts profits on a per-share basis so you can compare them to the share price — it is the denominator of the P/E ratio.",
@@ -602,6 +660,7 @@ const CONCEPTS_DATA = [
   {
     slug: "pe-ratio",
     term: "Price Earnings (P/E) Ratio",
+    short: "How many dollars investors pay for each $1 of a company's yearly earnings.",
     group: "ratios",
     def: "How many dollars investors pay for each dollar of a company's annual earnings.",
     why: "The P/E is the quickest gauge of how expensive a stock is relative to its profits — high P/Es price in high expected growth.",
@@ -617,6 +676,7 @@ const CONCEPTS_DATA = [
   {
     slug: "dividend-yield",
     term: "Dividend Yield",
+    short: "The yearly dividend as a percentage of the share price.",
     group: "ratios",
     def: "The annual dividend expressed as a percentage of the share price — the cash return you earn just for holding the stock.",
     why: "Yield lets you compare a stock's cash payout to alternatives such as a savings account or a U.S. Treasury Bill, Note, or Bond.",
@@ -632,6 +692,7 @@ const CONCEPTS_DATA = [
   {
     slug: "financial-leverage",
     term: "Financial Leverage",
+    short: "How much debt a company carries compared to its value.",
     group: "ratios",
     def: "How much debt a company carries relative to its market value.",
     why: "Leverage amplifies both gains and losses: a little debt boosts returns, too much turns a slowdown into a bankruptcy.",
@@ -647,6 +708,7 @@ const CONCEPTS_DATA = [
   {
     slug: "interest-coverage",
     term: "Interest Coverage Ratio",
+    short: "How many times a company's cash flow can pay its yearly interest bill.",
     group: "ratios",
     def: "How many times over a company's cash flow can cover its annual interest bill.",
     why: "It measures the margin of safety on a company's debt: the higher the coverage, the less likely a rough year forces a default.",
