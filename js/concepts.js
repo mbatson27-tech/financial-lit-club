@@ -40,10 +40,10 @@
       const links = c.related
         .filter(function (slug) { return bySlug.has(slug); })
         .map(function (slug) {
-          return '<a href="#' + slug + '" data-related>' + esc(bySlug.get(slug).term) + "</a>";
+          return '<li><a href="#' + slug + '" data-related>' + esc(bySlug.get(slug).term) + "</a></li>";
         })
-        .join('<span aria-hidden="true"> · </span>');
-      body += '<p class="term-related"><strong>Related:</strong> ' + links + "</p>";
+        .join("");
+      body += '<div class="term-related"><strong>Related:</strong> <ul class="related-list">' + links + "</ul></div>";
     }
 
     return (
@@ -51,7 +51,10 @@
       '<h3 class="term-heading">' +
       '<button type="button" class="term-toggle" aria-expanded="false" aria-controls="' + c.slug + '-body">' +
       '<span class="term-tag term-tag--' + (g ? g.color : "navy") + '" aria-hidden="true"></span>' +
+      '<span class="term-text">' +
       '<span class="term-title" id="' + c.slug + '-label">' + esc(c.term) + "</span>" +
+      (c.short ? '<span class="term-short">' + esc(c.short) + "</span>" : "") +
+      "</span>" +
       '<svg class="icon term-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>' +
       "</button></h3>" +
       '<div class="term-body" id="' + c.slug + '-body" role="region" aria-labelledby="' + c.slug + '-label">' +
@@ -117,7 +120,7 @@
 
   const searchText = new Map(); // slug -> lowercase haystack
   for (const c of CONCEPTS_DATA) {
-    const parts = [c.term, c.def, c.why || "", c.example || ""];
+    const parts = [c.term, c.short || "", c.def, c.why || "", c.example || ""];
     if (c.formula) parts.push(c.formula.name, c.formula.code, c.formula.note || "");
     searchText.set(c.slug, parts.join(" ").replace(/<[^>]*>/g, " ").toLowerCase());
   }

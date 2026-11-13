@@ -26,7 +26,7 @@
           '<div class="vc-body">' +
             '<div class="vc-series">' + escapeHtml(seriesName) + "</div>" +
             '<div class="vc-title">' + escapeHtml(video.title) + "</div>" +
-            '<span class="badge badge-pending" style="margin-top:0.5rem;">Link coming soon</span>' +
+            '<span class="badge badge-pending vc-badge">Link coming soon</span>' +
           "</div>" +
         "</div>"
       );

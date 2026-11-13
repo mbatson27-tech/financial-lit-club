@@ -46,8 +46,8 @@
     <div class="nav-spacer"></div>
     <div class="nav-tools">
       <div class="site-search">
-        <label for="site-search-input" style="position:absolute;left:-9999px;">Search the site</label>
-        <input type="search" id="site-search-input" placeholder="Search videos, resources, concepts…" autocomplete="off">
+        <label for="site-search-input" class="sr-only">Search the site</label>
+        <input type="search" id="site-search-input" placeholder="Search videos, concepts…" autocomplete="off">
         <div id="site-search-results" class="search-results" role="listbox" aria-label="Search results"></div>
       </div>
       <button id="theme-toggle" class="icon-btn" aria-pressed="false" aria-label="Switch to dark mode"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
@@ -65,7 +65,7 @@
 
     <div class="toolbar">
       <div class="search-box">
-        <label for="video-search" style="position:absolute;left:-9999px;">Search videos</label>
+        <label for="video-search" class="sr-only">Search videos</label>
         <input type="search" id="video-search" placeholder="Search video titles…" autocomplete="off">
       </div>
       <div class="filter-chips" id="series-filters" role="group" aria-label="Filter by series"></div>
