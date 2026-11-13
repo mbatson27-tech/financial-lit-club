@@ -1034,7 +1034,7 @@ a.video-card:hover, a.video-card:focus-visible {
   background: var(--code-bg);
   color: var(--text);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: var(--fs-md);
   border-left: 3px solid var(--accent);
 }
 .calc-example {
@@ -1188,7 +1188,7 @@ a.video-card:hover, a.video-card:focus-visible {
 .term-title { display: block; }
 .term-short {
   display: block;
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   font-weight: 400;
   line-height: 1.4;
   color: var(--text-muted);
@@ -1489,7 +1489,7 @@ a.video-card:hover, a.video-card:focus-visible {
 .brand {
   white-space: normal;
   line-height: 1.15;
-  font-size: 1.05rem;
+  font-size: var(--fs-base);
   max-width: 16.5rem;
 }
 .nav-bar { gap: 0.75rem; }
@@ -1552,7 +1552,7 @@ a.video-card:hover, a.video-card:focus-visible {
 .brand { min-height: 2.75rem; }
 
 @media (max-width: 1180px) {
-  .brand { max-width: none; font-size: 1rem; }
+  .brand { max-width: none; font-size: var(--fs-base); }
   .nav-links a { padding: 0 0.75rem; }
 }
 
