@@ -40,10 +40,10 @@
       const links = c.related
         .filter(function (slug) { return bySlug.has(slug); })
         .map(function (slug) {
-          return '<a href="#' + slug + '" data-related>' + esc(bySlug.get(slug).term) + "</a>";
+          return '<li><a href="#' + slug + '" data-related>' + esc(bySlug.get(slug).term) + "</a></li>";
         })
-        .join('<span aria-hidden="true"> · </span>');
-      body += '<p class="term-related"><strong>Related:</strong> ' + links + "</p>";
+        .join("");
+      body += '<div class="term-related"><strong>Related:</strong> <ul class="related-list">' + links + "</ul></div>";
     }
 
     return (

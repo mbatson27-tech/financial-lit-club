@@ -1425,7 +1425,7 @@ a.video-card:hover, a.video-card:focus-visible {
   .kc-toc-select { display: block; }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1180px) {
   .nav-toggle {
     display: inline-flex;
     order: 3;
@@ -1453,6 +1453,79 @@ a.video-card:hover, a.video-card:focus-visible {
   .site-search { order: 4; width: 100%; }
   .site-search input[type="search"] { width: 100%; }
   .search-results { width: 100%; }
+}
+
+/* ---------- Header fit + 44px tap targets (WCAG 2.5.5) ---------- */
+/* Let the club name wrap onto two lines so the full nav fits in the
+   1200px container (it was ~130px too wide at every desktop width). */
+.brand {
+  white-space: normal;
+  line-height: 1.15;
+  font-size: 1.05rem;
+  max-width: 16.5rem;
+}
+.nav-bar { gap: 0.75rem; }
+.nav-links a {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.7rem;
+}
+.icon-btn { width: 2.75rem; height: 2.75rem; }
+.site-search input[type="search"] { width: 200px; min-height: 2.75rem; }
+
+/* Small links and controls get a 44px minimum hit area. */
+.resource-card a.rc-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin: -0.35rem 0 -0.5rem;
+}
+.kc-toc li a {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.3rem 0.6rem;
+}
+.term-related { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
+.related-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.related-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+.related-list a:hover { background: var(--surface-alt); text-decoration: none; }
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+.footer-links { gap: 0 1.25rem; }
+.chip,
+.btn,
+.graph-tabs [role="tab"] {
+  min-height: 2.75rem;
+}
+.chip { display: inline-flex; align-items: center; }
+.calc-form input,
+.search-box input[type="search"],
+.kc-toc-select { min-height: 2.75rem; }
+.brand { min-height: 2.75rem; }
+
+@media (max-width: 1180px) {
+  .brand { max-width: none; font-size: 1rem; }
+  .nav-links a { padding: 0 0.75rem; }
 }
 
 /* ---------- Print (Key Concepts + Graphs print as clean notes) ---------- */
