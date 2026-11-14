@@ -573,11 +573,10 @@ main { display: block; padding-bottom: 4rem; }
 .profile-photo-frame::before {
   content: "";
   position: absolute;
-  inset: -12px;
+  inset: -10px;
   border-radius: 50%;
   border: 1px solid var(--gold);
   opacity: 0.55;
-  transform: translate(8px, 8px);
   pointer-events: none;
 }
 .profile-photo {
@@ -605,7 +604,7 @@ main { display: block; padding-bottom: 4rem; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
 }
 .profile-stats {
   display: grid;
