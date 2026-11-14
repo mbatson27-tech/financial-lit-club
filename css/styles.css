@@ -570,15 +570,6 @@ main { display: block; padding-bottom: 4rem; }
   background: var(--surface);
   box-shadow: 0 0 0 3px var(--gold), var(--shadow-md);
 }
-.profile-photo-frame::before {
-  content: "";
-  position: absolute;
-  inset: -10px;
-  border-radius: 50%;
-  border: 1px solid var(--gold);
-  opacity: 0.55;
-  pointer-events: none;
-}
 .profile-photo {
   position: relative;
   aspect-ratio: 1 / 1;
