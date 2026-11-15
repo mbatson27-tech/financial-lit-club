@@ -526,38 +526,56 @@ main { display: block; padding-bottom: 4rem; }
 
 /* ---------- About Us / faculty profile (home) ---------- */
 .about-section {
+  position: relative;
   padding: 4.5rem 0 5rem;
-  background: var(--bg);
+  background:
+    linear-gradient(180deg, var(--surface-alt) 0, var(--surface-alt) 11rem, var(--bg) 11rem);
 }
 .about-section > .container > h2 {
   text-align: center;
   margin-top: 0;
 }
+.about-section > .container > h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+  background: var(--gold);
+}
 .profile-card {
-  max-width: 48rem;
-  margin: 2rem auto 0;
-  padding: 3rem 3rem 2.5rem;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+  max-width: 64rem;
+  margin: 2.25rem auto 0;
+  padding: 2.5rem;
   background: var(--surface);
   border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
-/* Centered header: photo, name, role, chips */
-.profile-head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.profile-aside { display: grid; gap: 2.25rem; padding-top: 0.5rem; }
+/* Circular portrait with a gold ring and an offset accent ring. */
+.profile-photo-frame {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: 0 0 0 3px var(--gold), var(--shadow-md);
 }
 .profile-photo {
   position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 0 1.5rem;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
   background: var(--navy);
-  border: 4px solid var(--gold);
 }
 /* Monogram shows while the photo loads, or if it can't be loaded. */
 .profile-monogram {
@@ -574,10 +592,43 @@ main { display: block; padding-bottom: 4rem; }
 }
 .profile-img {
   position: relative;
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+}
+.profile-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--border);
+  gap: 1px;
+}
+.profile-stats > div {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0.85rem 0.75rem;
+  background: var(--bg);
+  text-align: center;
+}
+.profile-stats dd {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--heading);
+  font-variant-numeric: tabular-nums;
+}
+[data-theme="dark"] .profile-stats dd { color: var(--gold); }
+.profile-stats dt {
+  margin-top: 0.25rem;
+  font-size: var(--fs-xs);
+  line-height: 1.35;
+  color: var(--text-muted);
 }
 .profile-eyebrow {
   margin: 0 0 0.35rem;
@@ -602,9 +653,8 @@ main { display: block; padding-bottom: 4rem; }
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.5rem;
-  margin: 1.25rem 0 0;
+  margin: 1rem 0 0;
   padding: 0;
 }
 .profile-chips li {
@@ -616,41 +666,10 @@ main { display: block; padding-bottom: 4rem; }
   font-size: var(--fs-sm);
   font-weight: 500;
 }
-/* Stats: one even row of four */
-.profile-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;
-  margin: 2.25rem 0 0;
-}
-.profile-stats > div {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-end;
-  padding: 1rem 0.5rem;
-  border-radius: var(--radius-md);
-  background: var(--bg);
-  text-align: center;
-}
-.profile-stats dd {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: var(--fs-xl);
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--heading);
-  font-variant-numeric: tabular-nums;
-}
-[data-theme="dark"] .profile-stats dd { color: var(--gold); }
-.profile-stats dt {
-  margin-top: 0.35rem;
-  font-size: var(--fs-xs);
-  line-height: 1.35;
-  color: var(--text-muted);
-}
-.profile-body { margin-top: 2.25rem; }
 .profile-bio {
-  margin: 0;
+  margin: 1.25rem 0 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--gold);
   font-size: var(--fs-lg);
   line-height: 1.7;
   color: var(--text);
@@ -665,8 +684,9 @@ main { display: block; padding-bottom: 4rem; }
 .profile-highlights li {
   display: flex;
   gap: 0.85rem;
-  align-items: center;
+  align-items: flex-start;
   padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--bg);
   font-size: var(--fs-md);
@@ -688,34 +708,48 @@ main { display: block; padding-bottom: 4rem; }
   margin: 2rem 0 0.75rem;
   font-size: var(--fs-base);
 }
-/* Career path: year column + text, no rule lines */
 .profile-timeline {
   list-style: none;
   margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 0.5rem;
+  padding: 0 0 0 1.25rem;
+  border-left: 2px solid var(--border);
   font-size: var(--fs-md);
 }
 .profile-timeline li {
-  display: grid;
-  grid-template-columns: 3.5rem 1fr;
-  gap: 0.75rem;
-  align-items: baseline;
+  position: relative;
+  padding: 0.3rem 0;
+}
+.profile-timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.25rem - 6px);
+  top: 0.85rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 3px var(--surface);
+}
+.profile-timeline li:last-child::before {
+  width: 14px;
+  height: 14px;
+  left: calc(-1.25rem - 8px);
+  top: 0.7rem;
+  background: var(--navy);
+  border: 3px solid var(--gold);
 }
 .pt-year {
-  grid-column: 1;
   font-weight: 700;
-  color: var(--gold-strong);
+  color: var(--heading);
   font-variant-numeric: tabular-nums;
+  margin-right: 0.35rem;
 }
-[data-theme="dark"] .pt-year { color: var(--gold); }
-.profile-timeline li > :not(.pt-year) { grid-column: 2; }
 .profile-sources {
-  margin: 2rem 0 0;
+  margin: 1.75rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
   font-size: var(--fs-sm);
   color: var(--text-muted);
-  text-align: center;
 }
 .profile-sources a {
   display: inline-block;
@@ -723,11 +757,18 @@ main { display: block; padding-bottom: 4rem; }
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-@media (max-width: 700px) {
+@media (max-width: 860px) {
   .about-section { padding: 3rem 0 3.5rem; }
-  .profile-card { padding: 2rem 1.25rem 1.75rem; }
-  .profile-photo { width: 160px; height: 160px; }
-  .profile-stats { grid-template-columns: 1fr 1fr; }
+  .profile-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.75rem 1.25rem;
+  }
+  .profile-aside {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+  }
   .profile-bio { font-size: var(--fs-base); }
 }
 
