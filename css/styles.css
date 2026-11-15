@@ -593,6 +593,7 @@ main { display: block; padding-bottom: 4rem; }
   background: var(--border);
   gap: 1px;
 }
+.profile-stats > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .profile-stats > div {
   display: flex;
   flex-direction: column-reverse;
