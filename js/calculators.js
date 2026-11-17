@@ -1,4 +1,8 @@
-/* Calculators page: five independent, live-updating ratio calculators.
+/* Key Concepts ratio calculators: five independent, live-updating
+   calculators. js/concepts.js renders an empty
+   <div class="term-calc" data-calc="KEY"> inside each ratio card that has
+   a `calc` key in js/concepts-data.js; this file builds the form into that
+   slot and wires it up. Load it after js/concepts.js.
 
    Inputs are text fields (inputmode="decimal") rather than type="number"
    so large values can show thousands separators, e.g. 10,000,000. Commas,
@@ -56,7 +60,39 @@
     return null;
   }
 
+  function escAttr(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+  }
+
+  /* Build the form markup into the matching card's slot. */
+  function build(cfg) {
+    const slot = document.querySelector('.term-calc[data-calc="' + cfg.key + '"]');
+    if (!slot) return false;
+    let html =
+      '<h4 class="term-calc-title">Try it yourself</h4>' +
+      '<form class="calc-form" id="' + cfg.form + '" novalidate>' +
+      '<div class="calc-fields">';
+    cfg.fields.forEach(function (f, idx) {
+      html +=
+        '<div class="calc-field">' +
+        '<label for="' + f.id + '">' + escAttr(f.label) + "</label>" +
+        '<input type="text" inputmode="decimal" autocomplete="off" id="' + f.id +
+        '" value="' + escAttr(cfg.example[idx]) + '">' +
+        "</div>";
+    });
+    html +=
+      "</div>" +
+      '<div class="calc-actions">' +
+      '<button type="button" class="btn btn-secondary" data-example>' + escAttr(cfg.exampleLabel) + "</button>" +
+      "</div>" +
+      '<div class="calc-result" id="' + cfg.result + '" role="status" aria-live="polite"></div>' +
+      "</form>";
+    slot.innerHTML = html;
+    return true;
+  }
+
   function wire(cfg) {
+    if (!build(cfg)) return;
     const form = document.getElementById(cfg.form);
     const result = document.getElementById(cfg.result);
     if (!form || !result) return;
@@ -113,12 +149,14 @@
   }
 
   wire({
+    key: "dy",
     form: "dy-form",
+    exampleLabel: "Load McDonald's example",
     result: "dy-result",
     fields: [
-      { id: "dy-dividend", name: "the annual dividend",
+      { id: "dy-dividend", label: "Annualized Dividend ($)", name: "the annual dividend",
         empty: "Enter the annual dividend to see the yield." },
-      { id: "dy-price", name: "the share price",
+      { id: "dy-price", label: "Common Share Price ($)", name: "the share price",
         empty: "Enter the share price to see the yield.",
         zero: "Share price must be more than $0 to calculate a yield." }
     ],
@@ -130,12 +168,14 @@
   });
 
   wire({
+    key: "pe",
     form: "pe-form",
+    exampleLabel: "Load S&P 500 average example",
     result: "pe-result",
     fields: [
-      { id: "pe-price", name: "the share price",
+      { id: "pe-price", label: "Common Share Price ($)", name: "the share price",
         empty: "Enter the share price to see the P/E ratio." },
-      { id: "pe-eps", name: "earnings per share",
+      { id: "pe-eps", label: "Earnings Per Share (EPS) ($)", name: "earnings per share",
         empty: "Enter earnings per share (EPS) to see the P/E ratio.",
         zero: "EPS must be more than $0. A company with no earnings has no P/E ratio." }
     ],
@@ -146,12 +186,14 @@
   });
 
   wire({
+    key: "eps",
     form: "eps-form",
+    exampleLabel: "Load $10M earnings example",
     result: "eps-result",
     fields: [
-      { id: "eps-earnings", name: "net earnings",
+      { id: "eps-earnings", label: "Annualized Net Earnings ($)", name: "net earnings",
         empty: "Enter the company's yearly net earnings to see EPS." },
-      { id: "eps-shares", name: "shares outstanding",
+      { id: "eps-shares", label: "Common Shares Outstanding", name: "shares outstanding",
         empty: "Enter the number of shares outstanding to see EPS.",
         zero: "Shares outstanding must be at least 1 to calculate EPS." }
     ],
@@ -162,12 +204,14 @@
   });
 
   wire({
+    key: "mc",
     form: "mc-form",
+    exampleLabel: "Load $500M company example",
     result: "mc-result",
     fields: [
-      { id: "mc-price", name: "the share price",
+      { id: "mc-price", label: "Common Share Price ($)", name: "the share price",
         empty: "Enter the share price to see the market cap." },
-      { id: "mc-shares", name: "shares outstanding",
+      { id: "mc-shares", label: "Common Shares Outstanding", name: "shares outstanding",
         empty: "Enter the number of shares outstanding to see the market cap.",
         zero: "Shares outstanding must be at least 1 to calculate market cap." }
     ],
@@ -178,12 +222,14 @@
   });
 
   wire({
+    key: "ic",
     form: "ic-form",
+    exampleLabel: "Load 8x coverage example",
     result: "ic-result",
     fields: [
-      { id: "ic-ebitda", name: "EBITDA",
+      { id: "ic-ebitda", label: "EBITDA / Cash Flow ($)", name: "EBITDA",
         empty: "Enter EBITDA (or cash flow) to see interest coverage." },
-      { id: "ic-interest", name: "interest expense",
+      { id: "ic-interest", label: "Interest Expense ($)", name: "interest expense",
         empty: "Enter the yearly interest expense to see interest coverage.",
         zero: "Interest expense is $0, so there's no interest to cover. Enter an amount above $0." }
     ],

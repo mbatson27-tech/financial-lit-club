@@ -1,5 +1,6 @@
 /* Renders the Key Concepts glossary from js/concepts-data.js into
-   collapsible term cards, and wires up the toolbar (search, group chips,
+   collapsible term cards (ratio cards get a calculator slot that
+   js/calculators.js fills), and wires up the toolbar (search, group chips,
    expand/collapse all, A-Z view), the sticky TOC, and deep links. */
 
 (function () {
@@ -36,6 +37,8 @@
         "</div>";
     }
     if (c.html) body += c.html;
+    /* js/calculators.js fills this slot with a live calculator. */
+    if (c.calc) body += '<div class="term-calc" data-calc="' + c.calc + '"></div>';
     if (c.related && c.related.length) {
       const links = c.related
         .filter(function (slug) { return bySlug.has(slug); })
@@ -55,6 +58,7 @@
       '<span class="term-title" id="' + c.slug + '-label">' + esc(c.term) + "</span>" +
       (c.short ? '<span class="term-short">' + esc(c.short) + "</span>" : "") +
       "</span>" +
+      (c.calc ? '<span class="term-badge">Calculator</span>' : "") +
       '<svg class="icon term-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>' +
       "</button></h3>" +
       '<div class="term-body" id="' + c.slug + '-body" role="region" aria-labelledby="' + c.slug + '-label">' +
@@ -122,6 +126,7 @@
   for (const c of CONCEPTS_DATA) {
     const parts = [c.term, c.short || "", c.def, c.why || "", c.example || ""];
     if (c.formula) parts.push(c.formula.name, c.formula.code, c.formula.note || "");
+    if (c.calc) parts.push("calculator calculate");
     searchText.set(c.slug, parts.join(" ").replace(/<[^>]*>/g, " ").toLowerCase());
   }
 

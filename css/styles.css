@@ -902,7 +902,6 @@ dl.glossary dd {
   background: var(--gold-soft);
   border: 1px solid var(--gold);
 }
-.formula-box-flush { margin: 0 0 0.75rem; }
 [data-theme="dark"] .formula-box code { color: var(--gold-strong); }
 .formula-box .formula-name { font-weight: 700; margin-bottom: 0.35rem; color: var(--text); }
 .formula-box code {
@@ -1197,24 +1196,50 @@ a.video-card:hover, a.video-card:focus-visible {
 .book-card h3 { margin: 0; font-size: var(--fs-base); }
 .book-card p { margin: 0.2rem 0 0; color: var(--text-muted); font-size: var(--fs-sm); }
 
-/* ---------- Calculators ---------- */
-.calc-card {
-  background: var(--surface);
+/* ---------- Ratio calculators (inside Key Concepts ratio cards) ---------- */
+.term-calc {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem 1.25rem;
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem;
-  margin-bottom: 1.75rem;
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-md);
+  background: var(--bg);
 }
-.calc-card h2 { margin-top: 0; }
-.calc-grid {
+.term-calc-title {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+.calc-fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  align-items: start;
+  gap: 0 1rem;
 }
-@media (max-width: 720px) {
-  .calc-grid { grid-template-columns: 1fr; }
+@media (max-width: 560px) {
+  .calc-fields { grid-template-columns: 1fr; }
+}
+.calc-actions .btn { margin-top: 1rem; }
+.btn.btn-secondary {
+  background: transparent;
+  color: var(--heading);
+  border: 1px solid var(--input-border);
+}
+.btn.btn-secondary:hover { background: var(--surface-alt); }
+.term-badge {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  margin-top: 0.1rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--heading);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 .calc-form label {
   display: block;
@@ -1252,14 +1277,6 @@ a.video-card:hover, a.video-card:focus-visible {
   font-size: var(--fs-md);
   border-left: 3px solid var(--accent);
 }
-.calc-example {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 0.85rem 1rem;
-  font-size: var(--fs-sm);
-}
-.calc-example h4 { margin: 0 0 0.4rem; font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); }
 .btn {
   display: inline-block;
   background: var(--accent);
@@ -1456,7 +1473,7 @@ a.video-card:hover, a.video-card:focus-visible {
   text-align: center;
   color: var(--text-muted);
 }
-.kc-calc-note { margin-top: 1.5rem; }
+.kc-calc-note { margin: 0 0 1rem; color: var(--text-muted); }
 
 /* ---------- Graphs page ---------- */
 .graph-toolbar {
@@ -1807,7 +1824,8 @@ a.video-card:hover, a.video-card:focus-visible {
   /* Key Concepts: print every card fully expanded. */
   .term-body { display: block !important; }
   .term-body-inner { visibility: visible !important; overflow: visible !important; }
-  .term-card, .calc-card, .mission-card { break-inside: avoid; }
+  .term-card, .mission-card { break-inside: avoid; }
+  .term-calc { display: none; }
   .kc-layout { display: block; }
 
   /* Graphs: print all four panels, one per section. */

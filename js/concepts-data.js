@@ -23,7 +23,7 @@ const CONCEPT_GROUPS = [
   { id: "stocks", name: "Investing: Stocks", color: "gold" },
   { id: "bonds", name: "Investing: Bonds", color: "green" },
   { id: "accounting", name: "Accounting & Financial Statements", color: "maroon" },
-  { id: "ratios", name: "Key Ratios", color: "blue" }
+  { id: "ratios", name: "Key Ratios & Calculators", color: "blue" }
 ];
 
 const CONCEPTS_DATA = [
@@ -627,6 +627,7 @@ const CONCEPTS_DATA = [
   /* ============ 8. KEY RATIOS ============ */
   {
     slug: "market-cap",
+    calc: "mc", // interactive calculator in js/calculators.js
     term: "Market Capitalization",
     short: "The total value of all a company's shares: price times shares outstanding.",
     group: "ratios",
@@ -643,6 +644,7 @@ const CONCEPTS_DATA = [
   },
   {
     slug: "eps",
+    calc: "eps", // interactive calculator in js/calculators.js
     term: "Earnings Per Share (EPS)",
     short: "A company's yearly profit divided by its number of shares.",
     group: "ratios",
@@ -659,6 +661,7 @@ const CONCEPTS_DATA = [
   },
   {
     slug: "pe-ratio",
+    calc: "pe", // interactive calculator in js/calculators.js
     term: "Price Earnings (P/E) Ratio",
     short: "How many dollars investors pay for each $1 of a company's yearly earnings.",
     group: "ratios",
@@ -675,6 +678,7 @@ const CONCEPTS_DATA = [
   },
   {
     slug: "dividend-yield",
+    calc: "dy", // interactive calculator in js/calculators.js
     term: "Dividend Yield",
     short: "The yearly dividend as a percentage of the share price.",
     group: "ratios",
@@ -707,6 +711,7 @@ const CONCEPTS_DATA = [
   },
   {
     slug: "interest-coverage",
+    calc: "ic", // interactive calculator in js/calculators.js
     term: "Interest Coverage Ratio",
     short: "How many times a company's cash flow can pay its yearly interest bill.",
     group: "ratios",
