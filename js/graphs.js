@@ -123,7 +123,7 @@
       move: "d",
       to: [40, 72, 218, 193],
       eqTo: [143, 130],
-      newLbl: { x: 46, y: 64, text: "D₂" },
+      newLbl: { x: 56, y: 64, text: "D₂" },
       arrow: { x1: 138, y1: 70, x2: 112, y2: 70, dir: "left" },
       caption: "Demand shifts left (P₁→P₂, Q₁→Q₂).",
       table: { gdp: "down", unemp: "up", infl: "down" },
